@@ -10,23 +10,12 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage })
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'uploads/groups')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.originalname)
-    }
-})
-const upload = multer({ storage: storage })
-
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 const mongoose = require('mongoose')
 const express = require('express')
 const path = require('path')
-const { isError } = require('util')
 const serveStatic = require('serve-static')
 
 const app = express()
