@@ -363,9 +363,1501 @@
         <img src="https://cdn-front.kwork.ru/pics/t1/16/15918163-1628088416.jpg" alt="">
       </div>
       <div class="main">
-        <span>
+        <span class="newOfTracker">
           Новости трекера
         </span>
+        <div class="news">
+          <div>
+            <span class="newsDate">
+              14-Сен
+            </span>
+            <span class="newsDesc">
+              Осенние конкурсы – 2021 на Rutracker.org!
+            </span>
+          </div>
+          <div>
+            <span class="newsDate">
+              23-Авг
+            </span>
+            <span class="newsDesc">
+              Торрентовка в честь 17-летия torrents.ru/rutracker.org в Москве. 18 сентября 2021 г.
+            </span>
+          </div>
+          <div>
+            <span class="newsDate">
+              03-Май
+            </span>
+            <span class="newsDesc">
+              День Победы!
+            </span>
+          </div>
+          <div>
+            <span class="newsDate">
+              28-Мар
+            </span>
+            <span class="newsDesc">
+              Конкурсы к 1 апреля
+            </span>
+          </div>
+          <div>
+            <span class="newsDate">
+              17-Фев
+            </span>
+            <span class="newsDesc">
+              Музыкальный конкурс - Generation.torrent 
+            </span>
+          </div>
+        </div>
+        <div class="roadmap">
+          <div>
+            <img width="10px" src="https://static.t-ru.org/templates/v1/images/feed_1.png" alt="">
+            <span class="mapForums">
+              Карта форумов
+            </span>
+          </div>
+          <div>
+            <img width="10px" src="https://static.t-ru.org/templates/v1/images/feed_1.png" alt="">
+            <span>
+              Последние раздачи
+            </span>
+          </div>
+          <div>
+            <img width="10px" src="https://static.t-ru.org/templates/v1/images/feed_1.png" alt="">
+            <span>
+              Последние темы
+            </span>
+          </div>
+        </div>
+        <div>
+          <div class="mainLinks">
+            <span>
+              Будущие закачки
+            </span>
+            <span>
+              Избранное
+            </span>
+            <span>
+              Мои раздачи
+            </span>
+            <span>
+              Начатые темы
+            </span>
+            <span>
+              Ответы в начатых темах 
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="20px" src="https://static.t-ru.org/templates/v1/images/folder_games_1.svg" alt="">
+            <div class="forumContent">
+              <span>
+                Браузерные и клиентские онлайн-игры
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •FIFA Online 4 (2021)
+                </span>
+                <span>
+                  •War Thunder
+                </span>
+                <span>
+                  •Crossout
+                </span>
+                <span>
+                  •Танки
+                </span>
+                <span>
+                  •Только для взрослых (18+) 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="20px" src="https://static.t-ru.org/templates/v1/images/shopping_cart_1.svg" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Магазины и образование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Текущие акции 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Товары, услуги, игры и развлечения
+            </span>
+          </div>
+        </div>
       </div>
       <div class="article">
         <span class="optionsOfShow">
@@ -546,6 +2038,107 @@ export default {
     color: rgb(0, 100, 255);
     font-weight: bolder;
     font-size: 12px;
+  }
+
+  .newOfTracker {
+    font-weight: bolder;
+  }
+
+  .roadmap {
+    display: flex;
+  }
+
+  .roadmap > div {
+    margin: 0px 5px;
+  }
+
+  .roadmap > div > span {
+    color: rgb(100, 100, 255);
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .mapForums {
+    font-weight: bolder;
+  }
+
+  .roadmap > div > span:hover {
+    color: rgb(200, 50, 0);
+    cursor: pointer;
+  }
+
+  .news {
+
+  }
+
+  .news > div {
+    margin: 5px 0px;
+  }
+
+  .newsDate {
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(235, 235, 235);
+    margin: 0px 10px;
+  }
+
+  .newsDesc {
+    border-top: 1px solid rgb(215, 215, 215);
+  }
+
+  .mainLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 235, 255);
+    height: 35px;
+  }
+
+  .mainLinks > span {
+    margin: 0px 10px;
+    color: rgb(100, 100, 255);
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .sectionHeader {
+    display: flex;
+    align-items: center;
+    background-color: rgb(215, 215, 255);
+    height: 35px;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0px 10px;
+  }
+
+  .sectionHeaderToggler {
+    color: rgb(50, 50, 255);
+    font-size: 36px;
+  }
+
+  .forum {
+    display: flex;
+    background-color: rgb(235, 235, 255);
+  }
+
+  .forumContent > span {
+    color: rgb(100, 100, 255);
+    cursor: pointer;
+    font-weight: bolder;
+  }
+
+  .forumFooter {
+    display: flex;
+  }
+
+  .forumFooter > span {
+    margin: 0px 5px;
+    color: rgb(100, 100, 255);
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .forum > img {
+    margin: 0px 15px;
   }
 
 </style>
