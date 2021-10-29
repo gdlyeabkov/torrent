@@ -5,6 +5,7 @@ import Search from '../views/Search.vue'
 import PM from '../views/PM.vue'
 import Profile from '../views/Profile.vue'
 import MyMessages from '../views/MyMessages.vue'
+import Distribution from '../views/Distribution.vue'
 
 Vue.use(VueRouter)
 
@@ -34,6 +35,12 @@ const routes = [
     name: 'MyMessages',
     component: MyMessages
   },
+  {
+    path: '/distribution',
+    name: 'Distribution',
+    component: Distribution
+  },
+  
 ]
 
 const router = new VueRouter({
