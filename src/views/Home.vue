@@ -497,18 +497,24 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              ОБХОД БЛОКИРОВОК
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                VPN-сервисы
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Приватный браузер со встроенным Tor и IPFS
+                </span>
+                <span>
+                  •ExpressVPN
+                </span>
+                <span>
+                  •Surfshark
                 </span>
               </div>
             </div>
@@ -517,11 +523,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                ОБХОД БЛОКИРОВОК
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Плагины для браузеров
+                </span>
+                <span>
+                  •Блокировка bt, способы обхода и обсуждение 
                 </span>
               </div>
             </div>
@@ -531,18 +540,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Новости
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Новости трекера
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Авторские раздачи 
                 </span>
               </div>
             </div>
@@ -551,11 +560,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Краудфандинг (переводы, покупка дисков и т. п.)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Подфорум для общих сборов
+                </span>
+                <span>
+                  •Переводы: фильмы, мультфильмы, сериалы - СВ Студия
+                </span>
+                <span>
+                  •Переводы: фильмы, мультфильмы, сериалы - Авторские переводчики 
                 </span>
               </div>
             </div>
@@ -564,11 +579,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                GENERATION.TORRENT - Музыкальный конкурс
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -577,11 +592,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Rutracker Awards (мероприятия и конкурсы)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Конкурсы
+                </span>
+                <span>
+                  •Доска почета!
                 </span>
               </div>
             </div>
@@ -591,18 +609,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Вопросы по форуму и трекеру
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Правила, основные инструкции, FAQ-и
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -611,11 +629,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Вопросы по форуму и трекеру
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Предложения по улучшению форума и трекера 
                 </span>
               </div>
             </div>
@@ -624,11 +642,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Вопросы по BitTorrent сети и ее клиентам
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -637,11 +655,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Обсуждение провайдеров
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -650,11 +668,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Железо: комплектующие и периферия
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Железо: комплексные проблемы
+                </span>
+                <span>
+                  •Подбор конфигурации, выбор и обсуждение комплектующих 
                 </span>
               </div>
             </div>
@@ -664,18 +685,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Кино, Видео и ТВ
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Предложения по улучшению категории "Кино, Видео и ТВ"
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -684,11 +705,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Кино, Видео и TV - помощь по разделу
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Заявки, заказы, координация 
                 </span>
               </div>
             </div>
@@ -697,11 +718,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Наше кино
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Кино СССР
+                </span>
+                <span>
+                  •Детские отечественные фильмы 
                 </span>
               </div>
             </div>
@@ -710,11 +734,20 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Зарубежное кино
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Тематические подборки ссылок
+                </span>
+                <span>
+                  •Классика мирового кинематографа
+                </span>
+                <span>
+                  •Фильмы 2016-2020
+                </span>
+                <span>
+                  •Фильмы 2021
                 </span>
               </div>
             </div>
@@ -723,11 +756,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Арт-хаус и авторское кино
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Короткий метр (Арт-хаус и авторское кино)
+                </span>
+                <span>
+                  •Анимация (Арт-хаус и авторское кино) 
                 </span>
               </div>
             </div>
@@ -736,11 +772,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Театр
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -749,11 +785,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                DVD Video
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Зарубежное кино (DVD Video)
+                </span>
+                <span>
+                   •Наше кино (DVD Video)
+                </span>
+                <span>
+                  •Арт-хаус и авторское кино (DVD Video) 
                 </span>
               </div>
             </div>
@@ -762,11 +804,20 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                HD Video
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •UHD Video
+                </span>
+                <span>
+                  •Зарубежное кино (HD Video)
+                </span>
+                <span>
+                  •Наше кино (HD Video)
+                </span>
+                <span>
+                  •Арт-хаус и авторское кино (HD Video) 
                 </span>
               </div>
             </div>
@@ -775,11 +826,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                3D/Стерео Кино, Видео, TV и Спорт
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -788,11 +839,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Мультфильмы
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -801,11 +852,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Мультсериалы
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -814,11 +865,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Аниме
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -828,18 +879,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Сериалы
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Предложения по улучшению категории "Сериалы"
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -848,11 +899,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Русские сериалы
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Русские сериалы (HD Video)
+                </span>
+                <span>
+                  •Русские сериалы (DVD Video) 
                 </span>
               </div>
             </div>
@@ -861,11 +915,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Зарубежные сериалы
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Новинки и сериалы в стадии показа 
                 </span>
               </div>
             </div>
@@ -874,11 +928,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Зарубежные сериалы (HD Video)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Зарубежные сериалы (UHD Video)
+                </span>
+                <span>
+                  •Новинки и сериалы в стадии показа (HD Video) 
                 </span>
               </div>
             </div>
@@ -887,11 +944,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Сериалы Латинской Америки, Турции и Индии
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -900,11 +957,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Азиатские сериалы
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -914,18 +971,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Документалистика и юмор
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Предложения по улучшению категории "Документалистика и юмор"
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -934,11 +991,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Вера и религия
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -947,11 +1004,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Документальные фильмы и телепередачи
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -960,11 +1017,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Документальные (HD Video)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -973,11 +1030,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Развлекательные телепередачи и шоу, приколы и юмор
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -987,18 +1044,27 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Спорт
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                XXXII Летние Олимпийские игры 2020
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Спортивная гимнастика. Художественная гимнастика. Прыжки на батуте
+                </span>
+                <span>
+                  •Бокс. Борьба Вольная и Греко-римская. Дзюдо. Карате. Тхэквондо
+                </span>
+                <span>
+                  •Баскетбол. Волейбол. Гандбол. Водное поло. Регби. Хоккей на траве
+                </span>
+                <span>
+                  •Фехтование. Стрельба. Стрельба из лука. Современное пятиборье 
                 </span>
               </div>
             </div>
@@ -1007,11 +1073,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Зимние Олимпийские игры 2018
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1020,11 +1086,23 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Спортивные турниры, фильмы и передачи
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Формула-1 (2021)
+                </span>
+                <span>
+                   •Велоспорт
+                </span>
+                <span>
+                   •Бокс
+                </span>
+                <span>
+                   •Смешанные единоборства и K-1
+                </span>
+                <span>
+                  •Теннис 
                 </span>
               </div>
             </div>
@@ -1033,11 +1111,26 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Футбол
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •UHDTV
+                </span>
+                <span>
+                   •Чемпионат Европы 2020 [2021] (финальный турнир)
+                </span>
+                <span>
+                  •Лига Наций •Чемпионат Мира 2022 (отбор)
+                </span>
+                <span>
+                  •Россия 2021-2022
+                </span>
+                <span>
+                  •Англия
+                </span>
+                <span>
+                  •Еврокубки 2020-2021
                 </span>
               </div>
             </div>
@@ -1046,11 +1139,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Баскетбол
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •NBA / NCAA (2010-2022 гг.)
+                </span>
+                <span>
+                  •Европейский клубный баскетбол 
                 </span>
               </div>
             </div>
@@ -1059,11 +1155,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                🏒 Хоккей
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •КХЛ
+                </span>
+                <span>
+                  •НХЛ (с 2013) 
                 </span>
               </div>
             </div>
@@ -1072,11 +1171,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Рестлинг
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1085,11 +1184,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Для дооформления раздач
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1099,18 +1198,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Книги и журналы
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Помощь в "Книгах и журналах", предложения по улучшению, сканирование
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Сканирование, обработка сканов 
                 </span>
               </div>
             </div>
@@ -1119,11 +1218,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Книги и журналы (общий раздел)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Кино, театр, ТВ, мультипликация, цирк
+                </span>
+                <span>
+                  •Журналы и газеты (общий раздел) 
                 </span>
               </div>
             </div>
@@ -1132,11 +1234,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Для детей, родителей и учителей
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1145,11 +1247,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Спорт, физическая культура, боевые искусства
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Футбол (книги и журналы)
+                </span>
+                <span>  
+                  •Хоккей (книги и журналы)
+                </span>
+                <span>
+                  •Спортивная пресса 
                 </span>
               </div>
             </div>
@@ -1158,11 +1266,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Гуманитарные науки
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Искусствоведение. Культурология
+                </span>
+                <span>
+                  •Литературоведение
+                </span>
+                <span>
+                  •Философия 
                 </span>
               </div>
             </div>
@@ -1171,11 +1285,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Исторические науки
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Исторические персоны
+                </span>
+                <span>
+                  •История России
+                </span>
+                <span>
+                  •Эпоха СССР 
                 </span>
               </div>
             </div>
@@ -1184,11 +1304,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Точные, естественные и инженерные науки
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Физика
+                </span>
+                <span>
+                  •Математика
+                </span>
+                <span>
+                  •Машиностроение 
                 </span>
               </div>
             </div>
@@ -1197,11 +1323,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Ноты и Музыкальная литература
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1210,11 +1336,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Военное дело
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •История Второй мировой войны
+                </span>
+                <span>
+                  •Военная техника 
                 </span>
               </div>
             </div>
@@ -1223,11 +1352,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Вера и религия
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Христианство 
                 </span>
               </div>
             </div>
@@ -1236,11 +1365,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Психология
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Общая и прикладная психология
+                </span>
+                <span>
+                  •Популярная психология 
                 </span>
               </div>
             </div>
@@ -1249,11 +1381,29 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Коллекционирование, увлечения и хобби
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Вышивание
+                </span>
+                <span>
+                  •Вязание
+                </span>
+                <span>
+                  •Шитье, пэчворк
+                </span>
+                <span>
+                  •Охота и рыбалка •Кулинария (книги)
+                </span>
+                <span>
+                  •Моделизм
+                </span>
+                <span>
+                  •Деревообработка
+                </span>
+                <span>
+                  •Настольные игры 
                 </span>
               </div>
             </div>
@@ -1262,11 +1412,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Художественная литература
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Русская литература
+                </span>
+                <span>
+                  •Зарубежная литература (XX и XXI век)
+                </span>
+                <span>
+                  •Отечественная фантастика / фэнтези / мистика 
                 </span>
               </div>
             </div>
@@ -1275,11 +1431,17 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Компьютерная литература
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •СУБД
+                </span>
+                <span>
+                  •Веб-дизайн и программирование
+                </span>
+                <span>
+                  •Программирование (книги) 
                 </span>
               </div>
             </div>
@@ -1288,11 +1450,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Комиксы, манга, ранобэ
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1301,11 +1463,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Коллекции книг и библиотеки
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1314,11 +1476,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Мультимедийные и интерактивные издания
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1327,11 +1489,14 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Медицина и здоровье
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Клиническая медицина после 2000 г.
+                </span>
+                <span>
+                  •Медико-биологические науки •Нетрадиционная, народная медицина и популярные книги о здоровье 
                 </span>
               </div>
             </div>
@@ -1340,11 +1505,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Архив (Книги и журналы)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1354,18 +1519,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Обучение иностранным языкам
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Объявления, предложения, помощь по разделу
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1374,11 +1539,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Иностранные языки для взрослых
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Английский язык (для взрослых) 
                 </span>
               </div>
             </div>
@@ -1387,11 +1552,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Иностранные языки для детей
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1400,11 +1565,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Художественная литература (ин.языки)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Художественная литература на английском языке 
                 </span>
               </div>
             </div>
@@ -1413,11 +1578,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Аудиокниги на иностранных языках
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1426,58 +1591,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Архив (Иностранные языки)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="sectionHeader">
-            <span class="sectionHeaderToggler material-icons">
-              arrow_right
-            </span>
-            <span>
-              Товары, услуги, игры и развлечения
-            </span>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1487,18 +1605,30 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Обучающее видео
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Видеоуроки и обучающие интерактивные DVD
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Кулинария
+                </span>
+                <span>
+                  •Фитнес - Кардио-Силовые Тренировки
+                </span>
+                <span>
+                  •Видео- и фотосъёмка
+                </span>
+                <span>
+                  •Игра на гитаре
+                </span>
+                <span>
+                  •Образование 
                 </span>
               </div>
             </div>
@@ -1507,11 +1637,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Боевые искусства (Видеоуроки)
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1520,50 +1650,26 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Компьютерные видеоуроки и обучающие интерактивные DVD
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Devops
                 </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •Adobe Photoshop
                 </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •2D-графика
                 </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  •3D-графика
+                </span>
+                <span>
+                  •Программирование (видеоуроки)
+                </span>
+                <span>
+                  •Работа со звуком 
                 </span>
               </div>
             </div>
@@ -1573,18 +1679,18 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Аудиокниги
             </span>
           </div>
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Новости, объявления, полезная информация
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1593,32 +1699,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Радиоспектакли, история, мемуары
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="sectionHeader">
-            <span class="sectionHeaderToggler material-icons">
-              arrow_right
-            </span>
-            <span>
-              Товары, услуги, игры и развлечения
-            </span>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1627,11 +1712,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Фантастика, фэнтези, мистика, ужасы, фанфики
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1640,11 +1725,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Художественная литература
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1653,11 +1738,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Религии
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1666,89 +1751,11 @@
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
               <span>
-                Магазины и образование
+                Прочая литература
               </span>
               <div class="forumFooter">
                 <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
-                Магазины и образование
-              </span>
-              <div class="forumFooter">
-                <span>
-                  •Текущие акции 
+                  
                 </span>
               </div>
             </div>
@@ -1758,105 +1765,1189 @@
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Авто и мото
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Ремонт и эксплуатация транспортных средств
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Оригинальные каталоги по подбору запчастей
+                </span>
+                <span>
+                  •Программы по диагностике и ремонту
+                </span>
+                <span>
+                  •Книги по ремонту/обслуживанию/эксплуатации ТС 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Фильмы и передачи по авто/мото
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Документальные/познавательные фильмы
+                </span>
+                <span>
+                  •Top Gear/Топ Гир 
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Музыка
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Предложения по улучшению музыкальных разделов
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Помощь по музыкальным разделам
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Классическая и современная академическая музыка
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Фольклор, Народная и Этническая музыка
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                New Age, Relax, Meditative & Flamenco
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Рэп, Хип-Хоп, R'n'B
+              </span>
+              <div class="forumFooter">
+                <span>
+                   
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Reggae, Ska, Dub
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Саундтреки, караоке и мюзиклы
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Шансон, Авторская и Военная песня
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Label Packs (lossless)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Label packs, Scene packs (lossy)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Популярная музыка
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Отечественная поп-музыка
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Зарубежная поп-музыка
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Eurodance, Disco, Hi-NRG
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Джазовая и блюзовая музыка
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Курилка (общение на джазовые и блюзовые темы)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Зарубежный джаз
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Зарубежный блюз
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Отечественный джаз и блюз
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Рок-музыка
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Зарубежный Rock
+              </span>
+              <div class="forumFooter">
+                <span>
+                   
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Зарубежный Metal
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Зарубежные Alternative, Punk, Independent
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Отечественный Rock, Metal
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Электронная музыка
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Trance, Goa Trance, Psy-Trance, PsyChill, Ambient, Dub
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                House, Techno, Hardcore, Hardstyle, Jumpstyle
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Drum & Bass, Jungle, Breakbeat, Dubstep, IDM, Electro
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Chillout, Lounge, Downtempo, Trip-Hop
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Traditional Electronic, Ambient, Modern Classical, Electroacoustic, Experimental
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Industrial, Noise, EBM, Dark Electro, Aggrotech, Cyberpunk, Synthpop, New Wave
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Hi-res форматы, оцифровки 
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Архив (Hi-Res форматы, оцифровки)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Для общения (Hi-Res, оцифровки)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Hi-Res stereo и многоканальная музыка
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Оцифровки с аналоговых носителей
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Неофициальные конверсии цифровых форматов
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Музыкальное видео
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Помощь по музыкальным видео
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Музыкальное SD видео
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Музыкальное DVD видео
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Неофициальные DVD видео
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Музыкальное HD видео
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Некондиционное музыкальное видео (Видео, DVD видео, HD видео)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Игры
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Предложения по улучшению категории "Игры"
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Игры для Windows
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Горячие Новинки 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Прочее для Windows-игр
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Прочее для Microsoft Flight Simulator, Prepar3D, X-Plane
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Игры для Apple Macintosh
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Игры для Linux
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Игры для консолей
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Видео для консолей
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Игры для мобильных устройств
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Игровое видео
+              </span>
+              <div class="forumFooter">
+                <span>
+                   
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Программы и Дизайн
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Предложения по улучшению категории "Программы и Дизайн"
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Инструкции, руководства, обзоры программ
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Операционные системы от Microsoft
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Linux, Unix и другие ОС
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Тестовые диски для настройки аудио/видео аппаратуры
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Системные программы
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Системы для бизнеса, офиса, научной и проектной работы
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Веб-разработка и Программирование
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Программы для работы с мультимедиа и 3D
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Материалы для мультимедиа и дизайна
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                ГИС, системы навигации и карты
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Мобильные устройства
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Приложения для мобильных устройств
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Видео для мобильных устройств
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Apple
             </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Apple Macintosh
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Mac OS (для Macintosh)
+                </span>
+                <span>
+                  •Аудио редакторы и конвертеры (Mac OS)
+                </span>
+                <span>
+                  •Офисные программы (Mac OS)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                IOS
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Видео
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Видео HD
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Фильмы HD для Apple TV
+                </span>
+                <span>
+                  •Сериалы HD для Apple TV 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Аудио
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Аудиокниги (AAC, ALAC)
+                </span>
+                <span>
+                  •Музыка lossless (ALAC)
+                </span>
+                <span>
+                  •Музыка Lossy (AAC-iTunes) 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                F.A.Q.
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
           </div>
           <div class="sectionHeader">
             <span class="sectionHeaderToggler material-icons">
               arrow_right
             </span>
             <span>
-              Товары, услуги, игры и развлечения
+              Разное
             </span>
           </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Разное (раздачи)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Картинки
+                </span>
+                <span>
+                   •Музыка (lossy)
+                </span>
+                <span>
+                  •Публикации и учебные материалы (тексты) 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Обсуждения, встречи, общение
+            </span>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Для общения пользователей
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Для общения пользователей других ресурсов •Флудилка [18+] 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Юридический
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Бизнес-форум
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Раздел Пиратской партии России
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Место сбора для релиз-групп
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Место встречи изменить...
+              </span>
+              <div class="forumFooter">
+                <span>
+                  •Отчеты о встречах 
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span>
+                Архив (Общий)
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="sectionHeader">
+            <span class="sectionHeaderToggler material-icons">
+              arrow_right
+            </span>
+            <span>
+              Статистика
+            </span>
+          </div>
+          <div class="forum">
+            <img width="46px" height="25px" src="https://static.t-ru.org/templates/v1/images/whosonline.gif" alt="">
+            <div class="forumContent">
+              <div class="forumFooter forumLastFooter">
+                <span>
+                  Зарегистрированных пользователей: 13,643,023
+                </span>
+                <span>
+                  Раздач: 2,131,510  Живых: 1,937,584  Размер: 4.503 PB
+                </span>
+                <span>
+                  Пиров: 5,077,570  Сиды: 4,489,767  Личи: 587,803
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="currentDate">
+          <span>
+            Текущее время: 30-Окт 05:26
+          </span>
+          <span>
+            Часовой пояс: GMT
+          </span>
         </div>
       </div>
       <div class="article">
@@ -2139,6 +3230,22 @@ export default {
 
   .forum > img {
     margin: 0px 15px;
+  }
+
+  .currentDate {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 12px;
+  }
+
+  .forumLastFooter {
+    flex-direction: column;
+  }
+
+  .forumLastFooter > span {
+    color: rgb(0, 0, 0);
   }
 
 </style>

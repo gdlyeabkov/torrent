@@ -6,6 +6,8 @@ import PM from '../views/PM.vue'
 import Profile from '../views/Profile.vue'
 import MyMessages from '../views/MyMessages.vue'
 import Distribution from '../views/Distribution.vue'
+import Register from '../views/Register.vue'
+import Agreement from '../views/Agreement.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes = [
     path: '/distribution',
     name: 'Distribution',
     component: Distribution
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
+  {
+    path: '/agreement',
+    name: 'Agreement',
+    component: Agreement
   },
   
 ]

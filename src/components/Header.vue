@@ -37,7 +37,7 @@
         </div>
         <div class="bottom">
             <div class="bottomItem">
-                <div class="bottomItemLeft">
+                <div v-if="isLogin" class="bottomItemLeft">
                     <span class="clickable material-icons">
                         logout
                     </span>
@@ -45,9 +45,21 @@
                         rodogleb
                     </span>
                 </div>
+                <div v-else class="bottomItemLeft">
+                    <span @click="$router.push({ name: 'Agreement' })" class="clickable authLink">
+                        Регистрация
+                    </span>
+                    <span @click="loginToggler = !loginToggler" class="clickable authLink">
+                        Вход
+                    </span>
+                </div>
                 <div class="bottomItemCenter">
-                    <input type="text" class="form-control h-75">
-                    <select class="form-select h-75 w-25" aria-label="Default select example">
+                    <input v-if="!loginToggler" type="text" class="form-control h-75">
+                    <div v-else class="authRow">
+                        <input placeholder="имя" type="text" class="form-control h-75">
+                        <input placeholder="пароль" type="password" class="form-control h-75">
+                    </div>
+                    <select v-if="isLogin" class="form-select h-75 w-25" aria-label="Default select example">
                         <option selected>раздачи</option>
                         <option value="1">все темы</option>
                         <option value="2">в google</option>
@@ -55,11 +67,14 @@
                         <option value="4">в wiki</option>
                         <option value="5">по info_hash</option>
                     </select>
-                    <button class="btn btn-light h-75">
+                    <button v-if="!loginToggler" class="btn btn-light h-75">
                         Поиск
                     </button>
+                    <button v-else class="btn btn-light h-75">
+                        Вход
+                    </button>
                 </div>
-                <div class="bottomItemRight">
+                <div v-if="isLogin" class="bottomItemRight">
                     <div>
                         <span>
                             ЛС ✉
@@ -85,6 +100,13 @@
                         </span>
                     </div>
                 </div>
+                <div v-else class="bottomItemRight">
+                    <div>
+                        <span>
+                            Забыли имя или пароль?
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -92,7 +114,18 @@
 
 <script>
 export default {
-
+    name: 'Header',
+    data(){
+        return {
+            loginToggler: false
+        }
+    },
+    props: {
+        isLogin: {
+            type: Boolean,
+            default: false
+        }
+    }
 }
 </script>
 
@@ -201,6 +234,21 @@ export default {
     .clickable {
         cursor: pointer;
         margin: 0px 5px;
+    }
+
+    .authLink {
+        color: rgb(50, 50, 255);
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+    .authLink:hover {
+        color: rgb(250, 150, 0);
+        text-decoration: underline;
+    }
+
+    .authRow > input {
+        margin: 0px 15px;
     }
 
 </style>
