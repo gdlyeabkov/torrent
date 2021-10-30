@@ -2,57 +2,57 @@
     <div>
         <div class="footerTop">
             <div>
-                <span>
+                <span @click="$router.push({ name: 'ConditionUsability' })">
                     Условия использования
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Ads' })">
                     Реклама на сайте
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'ForRights' })">
                     Для правообладателей
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'ForPress' })">
                     Для прессы
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'ForProviders' })">
                     Для провайдеров
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Torrentpedia' })">
                     Торрентопедия
                 </span>
             </div>
             <div>
-                <span>
+                <span @click="$router.push({ name: 'Rules' })">
                     Правила
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'QAndA' })">
                     Кому задать вопрос
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Distributtions' })">
                     Авторские раздачи
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Concurs' })">
                     Конкурсы
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'News' })">
                     Новости "Хранителей" и "Антикваров"
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Distributtion', query: { distributtionid: randomDistributtionId } })">
                     · Случайная раздача
                 </span>
             </div>
         </div>
         <div class="footerBootom">
-            <span>
+            <span @click="$router.push({ name: 'Admin' })">
                 Администрация
             </span>
-            <span>
-                 Модераторы
+            <span @click="$router.push({ name: 'Moderators' })">
+                Модераторы
             </span>
-            <span>
+            <span @click="$router.push({ name: 'Support' })">
                 Техническая помощь
             </span>
-            <span>
+            <span @click="$router.push({ name: 'IRC' })">
                 IRC канал
             </span>
         </div>
@@ -61,7 +61,16 @@
 
 <script>
 export default {
-
+    name: 'Footer',
+    data(){
+        return {
+            distributions: [],
+            randomDistributtionId: 1
+        }
+    },
+    mounted(){
+        this.randomDistributtionId = Math.floor(Math.random() * distributions.length)
+    }
 }
 </script>
 

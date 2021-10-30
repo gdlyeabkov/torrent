@@ -2,7 +2,56 @@
     <div>
         <Header />
         <div class="main">
-            <h4>
+            <div class="post firstPost">
+                <div class="postAuthor">
+                    <span class="authorName">
+                        admin
+                    </span>
+                    <img width="85px" src="https://static.t-ru.org/avatars/0/79/3992479.jpg" alt="">
+                    <span class="authorMeta">
+                        Стаж: 13 лет 4 месяца
+                    </span>
+                    <span class="authorMeta">
+                        Сообщений: 118
+                    </span>
+                    <img class="authorCountry" src="../assets/flag.png" alt="" />
+                    <div class="postAuthorFooter">
+                        <span>
+                            [
+                            <span class="postQuote">    
+                                Профиль
+                            </span>
+                            ]
+                            [
+                            <span class="postQuote">
+                                ЛС
+                            </span>
+                            ]
+                        </span>
+                    </div>
+                </div>
+                <div class="postContent">
+                    <div class="postContentHeader">
+                        <div>
+                            <span class="postDate">
+                                13-Сен-21 15:03
+                            </span>
+                            <span>
+                                (спустя 13 мин.) 
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                [
+                                <span class="postQuote">
+                                    Цитировать
+                                </span>
+                                ]
+                            </span>
+                        </div>
+                    </div>
+                    <div class="postMessage">
+                        <h4>
                 Правила пользования данным ресурсом (читать на wiki):
             </h4>
             <div class="advices">
@@ -365,10 +414,8 @@
             <p>
                 Если Вы нарушите Правила, касающиеся подписи или аватары, то Вам может быть запрещён их показ без предупреждения.
             </p>
-            <div class="agreeBtnContainer">
-                <button @click="$router.push({ name: 'Register' })" class="btn btn-light agreeBtn">
-                    Я согласен с этими правилами
-                </button>
+                    </div>
+                </div>
             </div>
         </div>
         <Footer />
@@ -380,7 +427,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-    name: 'Agreement',
+    name: 'Rules',
     components: {
         Header,
         Footer
@@ -440,5 +487,321 @@ export default {
         flex-direction: column;
         margin: 25px auto;
     }
+
+    .main {
+        margin: auto;
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .searchByDistributionsHeader {
+        height: 35px;
+        background-color: rgb(0, 100, 255);
+        font-weight: bolder;
+        color: rgb(100, 200, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .postContent {
+        width: 100%;
+    }
+
+    .postContentHeader {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgb(150, 150, 150);
+        border-left: none;
+        height: 35px;
+    }
+
+    .post {
+        display: flex;
+    }
+
+    .postAuthor {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(150, 150, 150);
+        width: 15%;
+        box-sizing: border-box;
+        padding-left: 5px;
+    }
+
+    .authorName {
+        font-weight: bolder;
+        color: rgb(100, 100, 255);
+        cursor: pointer;
+    }
+
+    .authorName:hover {
+        text-decoration: underline;
+    }
+
+    .firstPost {
+        background-color: rgb(215, 215, 215);
+    }
+
+    .secondPost {
+        background-color: rgb(235, 235, 235);
+    }
+
+    .postAuthorFooter {
+        border-top: 1px solid rgb(150, 150, 150);
+    }
+
+    .postMessage {
+        border: 1px solid rgb(150, 150, 150);
+        height: calc(100% - 35px);
+        border-left: none;
+        border-top: none;
+    }
+
+    .postContentHeader, .postMessage {
+        box-sizing: border-box;
+        padding: 0px 15px;
+    }
+
+    .authorMeta {
+        font-size: 12px;
+    }
+
+    .postQuote, .postDate {
+        color: rgb(100, 100, 255);
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .authorCountry {
+        width: 25px;
+    }
+
+    .secondPost > .postAuthor, .secondPost > .postContent > .postContentHeader {
+        border-top: none;
+    }
+
+    .distributtion {
+        display: flex;
+        width: 100%;
+        background-color: rgb(240, 240, 240);
+    }
+
+    .distributtionAuthor {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(150, 150, 150);
+        width: 15%;
+        box-sizing: border-box;
+        padding-left: 5px;
+        border-bottom: none;
+    }
+
+    .distributionHeader {
+        font-weight: bolder;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .distributionContent {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .distributionContentAside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .distributionContentPicture {
+        width: 350px;
+        height: 350px;
+    }
+
+    .lastThanksgivers {
+        font-weight: bolder;
+        font-size: 12px;
+    }
+
+    .toggleList {
+        border: 1px solid rgb(215, 215, 215);
+        background-color: rgb(235, 235, 235);
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 15px auto;
+        height: 20px;
+    }
+
+    .toggleListBtn {
+        margin: 5px 20px;
+        border: 1px solid rgb(150, 150, 150);
+        max-width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+    }
+
+    .thanksBtn {
+        font-weight: bolder;
+        border: 1px solid rgb(150, 150, 150);
+        width: 175px;
+        align-self: center;
+    }
+
+    .thanksBtnContainer {
+        display: flex;
+        justify-content: center;        
+    }
+
+    .distributtionDownloadMeta {
+        background-color: rgb(215, 215, 255);
+        height: 30px;
+        color: rgb(125, 125, 255);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(185, 185, 185);
+    }
+
+    .distributtionDownload {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin: 15px auto;
+        text-align: center;
+    }
+    
+    .distributtionDownloadMetaHeader {
+        border-bottom: none;
+    }
+
+    .distributtionDownloadMetaFooter {
+        font-weight: bolder;
+        border-top: none;
+    }
+
+    .distributtionDownloadTable > tr > td {
+        border: 1px solid rgb(185, 185, 185);
+    }
+
+    .downloadCell {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .downloadCell > * {
+        align-self: center;
+    }
+
+    .downloadTorrent {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .downloadTorrent > span {
+        color: rgb(0, 100, 255);
+        font-weight: bolder;
+    }
+
+    .downloadTorrent:hover, .downloadTorrent > span:hover {
+        color: rgb(200, 100, 0) !important;
+    }
+
+    .downloadTorrent > * {
+        align-self: center;
+    }
+
+    .distributionContentAsideHeader {
+        font-weight: bolder;
+    }
+
+    .socialsMedia {
+        display: flex;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding-right: 15px;
+    }
+
+    .ads {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(180, 180, 180);
+        width: 100%;
+        height: 115px;
+        background-color: rgb(220, 220, 220);
+        border-bottom: none;
+    }
+
+    .selectForum {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .distributtionActions > span {
+        color: rgb(50, 50, 255);
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    .listOfFiles {
+        margin: 20px auto;
+        width: 85%;
+    }
+
+    .listOfFilesHeader {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0px 15px;
+    }
+
+    .listOfFilesHeader > div > span {
+        color: rgb(50, 50, 255);
+        margin: 0px 5px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .listOfFilesHeader > div > span:hover {
+        color: rgb(200, 75, 0);
+    }
+
+    .files {
+        height: 250px;
+        border: 1px solid rgb(225, 225, 225);
+        background-color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .file {
+        display: flex;
+        align-items: center;
+    }
+
+    .fileName {
+        font-weight: bolder;
+        margin: 0px 5px;
+    }
+
+    .fileSize {
+        font-weight: bolder;
+        color: rgb(215, 0, 0);
+        margin: 0px 5px;
+    }
+
+    .folder {
+        color: rgb(200, 200, 255);
+    }
+
 
 </style>

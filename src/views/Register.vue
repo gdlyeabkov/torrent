@@ -88,7 +88,11 @@
                             <input v-model="code" type="text" class="form-control w-25">
                         </div>
                         <div class="whereField">
-                            <input v-model="where" type="text" class="form-control w-25">
+                            <select v-model="where">
+                                <option value="Россия">Россия</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Беларусь">Беларусь</option>
+                            </select>
                             <div class="passwordInputRow">
                                 <span>
                                     Россия
@@ -103,7 +107,7 @@
                         </div>
                         <div class="gmtField">
                             <select v-model="gmt">
-                                <option value="secret" selected>GMT-12</option>
+                                <option value="gmt-12">GMT-12</option>
                                 <option value="gmt-11">GMT-11</option>
                                 <option value="gmt-10">GMT-10</option>
                                 <option value="gmt-9">GMT-9</option>
@@ -139,7 +143,7 @@
                         </div>
                         <div class="genderField">
                             <select v-model="gender">
-                                <option value="secret" selected>Засекречен</option>
+                                <option value="secret">Засекречен</option>
                                 <option value="male">Мужской</option>
                                 <option value="female">Женский</option>
                             </select>
@@ -243,7 +247,7 @@
                 </textarea>
             </div>
             <div class="agreeBtnContainer">
-                <button @click="$router.push({ name: 'Home' })" class="btn btn-light agreeBtn">
+                <button @click="createTorrenter()" class="btn btn-light agreeBtn">
                     Я согласен с условиями
                 </button>
             </div>
@@ -256,8 +260,62 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
+import * as jwt from 'jsonwebtoken'
+
 export default {
     name: 'Register',
+    data(){
+        return {
+            name: '',
+            password: '',
+            email: '',
+            where: 'Россия',
+            gmt: 'gmt+3',
+            gender: 'secret',
+            code: '',
+            token: ''
+        }
+    },
+    methods: {
+        createTorrenter(){
+            fetch(`http://localhost:4000/api/torrenters/create/?torrentername=${this.name}&torrenterpassword=${this.password}&torrenteremail=${this.email}&torrentergender=${this.gender}&torrentergmt=${this.gmt}&torrenterwhere=${this.where}`, {
+              mode: 'cors',
+              method: 'GET'
+            }).then(response => response.body).then(rb  => {
+            const reader = rb.getReader()
+            return new ReadableStream({
+              start(controller) {
+                function push() {
+                  reader.read().then( ({done, value}) => {
+                    if (done) {
+                      console.log('done', done);
+                      controller.close();
+                      return;
+                    }
+                    controller.enqueue(value);
+                    console.log(done, value);
+                    push();
+                  })
+                }
+                push();
+              }
+            });
+        }).then(stream => {
+            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+          })
+          .then(result => {
+                if(JSON.parse(result).status.includes('OK')){
+                //     this.token = jwt.sign({
+                //         torrenter: this.name
+                //     }, 'torentiosecret', { expiresIn: '5m' })
+                //     localStorage.setItem('torrentiotoken', this.token)
+                    this.$router.push({ name: 'Home' } )
+                } else if(JSON.parse(result).status.includes('Error')){
+                    alert('Не удаётся создать пользователя')
+                }
+            });
+        }
+    },
     components: {
         Header,
         Footer

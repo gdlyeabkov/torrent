@@ -38,6 +38,17 @@ mongoose.connect(url, connectionParams)
         console.error(`Error connecting to the database. \n${err}`);
     })
 
+    const TorrenterSchema = new mongoose.Schema({
+        name: String,
+        password: String,
+        email: String,
+        where: Number,
+        gender: String,
+        gmt: String
+    }, { collection : 'mytorenters' });
+    
+    const TorrenterModel = mongoose.model('TorrenterModel', TorrenterSchema);
+
 const DistributionSchema = new mongoose.Schema({
     name: String,
     forum: String,
@@ -61,42 +72,47 @@ const DistributionSchema = new mongoose.Schema({
 
 const DistributionModel = mongoose.model('DistributionModel', DistributionSchema);
 
-app.post('/api/users/create', async (req, res) => {
+app.get('/api/torrenters/create', async (req, res) => {
     
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
     
-    let query = UsersModel.find({  })
-    query.exec((err, allUsers) => {
+    console.log(`req.query.torrentername: ${req.query.torrentername}, req.query.torrenterpassword: ${req.query.torrenterpassword}, req.query.torrenteremail: ${req.query.torrenteremail}, req.query.torrentergmt: ${req.query.torrentergmt}, req.query.torrenterwhere: ${req.query.torrenterwhere}, req.query.torrentergender: ${req.query.torrentergender}`)
+    let query = TorrenterModel.find()
+    query.exec((err, allTorrenters) => {
         if (err){
+            console.log('ошибка 1')
             return res.json({ "status": "Error" })
-        }
-        
-        let userExists = false;
+        }      
+        let torrenterExists = false
 
-        allUsers.forEach(user => {
-            if(user.email.includes(req.query.useremail)){
-                userExists = true
-            }
-        })
-        if(userExists){
+        if(allTorrenters.length >= 1) {
+            allTorrenters.forEach(torrenter => {
+                if(torrenter.email.includes(req.query.torrenteremail)){
+                    torrenterExists = true
+                }
+            })
+        }
+        if(torrenterExists){
             return res.json({ status: "Error" })
         } else {
             let encodedPassword = "#"
             const salt = bcrypt.genSalt(saltRounds)
-            encodedPassword = bcrypt.hashSync(req.query.userpassword, saltRounds)
-            const user = new UsersModel({ email: req.query.useremail, password: encodedPassword, name: req.query.username, age: Number(req.query.userage) });
-            user.save(function (err) {
+            encodedPassword = bcrypt.hashSync(req.query.torrenterpassword, saltRounds)
+            // let newTorrenter = new TorrenterModel({ name: req.query.torrentername, email: req.query.torrenteremail, password: encodedPassword, where: req.query.torrenterwhere, gmt: req.query.torrentergmt, gender: req.query.torrentergender })
+            const newTorrenter = new TorrenterModel({ name: 'req.query.torrentername', email: 'req.query.torrenteremail', password: encodedPassword, where: 'req.query.torrenterwhere', gmt: 'req.query.torrentergmt', gender: 'req.query.torrentergender' })
+            newTorrenter.save(function (err) {
                 if(err){
+                    console.log('ошибка 2')
                     return res.json({ "status": "Error" })
                 } else {
                     return res.json({ "status": "OK" })
                 }
             })
         }
-    });
+    })
 })
 
 

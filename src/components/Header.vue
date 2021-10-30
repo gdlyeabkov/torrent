@@ -2,7 +2,7 @@
     <div>
         <div class="top">
             <div class="links">
-                <span>
+                <span @click="$router.push({ name: 'Home' })">
                     Главная
                 </span>
                 <span>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="middle">
-            <div class="logo">
+            <div class="logo" @click="$router.push({ name: 'Home' })">
 
             </div>
             <div class="videoAds">

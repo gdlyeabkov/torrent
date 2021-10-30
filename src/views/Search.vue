@@ -53,6 +53,58 @@
                 Поиск
             </button>
         </div>
+        <div class="distributtionsList">
+            <div class="distributtionsId">
+                <span>
+                    
+                </span>
+            </div>
+            <div class="distributtionsCheck">
+                <span>
+                    
+                </span>
+            </div>
+            <div class="distributtionsForum">
+                <span>
+                    Форум
+                </span>
+            </div>
+            <div class="distributtionsTopic">
+                <span>
+                    Тема
+                </span>
+            </div>
+            <div class="distributtionsAuthour">
+                <span>
+                    Автор
+                </span>
+            </div>
+            <div class="distributtionsSize">
+                <span>
+                    Размер
+                </span>
+            </div>
+            <div class="distributtionsSeeds">
+                <span>
+                    S
+                </span>
+            </div>
+            <div class="distributtionsLeaches">
+                <span>
+                    L
+                </span>
+            </div>
+            <div class="distributtionsDownloads">
+                <span>
+                    C
+                </span>
+            </div>
+            <div class="distributtionsAdd">
+                <span>
+                    Добавлен
+                </span>
+            </div>
+        </div>
     </div>
     <Footer />
     </div>
@@ -132,6 +184,71 @@ export default {
 
     .goToSection {
         overflow-y: scroll;
+    }
+
+    .distributtionsId {
+        display: flex;
+        flex-direction: column;
+        width: 5%;
+    }
+    
+    .distributtionsCheck {
+        display: flex;
+        flex-direction: column;
+        width: 5%;
+    }
+
+    .distributtionsForum {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+    }
+
+    .distributtionsTopic {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+
+    .distributtionsAuthor {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+    }
+
+    .distributtionsSize {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+    }
+
+    .distributtionsSeeds {
+        display: flex;
+        flex-direction: column;
+        width: 5%;
+    }
+
+    .distributtionsLeaches {
+        display: flex;
+        flex-direction: column;
+        width: 5%;
+    }
+
+    .distributtionsDownloads {
+        display: flex;
+        flex-direction: column;
+        width: 5%;
+    }
+
+    .distributtionsAdd {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+    }
+
+    .distributtionsList {
+        width: 100%;
+        display: flex;
     }
 
 </style>
