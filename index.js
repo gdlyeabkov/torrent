@@ -61,6 +61,45 @@ const DistributionSchema = new mongoose.Schema({
 
 const DistributionModel = mongoose.model('DistributionModel', DistributionSchema);
 
+app.post('/api/users/create', async (req, res) => {
+    
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    
+    let query = UsersModel.find({  })
+    query.exec((err, allUsers) => {
+        if (err){
+            return res.json({ "status": "Error" })
+        }
+        
+        let userExists = false;
+
+        allUsers.forEach(user => {
+            if(user.email.includes(req.query.useremail)){
+                userExists = true
+            }
+        })
+        if(userExists){
+            return res.json({ status: "Error" })
+        } else {
+            let encodedPassword = "#"
+            const salt = bcrypt.genSalt(saltRounds)
+            encodedPassword = bcrypt.hashSync(req.query.userpassword, saltRounds)
+            const user = new UsersModel({ email: req.query.useremail, password: encodedPassword, name: req.query.username, age: Number(req.query.userage) });
+            user.save(function (err) {
+                if(err){
+                    return res.json({ "status": "Error" })
+                } else {
+                    return res.json({ "status": "OK" })
+                }
+            })
+        }
+    });
+})
+
+
 app.get('/api/distributions/get',(req, res)=>{
     
     res.setHeader('Access-Control-Allow-Origin', '*');
