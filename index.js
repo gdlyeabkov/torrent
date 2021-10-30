@@ -44,8 +44,9 @@ mongoose.connect(url, connectionParams)
         email: String,
         where: Number,
         gender: String,
-        gmt: String
-    }, { collection : 'mytorenters' });
+        gmt: String,
+        distributtions: [mongoose.Schema.Types.Map]
+    }, { collection : 'mytorrenters' })
     
     const TorrenterModel = mongoose.model('TorrenterModel', TorrenterSchema);
 
@@ -90,7 +91,7 @@ app.get('/api/torrenters/create', async (req, res) => {
 
         if(allTorrenters.length >= 1) {
             allTorrenters.forEach(torrenter => {
-                if(torrenter.email.includes(req.query.torrenteremail)){
+                if(torrentername.email.includes(req.query.torrentername)){
                     torrenterExists = true
                 }
             })
@@ -101,8 +102,8 @@ app.get('/api/torrenters/create', async (req, res) => {
             let encodedPassword = "#"
             const salt = bcrypt.genSalt(saltRounds)
             encodedPassword = bcrypt.hashSync(req.query.torrenterpassword, saltRounds)
-            // let newTorrenter = new TorrenterModel({ name: req.query.torrentername, email: req.query.torrenteremail, password: encodedPassword, where: req.query.torrenterwhere, gmt: req.query.torrentergmt, gender: req.query.torrentergender })
-            const newTorrenter = new TorrenterModel({ name: 'req.query.torrentername', email: 'req.query.torrenteremail', password: encodedPassword, where: 'req.query.torrenterwhere', gmt: 'req.query.torrentergmt', gender: 'req.query.torrentergender' })
+            const newTorrenter = new TorrenterModel({ name: req.query.torrentername, email: req.query.torrenteremail, password: encodedPassword, where: req.query.torrenterwhere, gmt: req.query.torrentergmt, gender: req.query.torrentergender })
+            // const newTorrenter = new TorrenterModel({ name: 'req.query.torrentername', email: 'req.query.torrenteremail', password: encodedPassword, where: 'req.query.torrenterwhere', gmt: 'req.query.torrentergmt', gender: 'req.query.torrentergender' })
             newTorrenter.save(function (err) {
                 if(err){
                     console.log('ошибка 2')

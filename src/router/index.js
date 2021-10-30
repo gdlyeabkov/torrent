@@ -97,7 +97,7 @@ const routes = [
     component: Concurs
   },
   {
-    path: '/distributtions',
+    path: '/distributions',
     name: 'Distributtions',
     component: Distributtions
   },
