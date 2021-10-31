@@ -39,12 +39,30 @@ mongoose.connect(url, connectionParams)
     })
 
     const TorrenterSchema = new mongoose.Schema({
-        name: String,
-        password: String,
-        email: String,
-        where: Number,
-        gender: String,
-        gmt: String,
+        name: {
+            type: String,
+            default: 'admin'
+        },
+        password: {
+            type: String,
+            default: 'hash'
+        },
+        email: {
+            type: String,
+            default: 'admin@gmail.com'
+        },
+        where: {
+            type: String,
+            default: 'Россия'
+        },
+        gender: {
+            type: String,
+            default: 'male'
+        },
+        gmt: {
+            type: String,
+            default: 'gmt+3'
+        },
         distributtions: [mongoose.Schema.Types.Map]
     }, { collection : 'mytorrenters' })
     
@@ -80,8 +98,7 @@ app.get('/api/torrenters/create', async (req, res) => {
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
     
-    console.log(`req.query.torrentername: ${req.query.torrentername}, req.query.torrenterpassword: ${req.query.torrenterpassword}, req.query.torrenteremail: ${req.query.torrenteremail}, req.query.torrentergmt: ${req.query.torrentergmt}, req.query.torrenterwhere: ${req.query.torrenterwhere}, req.query.torrentergender: ${req.query.torrentergender}`)
-    let query = TorrenterModel.find()
+    let query = TorrenterModel.find({  })
     query.exec((err, allTorrenters) => {
         if (err){
             console.log('ошибка 1')
@@ -91,7 +108,7 @@ app.get('/api/torrenters/create', async (req, res) => {
 
         if(allTorrenters.length >= 1) {
             allTorrenters.forEach(torrenter => {
-                if(torrentername.email.includes(req.query.torrentername)){
+                if(torrenter.name.includes(req.query.torrentername)){
                     torrenterExists = true
                 }
             })
@@ -103,7 +120,7 @@ app.get('/api/torrenters/create', async (req, res) => {
             const salt = bcrypt.genSalt(saltRounds)
             encodedPassword = bcrypt.hashSync(req.query.torrenterpassword, saltRounds)
             const newTorrenter = new TorrenterModel({ name: req.query.torrentername, email: req.query.torrenteremail, password: encodedPassword, where: req.query.torrenterwhere, gmt: req.query.torrentergmt, gender: req.query.torrentergender })
-            // const newTorrenter = new TorrenterModel({ name: 'req.query.torrentername', email: 'req.query.torrenteremail', password: encodedPassword, where: 'req.query.torrenterwhere', gmt: 'req.query.torrentergmt', gender: 'req.query.torrentergender' })
+            // const newTorrenter = new TorrenterModel({ name: 'req.query.torrentername', password: 'encodedPassword', email: 'req.query.torrenteremail', where: 'req.query.torrenterwhere', gender: 'req.query.torrentergender', gmt: 'req.query.torrentergmt' })
             newTorrenter.save(function (err) {
                 if(err){
                     console.log('ошибка 2')
@@ -115,7 +132,6 @@ app.get('/api/torrenters/create', async (req, res) => {
         }
     })
 })
-
 
 app.get('/api/distributions/get',(req, res)=>{
     
@@ -133,6 +149,37 @@ app.get('/api/distributions/get',(req, res)=>{
     })
 
 })
+
+app.get('/api/torrenters/check', (req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    
+    let queryBefore = TorrenterModel.find({ name: { $in: req.query.torrentername }  })
+    queryBefore.exec((err, allTorrenters) => {
+        if(err){
+            return res.json({ "status": "Error" })
+        }
+        if(allTorrenters.length >= 1){
+            let query =  TorrenterModel.findOne({'name': req.query.torrentername}, function(err, torrenter){
+                if (err){
+                    return res.json({ "auth": "false" })
+                } else {
+                    const passwordCheck = bcrypt.compareSync(req.query.torrenterpassword, torrenter.password) && req.query.torrenterpassword !== ''
+                    if(torrenter != null && torrenter != undefined && passwordCheck){
+                        return res.json({ "status": "OK" })
+                    } else {
+                        return res.json({ "status": "Error" })
+                    }
+                }
+            })    
+        } else if(allTorrenters.length <= 0){
+            return res.json({ "status": "Error" })
+        }
+    })
+})
+
 
 app.get('**', (req, res) => { 
     res.setHeader('Access-Control-Allow-Origin', '*');

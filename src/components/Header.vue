@@ -56,8 +56,8 @@
                 <div class="bottomItemCenter">
                     <input v-if="!loginToggler" type="text" class="form-control h-75">
                     <div v-else class="authRow">
-                        <input placeholder="имя" type="text" class="form-control h-75">
-                        <input placeholder="пароль" type="password" class="form-control h-75">
+                        <input v-model="name" placeholder="имя" type="text" class="form-control h-75">
+                        <input v-model="password" placeholder="пароль" type="password" class="form-control h-75">
                     </div>
                     <select v-if="isLogin" class="form-select h-75 w-25" aria-label="Default select example">
                         <option selected>раздачи</option>
@@ -70,7 +70,7 @@
                     <button v-if="!loginToggler" class="btn btn-light h-75">
                         Поиск
                     </button>
-                    <button v-else class="btn btn-light h-75">
+                    <button @click="login()" v-else class="btn btn-light h-75">
                         Вход
                     </button>
                 </div>
@@ -117,13 +117,42 @@ export default {
     name: 'Header',
     data(){
         return {
-            loginToggler: false
+            loginToggler: false,
+            name: '',
+            password: ''
         }
     },
     props: {
         isLogin: {
             type: Boolean,
             default: false
+        }
+    },
+    methods: {
+        login() {
+            fetch(`http://localhost:4000/api/torrenters/check/?torrentername=${this.name}&torrenterpassword=${this.password}`, {
+              mode: 'cors',
+              method: 'GET'
+            }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                start(controller) {
+                    function push() {
+                    reader.read().then( ({done, value}) => {
+                        if (done) {
+                        console.log('done', done);
+                        controller.close();
+                        return;
+                        }
+                        controller.enqueue(value);
+                        console.log(done, value);
+                        push();
+                    })
+                    }
+                    push();
+                }
+                });
+            })
         }
     }
 }
