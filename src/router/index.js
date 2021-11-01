@@ -24,6 +24,11 @@ import ForPress from '../views/ForPress.vue'
 import ConditionUsability from '../views/ConditionUsability.vue'
 import AgreementDistributtion from '../views/AgreementDistributtion.vue'
 import Settings from '../views/Settings.vue'
+import FutureDownloads from '../views/FutureDownloads.vue'
+import Favorite from '../views/Favorite.vue'
+import StartThemes from '../views/StartThemes.vue'
+import Responses from '../views/Responses.vue'
+import StartNewTheme from '../views/StartNewTheme.vue'
 
 Vue.use(VueRouter)
 
@@ -143,6 +148,32 @@ const routes = [
     name: 'Settings',
     component: Settings
   },
+  {
+    path: '/favorite',
+    name: 'Favorite',
+    component: Favorite
+  },
+  {
+    path: '/future',
+    name: 'FutureDownloads',
+    component: FutureDownloads
+  },
+  {
+    path: '/responses',
+    name: 'Responses',
+    component: Responses
+  },
+  {
+    path: '/themes',
+    name: 'StartThemes',
+    component: StartThemes
+  },
+  {
+    path: '/theme/new',
+    name: 'StartNewTheme',
+    component: StartNewTheme
+  },
+  
   
   
 ]

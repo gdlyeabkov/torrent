@@ -80,28 +80,28 @@ mongoose.connect(url, connectionParams)
             default: ''
         },
         disableGetAndSendPM: {
-            type: Boolean,
-            default: false
+            type: String,
+            default: 'no'
         },
         enableShowOfActiveDistributtions: {
-            type: Boolean,
-            default: false
+            type: String,
+            default: 'no'
         },
         hideListOfActiveDistributtions: {
-            type: Boolean,
-            default: false
+            type: String,
+            default: 'no'
         },
         addRetreckerInTorrentFiles: {
-            type: Boolean,
-            default: true
+            type: String,
+            default: 'yes'
         },
         addNameOfThemeInNameDownloadedTorrentFile: {
-            type: Boolean,
-            default: true
+            type: String,
+            default: 'yes'
         },
         disableAnimationIcons: {
-            type: Boolean,
-            default: false
+            type: String,
+            default: 'no'
         },
         domainName: {
             type: String,

@@ -38,7 +38,7 @@
         <div class="bottom">
             <div class="bottomItem">
                 <div v-if="isLogin" class="bottomItemLeft">
-                    <span class="clickable material-icons">
+                    <span @click="logout()" class="clickable material-icons">
                         logout
                     </span>
                     <span class="clickable">
@@ -110,56 +110,56 @@
             </div>
         </div>
         <div v-if="pmDialog" @mouseleave="pmDialog = false" class="pmDialog">
-            <div>
+            <div @click="$router.push({ name: 'PM', query: { activetab: 'Входящие' } }); $emit('changeFolder', 'Входящие')">
                 <span>
                     Входящие
                 </span>
             </div>
-            <div>
+            <div @click="$router.push({ name: 'PM', query: { activetab: 'Исходящие' } }); $emit('changeFolder', 'Исходящие')">
                 <span>
                     Исходящие
                 </span>
             </div>
-            <div>
+            <div @click="$router.push({ name: 'PM', query: { activetab: 'Отправленные' } }); $emit('changeFolder', 'Отправленные')">
                 <span>
                     Отправленные
                 </span>
             </div>
-            <div>
+            <div @click="$router.push({ name: 'PM', query: { activetab: 'Сохранённые' } }); $emit('changeFolder', 'Сохранённые')">
                 <span>
                     Сохранённые
                 </span>
             </div>
         </div>
         <div v-if="profileDialog" @mouseleave="profileDialog = false" class="profileDialog">
-            <div @click="$router.push({ name: 'Settings' })">
+            <div @click="$router.push({ name: 'Settings' });">
                 <span>
                     Настройки
                 </span>
             </div>
-            <div>
+            <div @click="$router.push({ name: 'Future' })">
                 <span>
                     Будущие значки
                 </span>
             </div>
-            <div>
+            <div @click="$router.push({ name: 'Favorite' })">
                 <span>
                     Избранное
                 </span>
             </div>
         </div>
         <div v-if="messagesDialog" @mouseleave="messagesDialog = false" class="messagesDialog">
-            <div>
+            <div @click="$router.push({ name: 'Search' })">
                 <span>
                     Мои раздачи
                 </span>
             </div>
-            <div>
+            <div @click="$router.push({ name: 'StartThemes' })">
                 <span>
                     Начатые темы
                 </span>
             </div>
-            <div>
+            <div @click="$router.push({ name: 'Responses' })">
                 <span>
                     Ответы в начатых темах
                 </span>
@@ -182,7 +182,7 @@ export default {
             pmDialog: false,
             profileDialog: false,
             messagesDialog: false,
-            token: '',
+            token: window.localStorage.getItem("torrentiotoken")
         }
     },
     props: {
@@ -236,6 +236,15 @@ export default {
         })
     },
     methods: {
+        logout(){
+            this.token = jwt.sign({
+              torrenter: 'admin'
+            }, 'torrentiosecret', { expiresIn: 1 })
+            window.localStorage.setItem("torrentiotoken", this.token)
+            setTimeout(() => {
+                this.$router.push({ name: "Home" })
+            }, 1000)
+        },
         login() {
             fetch(`http://localhost:4000/api/torrenters/check/?torrentername=${this.name}&torrenterpassword=${this.password}`, {
               mode: 'cors',
@@ -415,6 +424,7 @@ export default {
         position: absolute;
         top: 200px;
         left: 900px;
+        z-index: 10;
     }
 
     .pmDialog > div {
@@ -440,6 +450,7 @@ export default {
         position: absolute;
         top: 200px;
         left: 1050px;
+        z-index: 15;
     }
 
     .profileDialog > div {
@@ -464,7 +475,8 @@ export default {
         border: 1px solid rgb(0, 0, 0);
         position: absolute;
         top: 200px;
-        left: 1150px;
+        left: 1200px;
+        z-index: 20;
     }
 
     .messagesDialog > div {

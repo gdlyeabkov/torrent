@@ -164,13 +164,13 @@
                             </div>
                         </div>
                         <div class="contactsField">
-                            <input v-model="code" type="text" class="form-control w-25">
+                            <input v-model="contacts" type="text" class="form-control w-25" />
                         </div>
                         <div class="hobbyField">
-                            <input v-model="code" type="text" class="form-control w-25">
+                            <input v-model="hobby" type="text" class="form-control w-25">
                         </div>
                         <div class="interestField">
-                            <input v-model="code" type="text" class="form-control w-25">
+                            <input v-model="interest" type="text" class="form-control w-25">
                         </div>
                         <div class="whereField">
                             <select v-model="where">
@@ -240,13 +240,13 @@
                         </div>
                         <div class="disableGetAndSendPMField">
                             <div>
-                                <input v-model="disableGetAndSendPMField" name="disableGetAndSendPMField" type="radio" />
+                                <input v-model="disableGetAndSendPMField" value="yes" name="disableGetAndSendPMField" type="radio" />
                                 <span>
                                     Да
                                 </span>
                             </div>
                             <div>
-                                <input v-model="disableGetAndSendPMField" name="disableGetAndSendPMField" type="radio" />
+                                <input v-model="disableGetAndSendPMField" value="no" name="disableGetAndSendPMField" type="radio" />
                                 <span>
                                     Нет
                                 </span>
@@ -254,13 +254,13 @@
                         </div>
                         <div class="enableShowOfActiveDistributtionsField">
                             <div>
-                                <input v-model="enableShowOfActiveDistributtionsField" name="enableShowOfActiveDistributtionsField" type="radio" />
+                                <input v-model="enableShowOfActiveDistributtionsField" value="yes" name="enableShowOfActiveDistributtionsField" type="radio" />
                                 <span>
                                     Да
                                 </span>
                             </div>
                             <div>
-                                <input v-model="enableShowOfActiveDistributtionsField" name="enableShowOfActiveDistributtionsField" type="radio" />
+                                <input v-model="enableShowOfActiveDistributtionsField" value="no" name="enableShowOfActiveDistributtionsField" type="radio" />
                                 <span>
                                     Нет
                                 </span>
@@ -268,13 +268,13 @@
                         </div>
                         <div class="hideListOfActiveDistributtionsField">
                             <div>
-                                <input v-model="hideListOfActiveDistributtionsField" name="hideListOfActiveDistributtionsField" type="radio" />
+                                <input v-model="hideListOfActiveDistributtionsField" value="yes" name="hideListOfActiveDistributtionsField" type="radio" />
                                 <span>
                                     Да
                                 </span>
                             </div>
                             <div>
-                                <input v-model="hideListOfActiveDistributtionsField" name="hideListOfActiveDistributtionsField" type="radio" />
+                                <input v-model="hideListOfActiveDistributtionsField" value="no" name="hideListOfActiveDistributtionsField" type="radio" />
                                 <span>
                                     Нет
                                 </span>
@@ -282,13 +282,13 @@
                         </div>
                         <div class="addRetreckerInTorrentFilesField">
                             <div>
-                                <input v-model="addRetreckerInTorrentFilesField" name="addRetreckerInTorrentFilesField" type="radio" />
+                                <input v-model="addRetreckerInTorrentFilesField" value="yes" name="addRetreckerInTorrentFilesField" type="radio" />
                                 <span>
                                     Да
                                 </span>
                             </div>
                             <div>
-                                <input v-model="addRetreckerInTorrentFilesField" name="addRetreckerInTorrentFilesField" type="radio" />
+                                <input v-model="addRetreckerInTorrentFilesField" value="no" name="addRetreckerInTorrentFilesField" type="radio" />
                                 <span>
                                     Нет
                                 </span>
@@ -296,13 +296,13 @@
                         </div>
                         <div class="addNameOfThemeInNameDownloadedTorrentFileField">
                             <div>
-                                <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
+                                <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" value="yes" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
                                 <span>
                                     Да
                                 </span>
                             </div>
                             <div>
-                                <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
+                                <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" value="no" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
                                 <span>
                                     Нет
                                 </span>
@@ -310,13 +310,13 @@
                         </div>
                         <div class="disableAnimationIconsField">
                             <div>
-                                <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" type="radio" />
+                                <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" value="yes" type="radio" />
                                 <span>
                                     Да
                                 </span>
                             </div>
                             <div>
-                                <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" type="radio" />
+                                <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" value="no" type="radio" />
                                 <span>
                                     Нет
                                 </span>
@@ -411,7 +411,29 @@ export default {
             })
             .then(result => {
                     if(JSON.parse(result).status.includes('OK')){
+                        
+                        console.log(`this.torrenter: ${this.torrenter}`)
                         this.torrenter = JSON.parse(result).torrenter
+
+                        this.password = this.torrenter.password
+                        this.newPassword = this.torrenter.password
+                        this.email = this.torrenter.email
+                        this.contacts = this.torrenter.contacts
+                        this.hobby = this.torrenter.hobby
+                        this.interest = this.torrenter.interest
+                        this.where = this.torrenter.where
+                        this.gmt = this.torrenter.gmt
+                        this.gender = this.torrenter.gender
+                        this.subscription = this.torrenter.subscription
+                        this.disableGetAndSendPMField = this.torrenter.disableGetAndSendPM
+                        this.enableShowOfActiveDistributtionsField = this.torrenter.enableShowOfActiveDistributtions
+                        this.hideListOfActiveDistributtionsField = this.torrenter.hideListOfActiveDistributtions
+                        this.addRetreckerInTorrentFilesField = this.torrenter.addRetreckerInTorrentFiles
+                        this.addNameOfThemeInNameDownloadedTorrentFileField = this.torrenter.addNameOfThemeInNameDownloadedTorrentFile
+                        this.disableAnimationIconsField = this.torrenter.disableAnimationIcons
+                        this.domainName = this.torrenter.domainName
+                        this.avatar = this.torrenter.avatar
+
                     } else if(JSON.parse(result).status.includes('Error')){
                         alert('Не удаётся получить торрентера')
                     }

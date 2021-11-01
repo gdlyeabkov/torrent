@@ -145,8 +145,88 @@
                 6.
             </h6>
             <p>
-                 Создав раздачу, у релизера есть 24 часа, чтобы начать раздавать, в противном случае раздача, даже правильно оформленная, будет закрыта.
+                Создав раздачу, у релизера есть 24 часа, чтобы начать раздавать, в противном случае раздача, даже правильно оформленная, будет закрыта.
             </p>
+            
+            <div class="inputData">
+                    <div class="inputLabels">
+                        <div class="themeField">
+                            <span>
+                                Тема раздачи:
+                            </span>
+                        </div>
+                        <div class="posterField">
+                            <span>
+                                Постер:
+                            </span>
+                        </div>
+                        <div class="resolutionField">
+                            <span>
+                                Разрешение
+                            </span>
+                        </div>
+                        <div class="countOfFilesField">
+                            <span>
+                                Количество файлов:
+                            </span>
+                        </div>
+                        <div class="formatField">
+                            <span>
+                                Формат:
+                            </span>
+                        </div>
+                        <div class="descriptionField">
+                            <span>
+                                Состав и описание раздачи:
+                            </span>
+                        </div>
+                        <div class="previewField">
+                            <span>
+                                Превью примеров:
+                            </span>
+                        </div>
+                    </div>
+                    <div class="inputFields">
+                        <div class="themeField">
+                            <input type="text" class="form-control w-25" v-model="theme">
+                        </div>
+                        <div class="posterField">
+                            <div>
+                                <div class="passwordInputRow">
+                                    <input type="text" class="form-control w-25" v-model="poster">
+                                    <span>
+                                        URL
+                                    </span>
+                                    <button>
+                                        Загрузить картинку
+                                    </button>
+                                </div>
+                                <span>
+                                    максимальный размер постера 400x400 pixels.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="resolutionField">
+                            <input type="text" class="form-control w-25" v-model="resolution">
+                        </div>
+                        <div class="countOfFilesField">
+                            <input type="text" class="form-control w-25" v-model="countOfFiles">
+                        </div>
+                        <div class="formatField">
+                            <input type="text" class="form-control w-25" v-model="format">
+                        </div>
+                        <div class="descriptionField">
+                            <textarea v-model="description" class="form-control"></textarea>
+                        </div>
+                        <div class="previewField">
+                            <textarea v-model="preview" class="form-control"></textarea>
+                            <button>
+                                Загрузить картинку
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             <div class="agreeBtnContainer">
                 <button @click="$router.push({ name: 'Register' })" class="btn btn-light agreeBtn">
                     Продолжить
@@ -163,6 +243,17 @@ import Footer from '@/components/Footer.vue'
 
 export default {
     name: 'Agreement',
+    data(){
+        return {
+            theme: '',
+            poster: '',
+            resolution: '',
+            countOfFiles: '',
+            format: '',
+            description: '',
+            preview: ''
+        }
+    },
     components: {
         Header,
         Footer
@@ -221,6 +312,78 @@ export default {
         justify-content: center;
         flex-direction: column;
         margin: 25px auto;
+    }
+
+    .themeField {
+        height: 50px;
+    }
+
+    .posterField {
+        height: 75px;
+    }
+
+    .countOfFilesField {
+        height: 50px;
+    }
+
+    .resolutionField {
+        height: 75px;
+    }
+
+    .previewField {
+        height: 150px;
+    }
+
+    .formatField {
+        height: 50px;
+    }
+
+    .descriptionField {
+        height: 150px;
+    }
+
+    .inputData {
+        display: flex;
+    }
+
+    .inputLabels {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .inputLabels > div, .inputFields > div {
+        border: 1px solid rgb(200, 200, 200);
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+    
+    .inputLabels > div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .inputFields {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .inputFields > div > input, .inputFields > div > div > input {
+        height: 25px;
+    }
+
+    .inputFields > div {
+        border-left: none;
+    }
+
+    .passwordInputRow {
+        display: flex;
+    }
+
+    .passwordInputRow > * {
+        margin: 0px 5px;
     }
 
 </style>

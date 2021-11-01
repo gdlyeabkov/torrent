@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header />
+        <Header @changeFolder="changeFolderHandler" />
         <div class="main">
             <div class="btns">
                 <div class="btnsGroup">
@@ -103,6 +103,14 @@ export default {
     data(){
         return {
             activeTab: 'Входящие'
+        }
+    },
+    mounted(){
+        this.activeTab = this.$route.query.activetab
+    },
+    methods: {
+        changeFolderHandler(folder){
+            this.activeTab = folder
         }
     },
     components: {
