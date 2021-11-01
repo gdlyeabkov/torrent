@@ -257,7 +257,8 @@ app.get('/api/torrenters/update', (req, res) => {
         if (err){
             return res.json({ "status": "Error" })
         } else {
-            let encodedPassword = "#"
+            if(bcrypt.compareSync(req.query.torrenterpassword, torrenter.password))
+            var encodedPassword = "#"
             let saltRounds = 10
             let salt = bcrypt.genSalt(saltRounds)
             encodedPassword = bcrypt.hashSync(req.query.torrenternewpassword, saltRounds)
@@ -278,7 +279,7 @@ app.get('/api/torrenters/update', (req, res) => {
                 addNameOfThemeInNameDownloadedTorrentFile: req.query.torrenteraddnameofthemeinnamedownloadedetorrentfile,
                 disableAnimationIcons: req.query.torrenterdisableanimationicons,
                 domainName: req.query.torrenterdomainname,
-                avatar: req.query.torrenteravatar,
+                avatar: req.query.torrenteravatar
             }, (err, torrenter) => {
                 if(err){
                     return res.json({ status: 'Error' })        

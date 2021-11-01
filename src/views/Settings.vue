@@ -132,9 +132,6 @@
                             <p>
                                 {{ torrenter.name }}
                             </p>
-                            <p>
-                                Пользователь с таким именем уже существует
-                            </p>
                         </div>
                         <div class="passwordField">
                             <div class="passwordInputRow">
@@ -379,12 +376,52 @@ export default {
             disableAnimationIconsField: false,
             domainName: '',
             avatar: '',
-            token: ''
+            token: window.localStorage.getItem('torrentiotoken')
         }
+    },
+    mounted(){
+        jwt.verify(this.token, 'torrentiosecret', (err, decoded) => {
+        if (err) {
+            this.$router.push({ name: 'Home' })
+        } else {
+            fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
+              mode: 'cors',
+              method: 'GET'
+            }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                    if(JSON.parse(result).status.includes('OK')){
+                        this.torrenter = JSON.parse(result).torrenter
+                    } else if(JSON.parse(result).status.includes('Error')){
+                        alert('Не удаётся получить торрентера')
+                    }
+                })
+            }
+        })
     },
     methods: {
         updateTorrenter(){
-            fetch(`http://localhost:4000/api/torrenters/update/?torrenterpassword=${this.password}&torrenteremail=${this.email}&torrentercontacts=${this.contacts}&torrenterhobby=${this.hobby}&torrenterinterest=${this.interest}&torrentergender=${this.gender}&torrentergmt=${this.gmt}&torrenterwhere=${this.where}&torrentersubscription=${this.subscription}&torrenterdisablegetandsendpm=${this.disableGetAndSendPMField}&torrenterenableshowofactivedistributtions=${this.enableShowOfActiveDistributtionsField}&torrenterhidelistofactivedistributtions=${this.hideListOfActiveDistributtionsField}&torrenteraddretreckerintorrentfiles=${this.addRetreckerInTorrentFilesField}&torrenteraddnameofthemeinnamedownloadedetorrentfile=${this.addNameOfThemeInNameDownloadedTorrentFileField}&torrenterdisableanimationicons=${this.disableAnimationIconsField}&torrenterdomainname=${this.domainName}&torrenteravatar=${this.avatar}`, {
+            fetch(`http://localhost:4000/api/torrenters/update/?torrentername=${this.torrenter.name}&torrenterpassword=${this.password}&torrenternewpassword=${this.newPassword}&torrenteremail=${this.email}&torrentercontacts=${this.contacts}&torrenterhobby=${this.hobby}&torrenterinterest=${this.interest}&torrentergender=${this.gender}&torrentergmt=${this.gmt}&torrenterwhere=${this.where}&torrentersubscription=${this.subscription}&torrenterdisablegetandsendpm=${this.disableGetAndSendPMField}&torrenterenableshowofactivedistributtions=${this.enableShowOfActiveDistributtionsField}&torrenterhidelistofactivedistributtions=${this.hideListOfActiveDistributtionsField}&torrenteraddretreckerintorrentfiles=${this.addRetreckerInTorrentFilesField}&torrenteraddnameofthemeinnamedownloadedetorrentfile=${this.addNameOfThemeInNameDownloadedTorrentFileField}&torrenterdisableanimationicons=${this.disableAnimationIconsField}&torrenterdomainname=${this.domainName}&torrenteravatar=${this.avatar}`, {
               mode: 'cors',
               method: 'GET'
             }).then(response => response.body).then(rb  => {

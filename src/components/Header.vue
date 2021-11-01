@@ -75,7 +75,7 @@
                     </button>
                 </div>
                 <div v-if="isLogin" class="bottomItemRight">
-                    <div>
+                    <div @mouseenter="pmDialog = true">
                         <span>
                             ЛС ✉
                         </span>
@@ -83,7 +83,7 @@
                             expand_more
                         </span>
                     </div>
-                    <div>
+                    <div @mouseenter="profileDialog = true">
                         <span>
                             Профиль
                         </span>
@@ -91,7 +91,7 @@
                             expand_more
                         </span>
                     </div>
-                    <div>
+                    <div @mouseenter="messagesDialog = true">
                         <span>
                             Мои сообщения
                         </span>
@@ -109,8 +109,30 @@
                 </div>
             </div>
         </div>
-        <div v-if="pmDialog" class="pmDialog">
+        <div v-if="pmDialog" @mouseleave="pmDialog = false" class="pmDialog">
             <div>
+                <span>
+                    Входящие
+                </span>
+            </div>
+            <div>
+                <span>
+                    Исходящие
+                </span>
+            </div>
+            <div>
+                <span>
+                    Отправленные
+                </span>
+            </div>
+            <div>
+                <span>
+                    Сохранённые
+                </span>
+            </div>
+        </div>
+        <div v-if="profileDialog" @mouseleave="profileDialog = false" class="profileDialog">
+            <div @click="$router.push({ name: 'Settings' })">
                 <span>
                     Настройки
                 </span>
@@ -126,37 +148,20 @@
                 </span>
             </div>
         </div>
-        <div v-if="profileDialog" class="profileDialog">
+        <div v-if="messagesDialog" @mouseleave="messagesDialog = false" class="messagesDialog">
             <div>
                 <span>
-                    Настройки
+                    Мои раздачи
                 </span>
             </div>
             <div>
                 <span>
-                    Будущие значки
+                    Начатые темы
                 </span>
             </div>
             <div>
                 <span>
-                    Избранное
-                </span>
-            </div>
-        </div>
-        <div v-if="messagesDialog" class="messagesDialog">
-            <div>
-                <span>
-                    Настройки
-                </span>
-            </div>
-            <div>
-                <span>
-                    Будущие значки
-                </span>
-            </div>
-            <div>
-                <span>
-                    Избранное
+                    Ответы в начатых темах
                 </span>
             </div>
         </div>
@@ -262,11 +267,11 @@ export default {
                     alert('вошёл')
                     this.isLogin = true
                     this.loginToggler = false
+                    this.torrenter = JSON.parse(result).torrenter
                     this.token = jwt.sign({
-                        torrenter: this.name
+                        torrenter: this.torrenter._id
                     }, 'torrentiosecret', { expiresIn: '5m' })
                     window.localStorage.setItem("torrentiotoken", this.token)
-                    this.torrenter = JSON.parse(result).torrenter
                 } else if(JSON.parse(result).status.includes('Error')){
                     alert('Не удаётся войти')
                 }
@@ -408,8 +413,8 @@ export default {
         flex-direction: column;
         border: 1px solid rgb(0, 0, 0);
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 200px;
+        left: 900px;
     }
 
     .pmDialog > div {
@@ -433,8 +438,8 @@ export default {
         flex-direction: column;
         border: 1px solid rgb(0, 0, 0);
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 200px;
+        left: 1050px;
     }
 
     .profileDialog > div {
@@ -458,8 +463,8 @@ export default {
         flex-direction: column;
         border: 1px solid rgb(0, 0, 0);
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 200px;
+        left: 1150px;
     }
 
     .messagesDialog > div {
