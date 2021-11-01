@@ -5,19 +5,19 @@
                 <span @click="$router.push({ name: 'Home' })">
                     Главная
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Home' })">
                     Трекер
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Search' })">
                     Поиск
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Home' })">
                     Группы
                 </span>
-                <span>
+                <span @click="$router.push({ name: 'Home' })">
                     FAQ
                 </span>
-                <span class="rules">
+                <span @click="$router.push({ name: 'Rules' })" class="rules">
                     Правила 
                 </span>
             </div>
@@ -42,7 +42,7 @@
                         logout
                     </span>
                     <span class="clickable">
-                        rodogleb
+                        {{ torrenter.name }}
                     </span>
                 </div>
                 <div v-else class="bottomItemLeft">
@@ -109,17 +109,75 @@
                 </div>
             </div>
         </div>
+        <div v-if="pmDialog" class="pmDialog">
+            <div>
+                <span>
+                    Настройки
+                </span>
+            </div>
+            <div>
+                <span>
+                    Будущие значки
+                </span>
+            </div>
+            <div>
+                <span>
+                    Избранное
+                </span>
+            </div>
+        </div>
+        <div v-if="profileDialog" class="profileDialog">
+            <div>
+                <span>
+                    Настройки
+                </span>
+            </div>
+            <div>
+                <span>
+                    Будущие значки
+                </span>
+            </div>
+            <div>
+                <span>
+                    Избранное
+                </span>
+            </div>
+        </div>
+        <div v-if="messagesDialog" class="messagesDialog">
+            <div>
+                <span>
+                    Настройки
+                </span>
+            </div>
+            <div>
+                <span>
+                    Будущие значки
+                </span>
+            </div>
+            <div>
+                <span>
+                    Избранное
+                </span>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+import * as jwt from 'jsonwebtoken'
+
 export default {
     name: 'Header',
     data(){
         return {
             loginToggler: false,
             name: '',
-            password: ''
+            password: '',
+            torrenter: {},
+            pmDialog: false,
+            profileDialog: false,
+            messagesDialog: false,
+            token: '',
         }
     },
     props: {
@@ -127,6 +185,50 @@ export default {
             type: Boolean,
             default: false
         }
+    },
+    mounted(){
+        jwt.verify(this.token, 'torrentiosecret', (err, decoded) => {
+        if (err) {
+            this.loginToggler = true
+            this.isLogin = false
+        } else {
+            fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
+              mode: 'cors',
+              method: 'GET'
+            }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                start(controller) {
+                    function push() {
+                        reader.read().then( ({done, value}) => {
+                            if (done) {
+                                console.log('done', done);
+                                controller.close();
+                                return;
+                            }
+                            controller.enqueue(value);
+                            console.log(done, value);
+                            push();
+                        })
+                    }
+                    push();
+                }
+            });
+        }).then(stream => {
+            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+          })
+          .then(result => {
+                if(JSON.parse(result).status.includes('OK')){
+                    alert('вошёл')
+                    this.isLogin = true
+                    this.loginToggler = false
+                    this.torrenter = JSON.parse(result).torrenter
+                } else if(JSON.parse(result).status.includes('Error')){
+                    alert('Не удаётся получить торрентера')
+                }
+            })
+        }
+        })
     },
     methods: {
         login() {
@@ -138,21 +240,37 @@ export default {
                 return new ReadableStream({
                 start(controller) {
                     function push() {
-                    reader.read().then( ({done, value}) => {
-                        if (done) {
-                        console.log('done', done);
-                        controller.close();
-                        return;
-                        }
-                        controller.enqueue(value);
-                        console.log(done, value);
-                        push();
-                    })
+                        reader.read().then( ({done, value}) => {
+                            if (done) {
+                                console.log('done', done);
+                                controller.close();
+                                return;
+                            }
+                            controller.enqueue(value);
+                            console.log(done, value);
+                            push();
+                        })
                     }
                     push();
                 }
-                });
-            })
+            });
+        }).then(stream => {
+            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+          })
+          .then(result => {
+                if(JSON.parse(result).status.includes('OK')){
+                    alert('вошёл')
+                    this.isLogin = true
+                    this.loginToggler = false
+                    this.token = jwt.sign({
+                        torrenter: this.name
+                    }, 'torrentiosecret', { expiresIn: '5m' })
+                    window.localStorage.setItem("torrentiotoken", this.token)
+                    this.torrenter = JSON.parse(result).torrenter
+                } else if(JSON.parse(result).status.includes('Error')){
+                    alert('Не удаётся войти')
+                }
+            });
         }
     }
 }
@@ -177,6 +295,7 @@ export default {
         font-weight: bolder;
         margin: 0px 5px;
         color: rgb(75, 75, 75);
+        cursor: pointer;
     }
 
     .links > span.rules {
@@ -196,6 +315,7 @@ export default {
     }
 
     .logo {
+        cursor: pointer;
         background-image: url('https://static.t-ru.org/logo/logo-3.svg');
         background-size: 100% 100%;
         width: 350px;
@@ -278,6 +398,81 @@ export default {
 
     .authRow > input {
         margin: 0px 15px;
+    }
+
+    .pmDialog {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(0, 0, 0);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .pmDialog > div {
+        margin: 2px;
+        background-color: rgb(185, 185, 255);
+        height: 50px;
+        color: rgb(0, 100, 255);
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profileDialog {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(0, 0, 0);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .profileDialog > div {
+        margin: 2px;
+        background-color: rgb(185, 185, 255);
+        height: 50px;
+        color: rgb(0, 100, 255);
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .messagesDialog {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(0, 0, 0);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .messagesDialog > div {
+        margin: 2px;
+        background-color: rgb(185, 185, 255);
+        height: 50px;
+        color: rgb(0, 100, 255);
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 </style>

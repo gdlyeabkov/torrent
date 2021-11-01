@@ -69,7 +69,7 @@ export default {
         }
     },
     mounted(){
-        this.randomDistributtionId = Math.floor(Math.random() * distributions.length)
+        this.randomDistributtionId = Math.floor(Math.random() * this.distributions.length)
     }
 }
 </script>

@@ -22,6 +22,8 @@ import ForRights from '../views/ForRights.vue'
 import ForProviders from '../views/ForProviders.vue'
 import ForPress from '../views/ForPress.vue'
 import ConditionUsability from '../views/ConditionUsability.vue'
+import AgreementDistributtion from '../views/AgreementDistributtion.vue'
+import Settings from '../views/Settings.vue'
 
 Vue.use(VueRouter)
 
@@ -131,7 +133,16 @@ const routes = [
     name: 'ForRights',
     component: ForRights
   },
-  
+  {
+    path: '/distributtions/agreement',
+    name: 'AgreementDistributtion',
+    component: AgreementDistributtion
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: Settings
+  },
   
   
 ]

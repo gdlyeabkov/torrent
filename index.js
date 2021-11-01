@@ -63,6 +63,54 @@ mongoose.connect(url, connectionParams)
             type: String,
             default: 'gmt+3'
         },
+        contacts: {
+            type: String,
+            default: ''
+        },
+        hobby: {
+            type: String,
+            default: ''
+        },
+        interest: {
+            type: String,
+            default: ''
+        },
+        subscription: {
+            type: String,
+            default: ''
+        },
+        disableGetAndSendPM: {
+            type: Boolean,
+            default: false
+        },
+        enableShowOfActiveDistributtions: {
+            type: Boolean,
+            default: false
+        },
+        hideListOfActiveDistributtions: {
+            type: Boolean,
+            default: false
+        },
+        addRetreckerInTorrentFiles: {
+            type: Boolean,
+            default: true
+        },
+        addNameOfThemeInNameDownloadedTorrentFile: {
+            type: Boolean,
+            default: true
+        },
+        disableAnimationIcons: {
+            type: Boolean,
+            default: false
+        },
+        domainName: {
+            type: String,
+            default: ""
+        },
+        avatar: {
+            type: Boolean,
+            default: false
+        },
         distributtions: [mongoose.Schema.Types.Map]
     }, { collection : 'mytorrenters' })
     
@@ -141,14 +189,32 @@ app.get('/api/distributions/get',(req, res)=>{
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
    
     let query = DistributionModel.findById(req.query.distributionid)
-    query.exec((err, Distribution) => {
+    query.exec((err, distribution) => {
         if (err){
-            return
+            return res.json({ status: 'Error' })
         }
         return res.json({ status: "OK" })
     })
 
 })
+
+app.get('/api/torrenters/get', (req, res) => {
+    
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+   
+    let query = TorrenterModel.findById(req.query.torrenterid)
+    query.exec((err, torrenter) => {
+        if (err){
+            return res.json({ status: 'Error' })
+        }
+        return res.json({ status: "OK", torrenter: torrenter })
+    })
+
+})
+
 
 app.get('/api/torrenters/check', (req,res)=>{
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -164,11 +230,11 @@ app.get('/api/torrenters/check', (req,res)=>{
         if(allTorrenters.length >= 1){
             let query =  TorrenterModel.findOne({'name': req.query.torrentername}, function(err, torrenter){
                 if (err){
-                    return res.json({ "auth": "false" })
+                    return res.json({ "status": "Error" })
                 } else {
                     const passwordCheck = bcrypt.compareSync(req.query.torrenterpassword, torrenter.password) && req.query.torrenterpassword !== ''
                     if(torrenter != null && torrenter != undefined && passwordCheck){
-                        return res.json({ "status": "OK" })
+                        return res.json({ "status": "OK", "torrenter": torrenter })
                     } else {
                         return res.json({ "status": "Error" })
                     }
@@ -180,6 +246,48 @@ app.get('/api/torrenters/check', (req,res)=>{
     })
 })
 
+app.get('/api/torrenters/update', (req, res) => {
+    
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    
+    let query =  TorrenterModel.findOne({ 'name': req.query.torrentername }, function(err, torrenter){
+        if (err){
+            return res.json({ "status": "Error" })
+        } else {
+            let encodedPassword = "#"
+            let saltRounds = 10
+            let salt = bcrypt.genSalt(saltRounds)
+            encodedPassword = bcrypt.hashSync(req.query.torrenternewpassword, saltRounds)
+            TorrenterModel.updateOne({ name: req.query.torrentername }, {
+                password: encodedPassword,
+                email: req.query.torrenteremail,
+                contacts: req.query.torrentercontacts,
+                hobby: req.query.torrenterhobby,
+                interest: req.query.torrenterinterest,
+                where: req.query.torrenterwhere,
+                gmt: req.query.torrentergmt,
+                gender: req.query.torrentergender,
+                subscription: req.query.torrentersubscription,
+                disableGetAndSendPM: req.query.torrenterdisablegetandsendpm,
+                enableShowOfActiveDistributtions: req.query.torrenterenableshowofactivedistributtions,
+                hideListOfActiveDistributtions: req.query.torrenterhidelistofactivedistributtions,
+                addRetreckerInTorrentFiles: req.query.torrenteraddretreckerintorrentfiles,
+                addNameOfThemeInNameDownloadedTorrentFile: req.query.torrenteraddnameofthemeinnamedownloadedetorrentfile,
+                disableAnimationIcons: req.query.torrenterdisableanimationicons,
+                domainName: req.query.torrenterdomainname,
+                avatar: req.query.torrenteravatar,
+            }, (err, torrenter) => {
+                if(err){
+                    return res.json({ status: 'Error' })        
+                }
+                return res.json({ status: 'OK' })
+            })
+        }
+    })
+})
 
 app.get('**', (req, res) => { 
     res.setHeader('Access-Control-Allow-Origin', '*');
