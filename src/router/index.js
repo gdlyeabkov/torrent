@@ -29,6 +29,7 @@ import Favorite from '../views/Favorite.vue'
 import StartThemes from '../views/StartThemes.vue'
 import Responses from '../views/Responses.vue'
 import StartNewTheme from '../views/StartNewTheme.vue'
+import DistributtionRegister from '../views/DistributtionRegister.vue'
 
 Vue.use(VueRouter)
 
@@ -173,8 +174,11 @@ const routes = [
     name: 'StartNewTheme',
     component: StartNewTheme
   },
-  
-  
+  {
+    path: '/distributtion/register',
+    name: 'DistributtionRegister',
+    component: DistributtionRegister  
+  },
   
 ]
 
