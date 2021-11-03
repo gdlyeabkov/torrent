@@ -30,6 +30,7 @@ import StartThemes from '../views/StartThemes.vue'
 import Responses from '../views/Responses.vue'
 import StartNewTheme from '../views/StartNewTheme.vue'
 import DistributtionRegister from '../views/DistributtionRegister.vue'
+import MyDistributtions from '../views/MyDistributtions.vue'
 
 Vue.use(VueRouter)
 
@@ -178,6 +179,11 @@ const routes = [
     path: '/distributtion/register',
     name: 'DistributtionRegister',
     component: DistributtionRegister  
+  },
+  {
+    path: '/my/distributtions',
+    name: 'MyDistributtions',
+    component: MyDistributtions
   },
   
 ]

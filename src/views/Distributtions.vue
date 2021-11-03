@@ -1224,7 +1224,6 @@ export default {
     
     .breadcrumbs {
         color: rgb(0, 0, 255);
-        
     }
 
     .tableHeader {

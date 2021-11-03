@@ -149,7 +149,7 @@
             </div>
         </div>
         <div v-if="messagesDialog" @mouseleave="messagesDialog = false" class="messagesDialog">
-            <div @click="$router.push({ name: 'Search' })">
+            <div @click="$router.push({ name: 'MyDistributtions' })">
                 <span>
                     Мои раздачи
                 </span>
@@ -175,6 +175,7 @@ export default {
     name: 'Header',
     data(){
         return {
+            isLogin: false,
             loginToggler: false,
             name: '',
             password: '',
@@ -185,54 +186,54 @@ export default {
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
-    props: {
-        isLogin: {
-            type: Boolean,
-            default: false
-        }
-    },
+    // props: {
+    //     isLogin: {
+    //         type: Boolean,
+    //         default: false
+    //     }
+    // },
     mounted(){
         jwt.verify(this.token, 'torrentiosecret', (err, decoded) => {
-        if (err) {
-            this.loginToggler = true
-            this.isLogin = false
-        } else {
-            fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
-              mode: 'cors',
-              method: 'GET'
-            }).then(response => response.body).then(rb  => {
-                const reader = rb.getReader()
-                return new ReadableStream({
-                start(controller) {
-                    function push() {
-                        reader.read().then( ({done, value}) => {
-                            if (done) {
-                                console.log('done', done);
-                                controller.close();
-                                return;
-                            }
-                            controller.enqueue(value);
-                            console.log(done, value);
-                            push();
-                        })
+            if (err) {
+                this.loginToggler = true
+                this.isLogin = false
+            } else {
+                fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
+                mode: 'cors',
+                method: 'GET'
+                }).then(response => response.body).then(rb  => {
+                    const reader = rb.getReader()
+                    return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
                     }
-                    push();
-                }
-            });
-        }).then(stream => {
-            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
-          })
-          .then(result => {
-                if(JSON.parse(result).status.includes('OK')){
-                    alert('вошёл')
-                    this.isLogin = true
-                    this.loginToggler = false
-                    this.torrenter = JSON.parse(result).torrenter
-                } else if(JSON.parse(result).status.includes('Error')){
-                    alert('Не удаётся получить торрентера')
-                }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
             })
-        }
+            .then(result => {
+                    if(JSON.parse(result).status.includes('OK')){
+                        alert('вошёл')
+                        this.isLogin = true
+                        this.loginToggler = false
+                        this.torrenter = JSON.parse(result).torrenter
+                    } else if(JSON.parse(result).status.includes('Error')){
+                        alert('Не удаётся получить торрентера')
+                    }
+                })
+            }
         })
     },
     methods: {

@@ -121,8 +121,14 @@ const DistributionSchema = new mongoose.Schema({
     forum: String,
     author: String,
     size: Number,
-    seeds: String,
-    leechs: String,
+    seeds: {
+        type: Number,
+        default: 0
+    },
+    leechs: {
+        type: Number,
+        default: 0
+    },
     markup: String,
     poster: String,
     resolution: String,
@@ -143,6 +149,7 @@ const DistributionSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    posts: [mongoose.Schema.Types.Map]
 }, { collection : 'mydistributions' });
 
 const DistributionModel = mongoose.model('DistributionModel', DistributionSchema);
@@ -214,13 +221,29 @@ app.get('/api/distributtions/create', async (req, res) => {
         if(distributtionExists){
             return res.json({ status: "Error" })
         } else {
-            const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtiontheme, author: req.query.torrentername, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countoffiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
-            newDistributtion.save(function (err) {
+            const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtiontheme, author: req.query.torrenterid, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countOfFiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
+            newDistributtion.save(function (err, distributtion) {
                 if(err){
                     console.log('ошибка 2')
                     return res.json({ "status": "Error" })
                 } else {
-                    return res.json({ "status": "OK" })
+                    TorrenterModel.updateOne({ _id: req.query.torrenterid },
+                        { $push: 
+                            {
+                                distributtions: [
+                                    {
+                                        id: distributtion._id
+                                    }
+                                ]
+                                
+                            }
+                    }, (err, torrenter) => {
+                        if(err){
+                            return res.json({ "status": "error" })
+                        } else {
+                            return res.json({ "status": "OK" })
+                        }
+                    })
                 }
             })
         }
@@ -239,7 +262,7 @@ app.get('/api/distributions/get',(req, res)=>{
         if (err){
             return res.json({ status: 'Error' })
         }
-        return res.json({ status: "OK" })
+        return res.json({ status: "OK", distribution: distribution })
     })
 
 })
@@ -256,7 +279,13 @@ app.get('/api/torrenters/get', (req, res) => {
         if (err){
             return res.json({ status: 'Error' })
         }
-        return res.json({ status: "OK", torrenter: torrenter })
+        let query = DistributionModel.find({ author: req.query.torrenterid })
+        query.exec((err, distributtions) => {
+            if (err){
+                return res.json({ status: 'Error' })
+            }
+            return res.json({ status: "OK", torrenter: torrenter, distributtions: distributtions })
+        })
     })
 
 })
@@ -334,6 +363,26 @@ app.get('/api/torrenters/update', (req, res) => {
             })
         }
     })
+})
+
+app.get('/api/distributtions/download', async (req, res) => {
+    
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    
+    console.log(`disstributtiontheme: ${req.query.distributtiontheme}`)
+    await res.download(path.join(__dirname, `uploads/${req.query.distributtiontheme}.torrent`), `${req.query.distributtiontheme}.torrent`, function (err) {
+        if (err) {
+            //error to download file
+            return res.json({ "status": "error to download file" })
+        } else {
+            //file success download
+            return res.json({ "status": "file success download" })
+        }
+    })
+
 })
 
 app.get('**', (req, res) => { 

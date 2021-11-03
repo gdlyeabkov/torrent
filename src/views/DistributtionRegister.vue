@@ -41,7 +41,9 @@
                         <p v-if="markup.split('\n')[line].match(/^\[size=(.*)$/)">
                             {{ markup.split('\n')[line].replace(/(\[size=(.{1,2})\])/, '').replace(/(\[\/size\])/, '') }}
                         </p>
-                        <img v-else-if="markup.split('\n')[line].match(/^\[img=.*$/)" :src="markup.split('\n')[line].replace(/(\[img=(.{4,5})\])/, '').replace(/\[\/img\]/, '')" :alt="markup.split('\n')[line].replace(/(\[img=.....\])/, '').replace(/\[\/img\]/, '')" width="250px" style="text-align: right;" />
+                        <div v-else-if="markup.split('\n')[line].match(/^\[img=.*$/)" :style="`display: flex; justify-content: ${markup.split('\n')[line].replace(/\[img=/, '').replace(/\].*\[\/img\]/, '').includes('right') ? 'flex-end;' : 'flex-start;'}`">
+                            <img :title="markup.split('\n')[line].replace(/\[img=/, '').replace(/\].*\[\/img\]/, '')" :src="markup.split('\n')[line].replace(/(\[img=(.{4,5})\])/, '').replace(/\[\/img\]/, '')" :alt="markup.split('\n')[line].replace(/(\[img=.....\])/, '').replace(/\[\/img\]/, '')" width="250px" />
+                        </div>
                         <div v-else-if="markup.split('\n')[line].match(/^\[b.*$/)">
                             <b>
                                 {{ markup.split('\n')[line].replace(/(\[b\])/, '').replace(/(\[\/b\].*)/, '') }}
@@ -374,7 +376,7 @@ export default {
     },
     methods: {
         createDistributtion(){
-            fetch(`http://localhost:4000/api/distributtions/create/?torrentername=${this.torrenter.name}&distributtiontheme=${this.theme}&distributtionmarkup=${this.markup}&distributtionposter=${this.poster}&distributtionresolution=${this.resolution}&distributtioncountoffiles=${this.countOfFiles}&distributtionformat=${this.format}&distributtiondescription=${this.description}&distributtionpreview=${this.preview}`, {
+            fetch(`http://localhost:4000/api/distributtions/create/?torrenterid=${this.torrenter._id}&distributtiontheme=${this.theme}&distributtionmarkup=${this.markup}&distributtionposter=${this.poster}&distributtionresolution=${this.resolution}&distributtioncountoffiles=${this.countOfFiles}&distributtionformat=${this.format}&distributtiondescription=${this.description}&distributtionpreview=${this.preview}`, {
               mode: 'cors',
               method: 'GET'
             }).then(response => response.body).then(rb  => {

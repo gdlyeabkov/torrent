@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <p class="distributionHeader">
-                        PSPaudioware - PSP Plugins Bundle 2021.9 VST, VST3, AAX x64
+                        {{ distributtion.theme }}
                     </p>
                     <div class="distributionContent">
                         <div class="distributionContentAside">
@@ -167,7 +167,7 @@
                                 </td>
                                 <td rowspan="4">
                                     <div class="downloadCell">
-                                        <div class="downloadTorrent">
+                                        <div @click="downloadDistributtion()" class="downloadTorrent">
                                             <img src="https://static.t-ru.org/templates/v1/images/attach_big.gif" alt="">
                                             <span class="">
                                                 Скачать .torrent
@@ -427,11 +427,96 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
+import * as jwt from 'jsonwebtoken'
+
 export default {
     name: 'Distribution',
     data(){
         return {
-            showListOfFiles: false
+            showListOfFiles: false,
+            torrenter: {},
+            distributtion: {},
+            token: window.localStorage.getItem("torrentiotoken")
+        }
+    },
+    mounted(){
+        jwt.verify(this.token, 'torrentiosecret', (err, decoded) => {
+            if (err) {
+                this.$router.push({ name: 'Home' })
+            } else {
+                fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
+                    mode: 'cors',
+                    method: 'GET'
+                }).then(response => response.body).then(rb  => {
+                    const reader = rb.getReader()
+                    return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                    if(JSON.parse(result).status.includes('OK')){
+                        this.torrenter = JSON.parse(result).torrenter
+
+                        fetch(`http://localhost:4000/api/distributions/get/?distributionid=${this.$route.query.distributtionid}`, {
+                            mode: 'cors',
+                            method: 'GET'
+                        }).then(response => response.body).then(rb  => {
+                            const reader = rb.getReader()
+                            return new ReadableStream({
+                                start(controller) {
+                                    function push() {
+                                        reader.read().then( ({done, value}) => {
+                                            if (done) {
+                                                console.log('done', done);
+                                                controller.close();
+                                                return;
+                                            }
+                                            controller.enqueue(value);
+                                            console.log(done, value);
+                                            push();
+                                        })
+                                    }
+                                    push();
+                                }
+                            });
+                        }).then(stream => {
+                            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+                        })
+                        .then(result => {
+                           if(JSON.parse(result).status.includes('OK')){
+                               console.log("получаем раздачу")
+                               this.distributtion = JSON.parse(result).distribution
+                           } else if(JSON.parse(result).status.includes('Error')){
+
+                           } 
+                        })
+
+                    } else if(JSON.parse(result).status.includes('Error')){
+                        
+                    }
+                })
+            }
+        })
+    },
+    methods: {
+        downloadDistributtion(){
+            window.location = `http://localhost:4000/api/distributtions/download/?distributtiontheme=${this.distributtion.theme}`
         }
     },
     components: {
