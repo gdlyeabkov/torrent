@@ -117,12 +117,20 @@ mongoose.connect(url, connectionParams)
     const TorrenterModel = mongoose.model('TorrenterModel', TorrenterSchema);
 
 const DistributionSchema = new mongoose.Schema({
-    name: String,
+    theme: String,
     forum: String,
     author: String,
     size: Number,
     seeds: String,
     leechs: String,
+    markup: String,
+    poster: String,
+    resolution: String,
+    poster: String,
+    countOfFiles: Number,
+    format: String,
+    description: String,
+    preview: String,
     added: {
         type: Date,
         default: Date.now
@@ -170,6 +178,44 @@ app.get('/api/torrenters/create', async (req, res) => {
             const newTorrenter = new TorrenterModel({ name: req.query.torrentername, email: req.query.torrenteremail, password: encodedPassword, where: req.query.torrenterwhere, gmt: req.query.torrentergmt, gender: req.query.torrentergender })
             // const newTorrenter = new TorrenterModel({ name: 'req.query.torrentername', password: 'encodedPassword', email: 'req.query.torrenteremail', where: 'req.query.torrenterwhere', gender: 'req.query.torrentergender', gmt: 'req.query.torrentergmt' })
             newTorrenter.save(function (err) {
+                if(err){
+                    console.log('ошибка 2')
+                    return res.json({ "status": "Error" })
+                } else {
+                    return res.json({ "status": "OK" })
+                }
+            })
+        }
+    })
+})
+
+app.get('/api/distributtions/create', async (req, res) => {
+    
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    
+    let query = DistributionModel.find({  })
+    query.exec((err, allDistributtions) => {
+        if (err){
+            console.log('ошибка 1')
+            return res.json({ "status": "Error" })
+        }      
+        let distributtionExists = false
+
+        if(allDistributtions.length >= 1) {
+            allDistributtions.forEach(distributtion => {
+                if(distributtion.theme.includes(req.query.distributtiontheme)){
+                    distributtionExists = true
+                }
+            })
+        }
+        if(distributtionExists){
+            return res.json({ status: "Error" })
+        } else {
+            const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtiontheme, author: req.query.torrentername, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countoffiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
+            newDistributtion.save(function (err) {
                 if(err){
                     console.log('ошибка 2')
                     return res.json({ "status": "Error" })

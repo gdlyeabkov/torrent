@@ -12,22 +12,22 @@
                     <div class="distributtionData">
                         <div class="distributtionInfo">
                             <span>
-                                фыв
+                                {{ theme }}
                             </span>
                             <span>
-                                picРазрешение: ячс
+                                picРазрешение: {{ resolution }}
                             </span>
                             <span>
-                                Количество файлов: 2
+                                Количество файлов: {{ countOfFiles }}
                             </span>
                             <span>
-                                Формат: йцу
+                                Формат: {{ format }}
                             </span>
                             <span>
-                                Состав и описание раздачи: мак
+                                Состав и описание раздачи: {{ description }}
                             </span>
                         </div>
-                        <img width="250px" class="distributtionPoster" src="https://cdn.admitad-connect.com/public/bs/2021/05/07/240%D1%85400_YD_img_F_Mbappe_Scr_3.e7d0.jpg" />
+                        <img width="250px" class="distributtionPoster" :src="poster" />
                     </div>
                     <div class="toggleList">
                         <button class="toggleListBtn">
@@ -36,6 +36,31 @@
                         <span class="lastThanksgivers">
                             Превью примеров
                         </span>
+                    </div>
+                    <div v-for="(rowMarkup, line) in markup.split('\n').length" :key="rowMarkup">
+                        <p v-if="markup.split('\n')[line].match(/^\[size=(.*)$/)">
+                            {{ markup.split('\n')[line].replace(/(\[size=(.{1,2})\])/, '').replace(/(\[\/size\])/, '') }}
+                        </p>
+                        <img v-else-if="markup.split('\n')[line].match(/^\[img=.*$/)" :src="markup.split('\n')[line].replace(/(\[img=(.{4,5})\])/, '').replace(/\[\/img\]/, '')" :alt="markup.split('\n')[line].replace(/(\[img=.....\])/, '').replace(/\[\/img\]/, '')" width="250px" style="text-align: right;" />
+                        <div v-else-if="markup.split('\n')[line].match(/^\[b.*$/)">
+                            <b>
+                                {{ markup.split('\n')[line].replace(/(\[b\])/, '').replace(/(\[\/b\].*)/, '') }}
+                            </b>
+                            <span>
+                                {{
+                                    markup.split('\n')[line].replace(/.*\[\/b\]/, '')
+                                }}
+                            </span>
+                        </div>
+
+                        <div v-else-if="markup.split('\n')[line].match(/^\[spoiler=.*$/)" class="toggleList">
+                            <button class="toggleListBtn">
+                                +
+                            </button>
+                            <span class="lastThanksgivers">
+                                {{ markup.split('\n')[line].replace(/\[spoiler=\"/, '').replace(/\"\].*\[\/.*\]/, '') }}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -228,7 +253,7 @@
                         </button>
                     </div>
                     <div class="distributtionMarkupContainer">
-                        <textarea v-model="markup" class="distributtionMarkup">
+                        <textarea @input="parseMarkup()" v-model="markup" ref="textareaMarkup" class="distributtionMarkup">
                             
                         </textarea>
                     </div>
@@ -262,7 +287,7 @@
                         <button>
                             Предв. просмотр
                         </button>
-                        <button>
+                        <button @click="createDistributtion()">
                             Отправить
                         </button>
                     </div>
@@ -277,6 +302,8 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
+import * as jwt from 'jsonwebtoken'
+
 export default {
     name: 'Favorite',
     data(){
@@ -288,10 +315,102 @@ export default {
             alignment: 'Выравнивание',
             img: 'Картинка',
             markup: `[size=24]фыв[/size]\n[img=right]https://cdn.admitad-connect.com/public/bs/2021/05/07/240%D1%85400_YD_img_F_Mbappe_Scr_3.e7d0.jpg[/img]\n[b]Разрешение[/b]: ячс\n[b]Количество файлов[/b]: 2\n[b]Формат[/b]: йцу\n[b]Состав и описание раздачи[/b]: мак\n[spoiler="Превью примеров"]йфя[/spoiler]"`,
-            uploadFile: true
+            uploadFile: true,
+            countOfFiles: 0,
+            resolution: '1024x768',
+            format: 'png',
+            description: '...',
+            poster: 'https://sobernation.com/wp-content/uploads/2011/10/Anonymity.jpg',
+            preview: 'https://sobernation.com/wp-content/uploads/2011/10/Anonymity.jpg',
+            torrenter: {},
+            token: localStorage.getItem('torrentiotoken')
         }
     },
+    mounted(){
+        jwt.verify(this.token, 'torrentiosecret', (err, decoded) => {
+            if (err) {
+                this.$router.push({ name: 'Home' })
+            } else {
+                fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
+                    mode: 'cors',
+                    method: 'GET'
+                }).then(response => response.body).then(rb  => {
+                    const reader = rb.getReader()
+                    return new ReadableStream({
+                        start(controller) {
+                            function push() {
+                                reader.read().then( ({done, value}) => {
+                                    if (done) {
+                                        console.log('done', done);
+                                        controller.close();
+                                        return;
+                                    }
+                                    controller.enqueue(value);
+                                    console.log(done, value);
+                                    push();
+                                })
+                            }
+                            push();
+                        }
+                    })
+                }).then(stream => {
+                    return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+                })
+                .then(result => {
+                    if(JSON.parse(result).status.includes('OK')){
+                        this.torrenter = JSON.parse(result).torrenter
+                        this.theme = this.$route.query.theme
+                        this.poster = this.$route.query.poster
+                        this.resolution = this.$route.query.resolution
+                        this.countOfFiles = this.$route.query.countoffiles
+                        this.format = this.$route.query.format
+                        this.description = this.$route.query.description
+                        this.preview = this.$route.query.preview
+                        this.markup = `[size=24]${this.theme}[/size]\n[img=right]${this.poster}[/img]\n[b]Разрешение[/b]: ${this.resolution}\n[b]Количество файлов[/b]: ${this.countOfFiles}\n[b]Формат[/b]: ${this.format}\n[b]Состав и описание раздачи[/b]: ${this.description}\n[spoiler="Превью примеров"]${this.preview}[/spoiler]`
+                    }
+                })
+            }
+        })
+    },
     methods: {
+        createDistributtion(){
+            fetch(`http://localhost:4000/api/distributtions/create/?torrentername=${this.torrenter.name}&distributtiontheme=${this.theme}&distributtionmarkup=${this.markup}&distributtionposter=${this.poster}&distributtionresolution=${this.resolution}&distributtioncountoffiles=${this.countOfFiles}&distributtionformat=${this.format}&distributtiondescription=${this.description}&distributtionpreview=${this.preview}`, {
+              mode: 'cors',
+              method: 'GET'
+            }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                })
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                if(JSON.parse(result).status.includes('OK')){
+                    this.$router.push({ name: 'Home' })
+                } else if(JSON.parse(result).status.includes('Error')){
+                    alert('Не удаётся создать раздачу')
+                }
+            })
+        },
+        parseMarkup(){
+            console.log('a')
+            console.log(`this.markup.split: ${this.markup.split('\n').length}`)
+        },
         openAuxSmiles(){
             window.open('https://rutracker.org/forum/posting.php?mode=smilies')
         }
