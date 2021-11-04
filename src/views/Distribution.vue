@@ -57,7 +57,7 @@
                             </span>
                         </div>
                     </div>
-                    <p class="distributionHeader">
+                    <!-- <p class="distributionHeader">
                         {{ distributtion.theme }}
                     </p>
                     <div class="distributionContent">
@@ -152,7 +152,28 @@
                         <span class="lastThanksgivers">
                             Скриншоты окна About
                         </span>
+                    </div> -->
+
+                    <div v-for="(rowMarkup, line) in distributtion.markup.split('\@').length" :key="rowMarkup">
+                        <p v-if="distributtion.markup.split('\@')[line].match(/^\[size=(.*)$/)" :style="`font-size: ${distributtion.markup.split('\@')[line].replace(/\[size=/, '').replace(/\].*\[\/size\]/, '')}px;`">
+                            {{ distributtion.markup.split('\@')[line].replace(/(\[size=(.{1,2})\])/, '').replace(/(\[\/size\])/, '') }}
+                        </p>
+                        <div v-else-if="distributtion.markup.split('\@')[line].match(/^\[img=.*$/)" :style="`display: flex; justify-content: ${distributtion.markup.split('\@')[line].replace(/\[img=/, '').replace(/\].*\[\/img\]/, '').includes('right') ? 'flex-end;' : 'flex-start;'}`">
+                            <img :title="distributtion.markup.split('\@')[line].replace(/\[img=/, '').replace(/\].*\[\/img\]/, '')" :src="distributtion.markup.split('\@')[line].replace(/(\[img=(.{4,5})\])/, '').replace(/\[\/img\]/, '')" :alt="distributtion.markup.split('\@')[line].replace(/(\[img=.....\])/, '').replace(/\[\/img\]/, '')" width="250px" />
+                        </div>
+                        <div v-else-if="distributtion.markup.split('\@')[line].match(/^\[b.*$/)">
+                            <b>
+                                {{ distributtion.markup.split('\@')[line].replace(/(\[b\])/, '').replace(/(\[\/b\].*)/, '') }}
+                            </b>
+                            <span>
+                                {{
+                                    distributtion.markup.split('\@')[line].replace(/.*\[\/b\]/, '')
+                                }}
+                            </span>
+                        </div>
+                        <Spoiler v-else-if="distributtion.markup.split('\@')[line].match(/^\[spoiler=.*$/)" :markup="distributtion.markup.split('\@')[line]" />
                     </div>
+
                     <div class="distributtionDownload">
                         <div class="distributtionDownloadMeta distributtionDownloadMetaHeader">
                             Как качать FAQ Покраснели раздачи?
@@ -426,6 +447,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Spoiler from '@/components/Spoiler.vue'
 
 import * as jwt from 'jsonwebtoken'
 
@@ -521,7 +543,8 @@ export default {
     },
     components: {
         Header,
-        Footer
+        Footer,
+        Spoiler
     }
 }
 </script>

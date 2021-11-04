@@ -4,18 +4,33 @@
         <div>
             <div class="breadcrumbs">
                 <h4>
-                    Авторские раздачи
+                    {{ forum }}
                 </h4>
                 <p>
                     Модераторы
                 </p>
-                <p>
-                    Страницы :  1, 2, 3, 4, 5, 6, 7, 8, 9  След.
-                </p>
-                <div>
-                    <img src="https://static.t-ru.org/templates/v1/images/post.gif" alt="">
+                <div class="pagination">
                     <span>
-                        Новости » Новости трекера » Авторские раздачи
+                        Страницы:
+                    </span>
+                    <div v-if="distributtions.length >= distributtionsPerPage">
+                        <span v-for="distributtion in Math.floor(distributtions.length / distributtionsPerPage) + 1" :key="distributtion._id" @click="currentPage = distributtion" :class="{ activePage: distributtion === currentPage }">
+                            {{ distributtion }}
+                        </span>
+                    </div>
+                    <div v-else>
+                        <span :class="{ activePage: true }">
+                            1
+                        </span>
+                    </div>
+                    <span @click="currentPage < Math.floor(distributtions.length / distributtionsPerPage) + 1 ? currentPage++ : currentPage = currentPage">
+                        След
+                    </span>
+                </div>
+                <div>
+                    <img class="createThemeBtn" @click="$router.push({ name: 'AgreementDistributtion', query: { distributtionforum: forum } })" src="https://static.t-ru.org/templates/v1/images/post.gif" alt="">
+                    <span>
+                        Новости » Новости трекера » {{ forum }}
                     </span>
                 </div>
             </div>
@@ -269,7 +284,7 @@
                         Темы
                     </span>
                 </div>
-                <div class="sortHeader dataRow">
+                <!-- <div class="sortHeader dataRow">
                     <div class="idSort">
                         <img width="25px" src="https://static.t-ru.org/templates/v1/images/folder.gif" alt="">
                     </div>
@@ -1160,6 +1175,39 @@
                         <div>
                             <span>
                                 2012-07-15 18:20
+                            </span>
+                            <br/>
+                            <span>
+                                mpv777	»
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                <div v-for="distributtion in distributtions.filter((distributtion, distributtionIdx) => {
+                    return distributtionIdx >= currentPage * distributtionsPerPage - distributtionsPerPage && distributtionIdx < currentPage * distributtionsPerPage 
+                })" :key="distributtion._id" class="sortHeader dataRow">
+                    <div class="idSort">
+                        <img width="25px" src="https://static.t-ru.org/templates/v1/images/folder.gif" alt="">
+                    </div>
+                    <div class="topicsSort" @click="$router.push({ name: 'Distribution', query: { distributtionid: distributtion._id } })">
+                        <span>
+                            {{ distributtion.theme }}
+                        </span>
+                    </div>
+                    <div class="answersSort">
+                        <span>
+                            0
+                        </span>
+                    </div>
+                    <div class="authorSort">
+                        <span>
+                            {{ distributtion.author }}
+                        </span>
+                    </div>
+                    <div class="lastMessageSort">
+                        <div>
+                            <span>
+                                {{ distributtion.added }}
                             </span>
                             <br/>
                             <span>
@@ -1187,18 +1235,34 @@
                 </div>
                 <div class="breadcrumbs">
                     <div>
-                        <img src="https://static.t-ru.org/templates/v1/images/post.gif" alt="">
+                        <img class="createThemeBtn" @click="$router.push({ name: 'AgreementDistributtion', query: { distributtionforum: forum } })" src="https://static.t-ru.org/templates/v1/images/post.gif" alt="">
                         <span>
-                            Главная » Новости » Новости трекера » Авторские раздачи
+                            Главная » Новости » Новости трекера » {{ forum }}
                         </span>
                     </div>
                     <div class="pages">
                         <p>
-                            Страница 1 из 9
+                            Страница {{ currentPage }} из {{ distributtions.length >= distributtionsPerPage ? Math.floor(distributtions.length / distributtionsPerPage) + 1 : '1'}}
                         </p>
-                        <p>
-                            Страницы :  1, 2, 3, 4, 5, 6, 7, 8, 9  След.
-                        </p>
+                        
+                        <div class="pagination">
+                            <span>
+                                Страницы:
+                            </span>
+                            <div v-if="distributtions.length >= distributtionsPerPage">
+                                <span v-for="distributtion in Math.floor(distributtions.length / distributtionsPerPage) + 1" :key="distributtion._id" @click="currentPage = distributtion" :class="{ activePage: distributtion === currentPage }">
+                                    {{ distributtion }}
+                                </span>
+                            </div>
+                            <div v-else>
+                                <span :class="{ activePage: true }">
+                                    1
+                                </span>
+                            </div>
+                            <span @click="currentPage < distributtions.length / distributtionsPerPage ? currentPage++ : currentPage = currentPage">
+                                След
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1211,8 +1275,132 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
+import * as jwt from 'jsonwebtoken'
+
 export default {
     name: 'Distributtions',
+    data(){
+        return {
+            condition: true,
+            asc: true,
+            forum: 'Авторские раздачи',
+            distributtions: [],
+            currentPage: 1,
+            distributtionsPerPage: 3,
+            token: window.localStorage.getItem("torrentiotoken")
+        }
+    },
+    mounted(){
+        jwt.verify(this.token, 'torrentiosecret', (err, decoded) => {
+            if (err) {
+                this.loginToggler = true
+                this.isLogin = false
+            } else {
+                fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
+                    mode: 'cors',
+                    method: 'GET'
+                }).then(response => response.body).then(rb  => {
+                    const reader = rb.getReader()
+                    return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                    if(JSON.parse(result).status.includes('OK')){
+                        this.torrenter = JSON.parse(result).torrenter
+                        this.forum = this.$route.query.distributtionforum
+                        
+                        fetch(`http://localhost:4000/api/distributtions/fromforum/?distributtionsforum=${this.forum}`, {
+                            mode: 'cors',
+                            method: 'GET'
+                        }).then(response => response.body).then(rb  => {
+                            const reader = rb.getReader()
+                            return new ReadableStream({
+                                start(controller) {
+                                    function push() {
+                                        reader.read().then( ({done, value}) => {
+                                            if (done) {
+                                                console.log('done', done);
+                                                controller.close();
+                                                return;
+                                            }
+                                            controller.enqueue(value);
+                                            console.log(done, value);
+                                            push();
+                                        })
+                                    }
+                                    push();
+                                }
+                            });
+                        }).then(stream => {
+                            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+                        })
+                        .then(result => {
+                            if(JSON.parse(result).status.includes('OK')){
+                                this.distributtions = JSON.parse(result).distributtions
+                            } else if(JSON.parse(result).status.includes('Error')){
+                            
+                            }
+                        })
+                    } else if(JSON.parse(result).status.includes('Error')){
+                        
+                    }
+                })
+            }
+        })
+    },
+    methods: {
+        getTorrenter(authorId) {
+            fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${authorId}`, {
+                mode: 'cors',
+                method: 'GET'
+            }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                if(JSON.parse(result).status.includes('OK')){
+                    return JSON.parse(result).torrenter.name
+                } else if(JSON.parse(result).status.includes('Error')){
+                    return authorId
+                }
+            })
+        }
+    },
     components: {
         Header,
         Footer
@@ -1295,6 +1483,7 @@ export default {
 
     .dataRow > .topicsSort > span {
         font-weight: bolder;
+        cursor: pointer;
     }
 
     .dataRow > .authorSort > span {
@@ -1313,6 +1502,25 @@ export default {
     .pages {
         display: flex;
         justify-content: space-between;
+    }
+
+    .createThemeBtn {
+        cursor: pointer;
+    }
+
+    .pagination {
+        color: rgb(100, 100, 250);
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: 12px;
+    }
+
+    .pagination > span {
+        margin: 0px 2px;
+    }
+
+    .activePage {
+        color: rgb(200, 100, 0);
     }
 
 </style>

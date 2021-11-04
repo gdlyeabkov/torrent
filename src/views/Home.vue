@@ -457,7 +457,7 @@
           <div class="forum">
             <img width="20px" src="https://static.t-ru.org/templates/v1/images/folder_games_1.svg" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Браузерные и клиентские онлайн-игры
               </span>
               <div class="forumFooter">
@@ -482,7 +482,7 @@
           <div class="forum">
             <img width="20px" src="https://static.t-ru.org/templates/v1/images/shopping_cart_1.svg" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Магазины и образование
               </span>
               <div class="forumFooter">
@@ -503,7 +503,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 VPN-сервисы
               </span>
               <div class="forumFooter">
@@ -522,7 +522,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 ОБХОД БЛОКИРОВОК
               </span>
               <div class="forumFooter">
@@ -546,7 +546,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Новости трекера
               </span>
               <div class="forumFooter">
@@ -559,7 +559,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Краудфандинг (переводы, покупка дисков и т. п.)
               </span>
               <div class="forumFooter">
@@ -578,7 +578,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 GENERATION.TORRENT - Музыкальный конкурс
               </span>
               <div class="forumFooter">
@@ -591,7 +591,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Rutracker Awards (мероприятия и конкурсы)
               </span>
               <div class="forumFooter">
@@ -615,7 +615,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Правила, основные инструкции, FAQ-и
               </span>
               <div class="forumFooter">
@@ -628,7 +628,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Вопросы по форуму и трекеру
               </span>
               <div class="forumFooter">
@@ -641,7 +641,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Вопросы по BitTorrent сети и ее клиентам
               </span>
               <div class="forumFooter">
@@ -654,7 +654,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Обсуждение провайдеров
               </span>
               <div class="forumFooter">
@@ -667,7 +667,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Железо: комплектующие и периферия
               </span>
               <div class="forumFooter">
@@ -691,7 +691,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Предложения по улучшению категории "Кино, Видео и ТВ"
               </span>
               <div class="forumFooter">
@@ -704,7 +704,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Кино, Видео и TV - помощь по разделу
               </span>
               <div class="forumFooter">
@@ -717,7 +717,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Наше кино
               </span>
               <div class="forumFooter">
@@ -733,7 +733,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Зарубежное кино
               </span>
               <div class="forumFooter">
@@ -755,7 +755,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Арт-хаус и авторское кино
               </span>
               <div class="forumFooter">
@@ -771,7 +771,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Театр
               </span>
               <div class="forumFooter">
@@ -784,7 +784,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 DVD Video
               </span>
               <div class="forumFooter">
@@ -803,7 +803,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 HD Video
               </span>
               <div class="forumFooter">
@@ -825,7 +825,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 3D/Стерео Кино, Видео, TV и Спорт
               </span>
               <div class="forumFooter">
@@ -838,7 +838,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Мультфильмы
               </span>
               <div class="forumFooter">
@@ -851,7 +851,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Мультсериалы
               </span>
               <div class="forumFooter">
@@ -864,7 +864,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Аниме
               </span>
               <div class="forumFooter">
@@ -885,7 +885,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Предложения по улучшению категории "Сериалы"
               </span>
               <div class="forumFooter">
@@ -898,7 +898,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Русские сериалы
               </span>
               <div class="forumFooter">
@@ -914,7 +914,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Зарубежные сериалы
               </span>
               <div class="forumFooter">
@@ -927,7 +927,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Зарубежные сериалы (HD Video)
               </span>
               <div class="forumFooter">
@@ -943,7 +943,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Сериалы Латинской Америки, Турции и Индии
               </span>
               <div class="forumFooter">
@@ -956,7 +956,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Азиатские сериалы
               </span>
               <div class="forumFooter">
@@ -977,7 +977,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Предложения по улучшению категории "Документалистика и юмор"
               </span>
               <div class="forumFooter">
@@ -990,7 +990,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Вера и религия
               </span>
               <div class="forumFooter">
@@ -1003,7 +1003,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Документальные фильмы и телепередачи
               </span>
               <div class="forumFooter">
@@ -1016,7 +1016,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Документальные (HD Video)
               </span>
               <div class="forumFooter">
@@ -1029,7 +1029,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Развлекательные телепередачи и шоу, приколы и юмор
               </span>
               <div class="forumFooter">
@@ -1050,7 +1050,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 XXXII Летние Олимпийские игры 2020
               </span>
               <div class="forumFooter">
@@ -1072,7 +1072,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Зимние Олимпийские игры 2018
               </span>
               <div class="forumFooter">
@@ -1085,7 +1085,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Спортивные турниры, фильмы и передачи
               </span>
               <div class="forumFooter">
@@ -1110,7 +1110,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Футбол
               </span>
               <div class="forumFooter">
@@ -1138,7 +1138,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Баскетбол
               </span>
               <div class="forumFooter">
@@ -1154,7 +1154,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 🏒 Хоккей
               </span>
               <div class="forumFooter">
@@ -1170,7 +1170,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Рестлинг
               </span>
               <div class="forumFooter">
@@ -1183,7 +1183,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Для дооформления раздач
               </span>
               <div class="forumFooter">
@@ -1204,7 +1204,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Помощь в "Книгах и журналах", предложения по улучшению, сканирование
               </span>
               <div class="forumFooter">
@@ -1217,7 +1217,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
                 Книги и журналы (общий раздел)
               </span>
               <div class="forumFooter">
@@ -1233,7 +1233,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Для детей, родителей и учителей' } })">
                 Для детей, родителей и учителей
               </span>
               <div class="forumFooter">
@@ -1246,7 +1246,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Спорт, физическая культура, боевые искусства' } })">
                 Спорт, физическая культура, боевые искусства
               </span>
               <div class="forumFooter">
@@ -1265,7 +1265,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Гуманитарные науки' } })">
                 Гуманитарные науки
               </span>
               <div class="forumFooter">
@@ -1284,7 +1284,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Исторические науки' } })">
                 Исторические науки
               </span>
               <div class="forumFooter">
@@ -1303,7 +1303,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Точные, естественные и инженерные науки' } })">
                 Точные, естественные и инженерные науки
               </span>
               <div class="forumFooter">
@@ -1322,7 +1322,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Ноты и Музыкальная литература' } })">
                 Ноты и Музыкальная литература
               </span>
               <div class="forumFooter">
@@ -1335,7 +1335,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Военное дело' } })">
                 Военное дело
               </span>
               <div class="forumFooter">
@@ -1351,7 +1351,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Вера и религия' } })">
                 Вера и религия
               </span>
               <div class="forumFooter">
@@ -1364,7 +1364,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Психология' } })">
                 Психология
               </span>
               <div class="forumFooter">
@@ -1380,7 +1380,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Коллекционирование, увлечения и хобби' } })">
                 Коллекционирование, увлечения и хобби
               </span>
               <div class="forumFooter">
@@ -1411,7 +1411,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Художественная литература' } })">
                 Художественная литература
               </span>
               <div class="forumFooter">
@@ -1430,7 +1430,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Компьютерная литература' } })">
                 Компьютерная литература
               </span>
               <div class="forumFooter">
@@ -1449,7 +1449,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Комиксы, манга, ранобэ' } })">
                 Комиксы, манга, ранобэ
               </span>
               <div class="forumFooter">
@@ -1462,7 +1462,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Коллекции книг и библиотеки' } })">
                 Коллекции книг и библиотеки
               </span>
               <div class="forumFooter">
@@ -1475,7 +1475,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Мультимедийные и интерактивные издания' } })">
                 Мультимедийные и интерактивные издания
               </span>
               <div class="forumFooter">
@@ -1488,7 +1488,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Медицина и здоровье' } })">
                 Медицина и здоровье
               </span>
               <div class="forumFooter">
@@ -1504,7 +1504,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Архив (Книги и журналы)' } })">
                 Архив (Книги и журналы)
               </span>
               <div class="forumFooter">
@@ -1525,7 +1525,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Объявления, предложения, помощь по разделу' } })">
                 Объявления, предложения, помощь по разделу
               </span>
               <div class="forumFooter">
@@ -1538,7 +1538,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Иностранные языки для взрослых' } })">
                 Иностранные языки для взрослых
               </span>
               <div class="forumFooter">
@@ -1551,7 +1551,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Иностранные языки для детей' } })">
                 Иностранные языки для детей
               </span>
               <div class="forumFooter">
@@ -1564,7 +1564,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Художественная литература (ин.языки)' } })">
                 Художественная литература (ин.языки)
               </span>
               <div class="forumFooter">
@@ -1577,7 +1577,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Аудиокниги на иностранных языках' } })">
                 Аудиокниги на иностранных языках
               </span>
               <div class="forumFooter">
@@ -1590,7 +1590,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Архив (Иностранные языки)' } })">
                 Архив (Иностранные языки)
               </span>
               <div class="forumFooter">
@@ -1611,7 +1611,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Видеоуроки и обучающие интерактивные DVD' } })">
                 Видеоуроки и обучающие интерактивные DVD
               </span>
               <div class="forumFooter">
@@ -1636,7 +1636,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Боевые искусства (Видеоуроки)' } })">
                 Боевые искусства (Видеоуроки)
               </span>
               <div class="forumFooter">
@@ -1649,7 +1649,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Компьютерные видеоуроки и обучающие интерактивные DVD' } })">
                 Компьютерные видеоуроки и обучающие интерактивные DVD
               </span>
               <div class="forumFooter">
@@ -1685,7 +1685,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Новости, объявления, полезная информация' } })">
                 Новости, объявления, полезная информация
               </span>
               <div class="forumFooter">
@@ -1698,7 +1698,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Радиоспектакли, история, мемуары' } })">
                 Радиоспектакли, история, мемуары
               </span>
               <div class="forumFooter">
@@ -1711,7 +1711,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Фантастика, фэнтези, мистика, ужасы, фанфики' } })">
                 Фантастика, фэнтези, мистика, ужасы, фанфики
               </span>
               <div class="forumFooter">
@@ -1724,7 +1724,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Художественная литература' } })">
                 Художественная литература
               </span>
               <div class="forumFooter">
@@ -1737,7 +1737,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Религии' } })">
                 Религии
               </span>
               <div class="forumFooter">
@@ -1750,7 +1750,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Прочая литература' } })">
                 Прочая литература
               </span>
               <div class="forumFooter">
@@ -1771,7 +1771,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Ремонт и эксплуатация транспортных средств' } })">
                 Ремонт и эксплуатация транспортных средств
               </span>
               <div class="forumFooter">
@@ -1790,7 +1790,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Фильмы и передачи по авто/мото' } })">
                 Фильмы и передачи по авто/мото
               </span>
               <div class="forumFooter">
@@ -1814,7 +1814,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Предложения по улучшению музыкальных разделов' } })">
                 Предложения по улучшению музыкальных разделов
               </span>
               <div class="forumFooter">
@@ -1827,7 +1827,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Помощь по музыкальным разделам' } })">
                 Помощь по музыкальным разделам
               </span>
               <div class="forumFooter">
@@ -1840,20 +1840,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
-                Классическая и современная академическая музыка
-              </span>
-              <div class="forumFooter">
-                <span>
-                  
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="forum">
-            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
-            <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Фольклор, Народная и Этническая музыка' } })">
                 Фольклор, Народная и Этническая музыка
               </span>
               <div class="forumFooter">
@@ -1866,7 +1853,20 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Фольклор, Народная и Этническая музыка' } })">
+                Фольклор, Народная и Этническая музыка
+              </span>
+              <div class="forumFooter">
+                <span>
+                  
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="forum">
+            <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
+            <div class="forumContent">
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'New Age, Relax, Meditative & Flamenco' } })">
                 New Age, Relax, Meditative & Flamenco
               </span>
               <div class="forumFooter">
@@ -1879,7 +1879,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Рэп, Хип-Хоп, R\'n\'B' } })">
                 Рэп, Хип-Хоп, R'n'B
               </span>
               <div class="forumFooter">
@@ -1892,7 +1892,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Reggae, Ska, Dub' } })">
                 Reggae, Ska, Dub
               </span>
               <div class="forumFooter">
@@ -1905,7 +1905,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Саундтреки, караоке и мюзиклы' } })">
                 Саундтреки, караоке и мюзиклы
               </span>
               <div class="forumFooter">
@@ -1918,7 +1918,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Шансон, Авторская и Военная песня' } })">
                 Шансон, Авторская и Военная песня
               </span>
               <div class="forumFooter">
@@ -1931,7 +1931,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Label Packs (lossless)' } })">
                 Label Packs (lossless)
               </span>
               <div class="forumFooter">
@@ -1944,7 +1944,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Label packs, Scene packs (lossy)' } })">
                 Label packs, Scene packs (lossy)
               </span>
               <div class="forumFooter">
@@ -1965,7 +1965,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Отечественная поп-музыка' } })">
                 Отечественная поп-музыка
               </span>
               <div class="forumFooter">
@@ -1978,7 +1978,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Зарубежная поп-музыка' } })">
                 Зарубежная поп-музыка
               </span>
               <div class="forumFooter">
@@ -1991,7 +1991,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Eurodance, Disco, Hi-NRG' } })">
                 Eurodance, Disco, Hi-NRG
               </span>
               <div class="forumFooter">
@@ -2012,7 +2012,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Курилка (общение на джазовые и блюзовые темы)' } })">
                 Курилка (общение на джазовые и блюзовые темы)
               </span>
               <div class="forumFooter">
@@ -2025,7 +2025,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Зарубежный джаз' } })">
                 Зарубежный джаз
               </span>
               <div class="forumFooter">
@@ -2038,7 +2038,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Зарубежный блюз' } })">
                 Зарубежный блюз
               </span>
               <div class="forumFooter">
@@ -2051,7 +2051,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Отечественный джаз и блюз' } })">
                 Отечественный джаз и блюз
               </span>
               <div class="forumFooter">
@@ -2072,7 +2072,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Зарубежный Rock' } })">
                 Зарубежный Rock
               </span>
               <div class="forumFooter">
@@ -2085,7 +2085,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Зарубежный Metal' } })">
                 Зарубежный Metal
               </span>
               <div class="forumFooter">
@@ -2098,7 +2098,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Зарубежные Alternative, Punk, Independent' } })">
                 Зарубежные Alternative, Punk, Independent
               </span>
               <div class="forumFooter">
@@ -2111,7 +2111,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Отечественный Rock, Metal' } })">
                 Отечественный Rock, Metal
               </span>
               <div class="forumFooter">
@@ -2132,7 +2132,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Trance, Goa Trance, Psy-Trance, PsyChill, Ambient, Dub' } })">
                 Trance, Goa Trance, Psy-Trance, PsyChill, Ambient, Dub
               </span>
               <div class="forumFooter">
@@ -2145,7 +2145,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'House, Techno, Hardcore, Hardstyle, Jumpstyle' } })">
                 House, Techno, Hardcore, Hardstyle, Jumpstyle
               </span>
               <div class="forumFooter">
@@ -2158,7 +2158,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Drum & Bass, Jungle, Breakbeat, Dubstep, IDM, Electro' } })">
                 Drum & Bass, Jungle, Breakbeat, Dubstep, IDM, Electro
               </span>
               <div class="forumFooter">
@@ -2171,7 +2171,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Chillout, Lounge, Downtempo, Trip-Hop' } })">
                 Chillout, Lounge, Downtempo, Trip-Hop
               </span>
               <div class="forumFooter">
@@ -2184,7 +2184,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Traditional Electronic, Ambient, Modern Classical, Electroacoustic, Experimental' } })">
                 Traditional Electronic, Ambient, Modern Classical, Electroacoustic, Experimental
               </span>
               <div class="forumFooter">
@@ -2197,7 +2197,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Industrial, Noise, EBM, Dark Electro, Aggrotech, Cyberpunk, Synthpop, New Wave' } })">
                 Industrial, Noise, EBM, Dark Electro, Aggrotech, Cyberpunk, Synthpop, New Wave
               </span>
               <div class="forumFooter">
@@ -2218,7 +2218,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Архив (Hi-Res форматы, оцифровки)' } })">
                 Архив (Hi-Res форматы, оцифровки)
               </span>
               <div class="forumFooter">
@@ -2231,7 +2231,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Для общения (Hi-Res, оцифровки)' } })">
                 Для общения (Hi-Res, оцифровки)
               </span>
               <div class="forumFooter">
@@ -2244,7 +2244,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Hi-Res stereo и многоканальная музыка' } })">
                 Hi-Res stereo и многоканальная музыка
               </span>
               <div class="forumFooter">
@@ -2257,7 +2257,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Оцифровки с аналоговых носителей' } })">
                 Оцифровки с аналоговых носителей
               </span>
               <div class="forumFooter">
@@ -2270,7 +2270,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Неофициальные конверсии цифровых форматов' } })">
                 Неофициальные конверсии цифровых форматов
               </span>
               <div class="forumFooter">
@@ -2291,7 +2291,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Помощь по музыкальным видео' } })">
                 Помощь по музыкальным видео
               </span>
               <div class="forumFooter">
@@ -2304,7 +2304,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Музыкальное SD видео' } })">
                 Музыкальное SD видео
               </span>
               <div class="forumFooter">
@@ -2317,7 +2317,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Музыкальное DVD видео' } })">
                 Музыкальное DVD видео
               </span>
               <div class="forumFooter">
@@ -2330,7 +2330,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Неофициальные DVD видео' } })">
                 Неофициальные DVD видео
               </span>
               <div class="forumFooter">
@@ -2343,7 +2343,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Музыкальное HD видео' } })">
                 Музыкальное HD видео
               </span>
               <div class="forumFooter">
@@ -2356,7 +2356,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Некондиционное музыкальное видео (Видео, DVD видео, HD видео)' } })">
                 Некондиционное музыкальное видео (Видео, DVD видео, HD видео)
               </span>
               <div class="forumFooter">
@@ -2377,7 +2377,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Предложения по улучшению категории "Игры"' } })">
                 Предложения по улучшению категории "Игры"
               </span>
               <div class="forumFooter">
@@ -2390,7 +2390,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Игры для Windows' } })">
                 Игры для Windows
               </span>
               <div class="forumFooter">
@@ -2403,7 +2403,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Прочее для Windows-игр' } })">
                 Прочее для Windows-игр
               </span>
               <div class="forumFooter">
@@ -2416,7 +2416,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Прочее для Microsoft Flight Simulator, Prepar3D, X-Plane' } })">
                 Прочее для Microsoft Flight Simulator, Prepar3D, X-Plane
               </span>
               <div class="forumFooter">
@@ -2429,7 +2429,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Игры для Apple Macintosh' } })">
                 Игры для Apple Macintosh
               </span>
               <div class="forumFooter">
@@ -2442,7 +2442,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Игры для Linux' } })">
                 Игры для Linux
               </span>
               <div class="forumFooter">
@@ -2455,7 +2455,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Игры для консолей' } })">
                 Игры для консолей
               </span>
               <div class="forumFooter">
@@ -2468,7 +2468,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Видео для консолей' } })">
                 Видео для консолей
               </span>
               <div class="forumFooter">
@@ -2481,7 +2481,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Игры для мобильных устройств' } })">
                 Игры для мобильных устройств
               </span>
               <div class="forumFooter">
@@ -2494,7 +2494,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Игровое видео' } })">
                 Игровое видео
               </span>
               <div class="forumFooter">
@@ -2515,7 +2515,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Предложения по улучшению категории "Программы и Дизайн"' } })">
                 Предложения по улучшению категории "Программы и Дизайн"
               </span>
               <div class="forumFooter">
@@ -2528,7 +2528,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Инструкции, руководства, обзоры программ' } })">
                 Инструкции, руководства, обзоры программ
               </span>
               <div class="forumFooter">
@@ -2541,7 +2541,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Операционные системы от Microsoft' } })">
                 Операционные системы от Microsoft
               </span>
               <div class="forumFooter">
@@ -2554,7 +2554,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Linux, Unix и другие ОС' } })">
                 Linux, Unix и другие ОС
               </span>
               <div class="forumFooter">
@@ -2567,7 +2567,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Тестовые диски для настройки аудио/видео аппаратуры' } })">
                 Тестовые диски для настройки аудио/видео аппаратуры
               </span>
               <div class="forumFooter">
@@ -2580,7 +2580,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Системные программы' } })">
                 Системные программы
               </span>
               <div class="forumFooter">
@@ -2593,7 +2593,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Системы для бизнеса, офиса, научной и проектной работы' } })">
                 Системы для бизнеса, офиса, научной и проектной работы
               </span>
               <div class="forumFooter">
@@ -2606,7 +2606,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Веб-разработка и Программирование' } })">
                 Веб-разработка и Программирование
               </span>
               <div class="forumFooter">
@@ -2619,7 +2619,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Программы для работы с мультимедиа и 3D' } })">
                 Программы для работы с мультимедиа и 3D
               </span>
               <div class="forumFooter">
@@ -2632,7 +2632,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Материалы для мультимедиа и дизайна' } })">
                 Материалы для мультимедиа и дизайна
               </span>
               <div class="forumFooter">
@@ -2645,7 +2645,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'ГИС, системы навигации и карты' } })">
                 ГИС, системы навигации и карты
               </span>
               <div class="forumFooter">
@@ -2666,7 +2666,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Приложения для мобильных устройств' } })">
                 Приложения для мобильных устройств
               </span>
               <div class="forumFooter">
@@ -2679,7 +2679,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Видео для мобильных устройств' } })">
                 Видео для мобильных устройств
               </span>
               <div class="forumFooter">
@@ -2700,7 +2700,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Apple Macintosh' } })">
                 Apple Macintosh
               </span>
               <div class="forumFooter">
@@ -2719,7 +2719,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'IOS' } })">
                 IOS
               </span>
               <div class="forumFooter">
@@ -2732,7 +2732,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Видео' } })">
                 Видео
               </span>
               <div class="forumFooter">
@@ -2745,7 +2745,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Видео HD' } })">
                 Видео HD
               </span>
               <div class="forumFooter">
@@ -2761,7 +2761,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Аудио' } })">
                 Аудио
               </span>
               <div class="forumFooter">
@@ -2780,7 +2780,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'F.A.Q.' } })">
                 F.A.Q.
               </span>
               <div class="forumFooter">
@@ -2801,7 +2801,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Разное (раздачи)' } })">
                 Разное (раздачи)
               </span>
               <div class="forumFooter">
@@ -2828,7 +2828,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Для общения пользователей' } })">
                 Для общения пользователей
               </span>
               <div class="forumFooter">
@@ -2841,7 +2841,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Юридический' } })">
                 Юридический
               </span>
               <div class="forumFooter">
@@ -2854,7 +2854,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Бизнес-форум' } })">
                 Бизнес-форум
               </span>
               <div class="forumFooter">
@@ -2867,7 +2867,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Раздел Пиратской партии России' } })">
                 Раздел Пиратской партии России
               </span>
               <div class="forumFooter">
@@ -2880,7 +2880,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Место сбора для релиз-групп' } })">
                 Место сбора для релиз-групп
               </span>
               <div class="forumFooter">
@@ -2893,7 +2893,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Место встречи изменить...' } })">
                 Место встречи изменить...
               </span>
               <div class="forumFooter">
@@ -2906,7 +2906,7 @@
           <div class="forum">
             <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
             <div class="forumContent">
-              <span>
+              <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Архив (Общий)' } })">
                 Архив (Общий)
               </span>
               <div class="forumFooter">

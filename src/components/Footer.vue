@@ -28,7 +28,7 @@
                 <span @click="$router.push({ name: 'QAndA' })">
                     Кому задать вопрос
                 </span>
-                <span @click="$router.push({ name: 'Distributtions' })">
+                <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Авторские раздачи' } })">
                     Авторские раздачи
                 </span>
                 <span @click="$router.push({ name: 'Concurs' })">

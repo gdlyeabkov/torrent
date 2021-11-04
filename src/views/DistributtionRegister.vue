@@ -9,7 +9,7 @@
                     </span>
                 </div>
                 <div class="distributtionContent">
-                    <div class="distributtionData">
+                    <!-- <div class="distributtionData">
                         <div class="distributtionInfo">
                             <span>
                                 {{ theme }}
@@ -36,9 +36,9 @@
                         <span class="lastThanksgivers">
                             Превью примеров
                         </span>
-                    </div>
+                    </div> -->
                     <div v-for="(rowMarkup, line) in markup.split('\n').length" :key="rowMarkup">
-                        <p v-if="markup.split('\n')[line].match(/^\[size=(.*)$/)">
+                        <p v-if="markup.split('\n')[line].match(/^\[size=(.*)$/)" :style="`font-size: ${markup.split('\n')[line].replace(/\[size=/, '').replace(/\].*\[\/size\]/, '')}px;`">
                             {{ markup.split('\n')[line].replace(/(\[size=(.{1,2})\])/, '').replace(/(\[\/size\])/, '') }}
                         </p>
                         <div v-else-if="markup.split('\n')[line].match(/^\[img=.*$/)" :style="`display: flex; justify-content: ${markup.split('\n')[line].replace(/\[img=/, '').replace(/\].*\[\/img\]/, '').includes('right') ? 'flex-end;' : 'flex-start;'}`">
@@ -54,21 +54,13 @@
                                 }}
                             </span>
                         </div>
-
-                        <div v-else-if="markup.split('\n')[line].match(/^\[spoiler=.*$/)" class="toggleList">
-                            <button class="toggleListBtn">
-                                +
-                            </button>
-                            <span class="lastThanksgivers">
-                                {{ markup.split('\n')[line].replace(/\[spoiler=\"/, '').replace(/\"\].*\[\/.*\]/, '') }}
-                            </span>
-                        </div>
+                        <Spoiler v-else-if="markup.split('\n')[line].match(/^\[spoiler=.*$/)" :markup="markup.split('\n')[line]" />
                     </div>
                 </div>
             </div>
             <div class="breadcrumbs">
                 <p>
-                    Главная » Картинки » фыв [ячс, 2]
+                    Главная » Картинки » {{ theme }}
                 </p>
             </div>
             <div class="searchByDistributionsHeader">
@@ -303,6 +295,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Spoiler from '@/components/Spoiler.vue'
 
 import * as jwt from 'jsonwebtoken'
 
@@ -369,6 +362,7 @@ export default {
                         this.description = this.$route.query.description
                         this.preview = this.$route.query.preview
                         this.markup = `[size=24]${this.theme}[/size]\n[img=right]${this.poster}[/img]\n[b]Разрешение[/b]: ${this.resolution}\n[b]Количество файлов[/b]: ${this.countOfFiles}\n[b]Формат[/b]: ${this.format}\n[b]Состав и описание раздачи[/b]: ${this.description}\n[spoiler="Превью примеров"]${this.preview}[/spoiler]`
+                        this.forum = this.$route.query.forum
                     }
                 })
             }
@@ -376,7 +370,10 @@ export default {
     },
     methods: {
         createDistributtion(){
-            fetch(`http://localhost:4000/api/distributtions/create/?torrenterid=${this.torrenter._id}&distributtiontheme=${this.theme}&distributtionmarkup=${this.markup}&distributtionposter=${this.poster}&distributtionresolution=${this.resolution}&distributtioncountoffiles=${this.countOfFiles}&distributtionformat=${this.format}&distributtiondescription=${this.description}&distributtionpreview=${this.preview}`, {
+            let markupWithEOL = this.markup.split('\n').map(markupRow => {
+                return `${markupRow}@`
+            }).join('')
+            fetch(`http://localhost:4000/api/distributtions/create/?torrenterid=${this.torrenter._id}&distributtiontheme=${this.theme}&distributtionmarkup=${markupWithEOL}&distributtionposter=${this.poster}&distributtionresolution=${this.resolution}&distributtioncountoffiles=${this.countOfFiles}&distributtionformat=${this.format}&distributtiondescription=${this.description}&distributtionpreview=${this.preview}&distributtionforum=${this.forum}`, {
               mode: 'cors',
               method: 'GET'
             }).then(response => response.body).then(rb  => {
@@ -419,7 +416,8 @@ export default {
     },
     components: {
         Header,
-        Footer
+        Footer,
+        Spoiler
     }
 }
 </script>

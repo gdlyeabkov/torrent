@@ -199,8 +199,8 @@ export default {
                 this.isLogin = false
             } else {
                 fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
-                mode: 'cors',
-                method: 'GET'
+                    mode: 'cors',
+                    method: 'GET'
                 }).then(response => response.body).then(rb  => {
                     const reader = rb.getReader()
                     return new ReadableStream({

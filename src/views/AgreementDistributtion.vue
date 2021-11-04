@@ -228,7 +228,7 @@
                 </div>
 
             <div class="agreeBtnContainer">
-                <button @click="$router.push({ name: 'DistributtionRegister', query: { theme: theme, resolution: resolution, poster: poster, countoffiles: countOfFiles, format: format, description: description, preview: preview } })" class="btn btn-light agreeBtn">
+                <button @click="$router.push({ name: 'DistributtionRegister', query: { theme: theme, resolution: resolution, poster: poster, countoffiles: countOfFiles, format: format, description: description, preview: preview, forum: forum } })" class="btn btn-light agreeBtn">
                     Продолжить
                 </button>
             </div>
@@ -253,6 +253,9 @@ export default {
             description: '',
             preview: ''
         }
+    },
+    mounted(){
+        this.forum = this.$route.query.distributtionforum
     },
     components: {
         Header,

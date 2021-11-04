@@ -236,16 +236,23 @@
         </div>
         <div class="pages">
             <span>
-                Страница 1 из 10
+                Страница {{ currentPage }} из {{ distributtions.length >= distributtionsPerPage ? Math.floor(distributtions.length / distributtionsPerPage) : '1'}}
             </span>
             <span class="pagination">
                 <span>
                     Страницы:
                 </span>
-                <span v-for="distributtion in distributtions.length / distributtionsPerPage" :key="distributtion._id" @click="currentPage = distributtion" :class="{ activePage: distributtion === currentPage }">
-                    {{ distributtion }}
-                </span>
-                <span @click="currentPage < distributtions.length / distributtionsPerPage ? currentPage++ : currentPage = currentPage">
+                <div v-if="distributtions.length >= distributtionsPerPage">
+                    <span v-for="distributtion in Math.floor(distributtions.length / distributtionsPerPage)" :key="distributtion._id" @click="currentPage = distributtion" :class="{ activePage: distributtion === currentPage }">
+                        {{ distributtion }}
+                    </span>
+                </div>
+                <div v-else>
+                    <span :class="{ activePage: true }">
+                        1
+                    </span>
+                </div>
+                <span @click="currentPage < Math.floor(distributtions.length / distributtionsPerPage) ? currentPage++ : currentPage = currentPage">
                     След
                 </span>
             </span>

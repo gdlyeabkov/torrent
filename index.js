@@ -221,7 +221,7 @@ app.get('/api/distributtions/create', async (req, res) => {
         if(distributtionExists){
             return res.json({ status: "Error" })
         } else {
-            const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtiontheme, author: req.query.torrenterid, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countOfFiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
+            const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtionforum, author: req.query.torrenterid, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countOfFiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
             newDistributtion.save(function (err, distributtion) {
                 if(err){
                     console.log('ошибка 2')
@@ -248,6 +248,23 @@ app.get('/api/distributtions/create', async (req, res) => {
             })
         }
     })
+})
+
+app.get('/api/distributtions/fromforum', (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+   
+    let query = DistributionModel.find({ forum: req.query.distributtionsforum })
+    query.exec((err, distributtions) => {
+        if (err){
+            return res.json({ status: 'Error' })
+        }
+        return res.json({ status: "OK", distributtions: distributtions })
+    })
+
 })
 
 app.get('/api/distributions/get',(req, res)=>{
@@ -379,7 +396,16 @@ app.get('/api/distributtions/download', async (req, res) => {
             return res.json({ "status": "error to download file" })
         } else {
             //file success download
-            return res.json({ "status": "file success download" })
+            DistributionModel.updateOne({ _id: req.query.distributtionid }, 
+            { 
+                "$inc": { "downloaded": 1 }
+            }, (err, distributtion) => {
+                if(err){
+                    return res.json({ "status": "error to download file" })
+                } else {
+                    return res.json({ "status": "file success download" })
+                }
+            })
         }
     })
 
