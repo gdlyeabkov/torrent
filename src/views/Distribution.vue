@@ -11,7 +11,7 @@
             <div class="distributtion">
                 <div class="distributtionAuthor">
                     <span class="authorName">
-                        alexpober
+                        {{ distributtion.author }}
                     </span>
                     <img width="75px" src="https://static.t-ru.org/ranks/s_topseed_7.gif" alt="">
                     <img width="85px" src="https://static.t-ru.org/avatars/0/79/3992479.jpg" alt="">
@@ -41,7 +41,7 @@
                     <div class="postContentHeader">
                         <div>
                             <span class="postDate">
-                                13-Сен-21 15:03
+                                {{ distributtion.added }}
                             </span>
                             <span>
                                 (спустя 13 мин.) 
@@ -184,7 +184,7 @@
                                     Зарегистрирован: 	
                                 </td>
                                 <td>
-                                    13-Сен-21 14:49 Скачан: 1,134 раза 
+                                    {{ distributtion.added }} Скачан: {{ distributtion.downloaded }} раза 
                                 </td>
                                 <td rowspan="4">
                                     <div class="downloadCell">
@@ -195,7 +195,7 @@
                                             </span>
                                         </div>
                                         <span>
-                                            15 КB
+                                            {{ distributtion.size }} КB
                                         </span>
                                         <button @click="showListOfFiles = !showListOfFiles">
                                             Список файлов
@@ -224,7 +224,7 @@
                                     Размер:
                                 </td>
                                 <td>
-                                    91.7 MB 
+                                    {{ distributtion.size }} MB 
                                     <img width="15px" src="https://static.t-ru.org/templates/v1/images/magnet_1.svg" alt="">
                                     Скачать по magnet-ссылке
                                 </td>
@@ -301,7 +301,7 @@
             <div class="ads">
                 <img src="https://cdn.admitad-connect.com/public/bs/2021/05/06/728x90_img_F_Dortmund.cc7f.jpg" alt="">
             </div>
-            <div class="post firstPost">
+            <!-- <div class="post firstPost">
                 <div class="postAuthor">
                     <span class="authorName">
                         alexpober
@@ -410,15 +410,133 @@
                         </span>
                     </div>
                 </div>
+            </div> -->
+
+            <div v-for="(post, postIdx) in distributtion.posts.filter((post, postIdx) => {
+                return true
+            })" :key="post" :class="`post ${(postIdx + 1) % 2 === 0 ? 'secondPost' : 'firstPost'}`">
+                <div class="postAuthor">
+                    <span class="authorName">
+                        {{ post.author }}
+                    </span>
+                    <img width="85px" src="https://static.t-ru.org/avatars/0/79/3992479.jpg" alt="">
+                    <span class="authorMeta">
+                        Стаж: 13 лет 4 месяца
+                    </span>
+                    <span class="authorMeta">
+                        Сообщений: 118
+                    </span>
+                    <img class="authorCountry" src="../assets/flag.png" alt="" />
+                    <div class="postAuthorFooter">
+                        <span>
+                            [
+                            <span class="postQuote">    
+                                Профиль
+                            </span>
+                            ]
+                            [
+                            <span class="postQuote">
+                                ЛС
+                            </span>
+                            ]
+                        </span>
+                    </div>
+                </div>
+                <div class="postContent">
+                    <div class="postContentHeader">
+                        <div>
+                            <span class="postDate">
+                                {{ post.date }}
+                            </span>
+                            <span>
+                                (спустя 13 мин.) 
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                [
+                                <span class="postQuote">
+                                    Цитировать
+                                </span>
+                                ]
+                            </span>
+                        </div>
+                    </div>
+                    <div class="postMessage">
+                        <span>
+                            {{ post.message }}
+                        </span>
+                    </div>
+                </div>
             </div>
+            <!-- <div v-for="post in distributtion.posts.filter((post, postIdx) => {
+                return postIdx % 2 !== 0
+            })" :key="post" class="post secondPost">
+                <div class="postAuthor">
+                    <span class="authorName">
+                        {{ post.author }}
+                    </span>
+                    <img width="85px" src="https://static.t-ru.org/avatars/0/79/3992479.jpg" alt="">
+                    <span class="authorMeta">
+                        Стаж: 13 лет 4 месяца
+                    </span>
+                    <span class="authorMeta">
+                        Сообщений: 118
+                    </span>
+                    <img class="authorCountry" src="../assets/flag.png" alt="" />
+                    <div class="postAuthorFooter">
+                        <span>
+                            [
+                            <span class="postQuote">    
+                                Профиль
+                            </span>
+                            ]
+                            [
+                            <span class="postQuote">
+                                ЛС
+                            </span>
+                            ]
+                        </span>
+                    </div>
+                </div>
+                <div class="postContent">
+                    <div class="postContentHeader">
+                        <div>
+                            <span class="postDate">
+                                {{ post.date }}
+                            </span>
+                            <span>
+                                (спустя 13 мин.) 
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                [
+                                <span class="postQuote">
+                                    Цитировать
+                                </span>
+                                ]
+                            </span>
+                        </div>
+                    </div>
+                    <div class="postMessage">
+                        <span>
+                            {{ post.message }}
+                        </span>
+                    </div>
+                </div>
+            </div> -->
 
             <div class="searchByDistributionsHeader">
                 <span>
                     Быстрый ответ
                 </span>
             </div>
+            <textarea v-model="message" name="" id="" cols="30" rows="10">
+
+            </textarea>
             <div class="distributtionActions">
-                <span>
+                <span @click="sendMessage()">
                     Ответить
                 </span>
                 <span>
@@ -458,6 +576,7 @@ export default {
             showListOfFiles: false,
             torrenter: {},
             distributtion: {},
+            message: '',
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
@@ -537,6 +656,40 @@ export default {
         })
     },
     methods: {
+        sendMessage(){
+            fetch(`http://localhost:4000/api/distributtions/posts/add/?distributtionid=${this.$route.query.distributtionid}&torrenter=${this.torrenter.name}&distributtionmessage=${this.message}`, {
+                mode: 'cors',
+                method: 'GET'
+            }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                if(JSON.parse(result).status.includes('OK')){
+                    this.$router.push({ name: 'Home' })
+                } else if(JSON.parse(result).status.includes('Error')){
+
+                } 
+            })
+        },
         downloadDistributtion(){
             window.location = `http://localhost:4000/api/distributtions/download/?distributtiontheme=${this.distributtion.theme}`
         }

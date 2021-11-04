@@ -111,6 +111,14 @@ mongoose.connect(url, connectionParams)
             type: Boolean,
             default: false
         },
+        messages: {
+            type: Number,
+            default: 0
+        },
+        created: {
+            type: Date,
+            default: Date.now
+        },
         distributtions: [mongoose.Schema.Types.Map]
     }, { collection : 'mytorrenters' })
     
@@ -182,7 +190,7 @@ app.get('/api/torrenters/create', async (req, res) => {
             let encodedPassword = "#"
             const salt = bcrypt.genSalt(saltRounds)
             encodedPassword = bcrypt.hashSync(req.query.torrenterpassword, saltRounds)
-            const newTorrenter = new TorrenterModel({ name: req.query.torrentername, email: req.query.torrenteremail, password: encodedPassword, where: req.query.torrenterwhere, gmt: req.query.torrentergmt, gender: req.query.torrentergender })
+            const newTorrenter = new TorrenterModel({ name: req.query.torrentername, email: req.query.torrenteremail, password: encodedPassword, where: req.query.torrenterwhere, gmt: req.query.torrentergmt, gender: req.query.torrentergender, created: new Date().toLocaleDateString() })
             // const newTorrenter = new TorrenterModel({ name: 'req.query.torrentername', password: 'encodedPassword', email: 'req.query.torrenteremail', where: 'req.query.torrenterwhere', gender: 'req.query.torrentergender', gmt: 'req.query.torrentergmt' })
             newTorrenter.save(function (err) {
                 if(err){
@@ -307,7 +315,6 @@ app.get('/api/torrenters/get', (req, res) => {
 
 })
 
-
 app.get('/api/torrenters/check', (req,res)=>{
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Credentials', true);
@@ -408,6 +415,44 @@ app.get('/api/distributtions/download', async (req, res) => {
             })
         }
     })
+
+})
+
+app.get('/api/distributtions/posts/add', (req, res) => {
+    
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    
+    DistributionModel.updateOne({ _id: req.query.distributtionid },
+        { $push: 
+            {
+                posts: [
+                    {
+                        author: req.query.torrenter,
+                        message: req.query.distributtionmessage,
+                        date: new Date().toLocaleString(),
+                    }
+                ]
+                
+            }
+        }, (err, distributtion) => {
+            if(err){
+                return res.json({ "status": "Error" })
+            } else {
+                TorrenterModel.updateOne({ name: req.query.torrenter }, 
+                    { 
+                        "$inc": { "messages": 1 }
+                    }, (err, torrenter) => {
+                    if(err){
+                        return res.json({ "status": "error" })
+                    } else {
+                        return res.json({ "status": "OK" })
+                    }
+                })
+            }
+        })
 
 })
 

@@ -88,7 +88,7 @@
                         Объявления
                     </span>
                 </div>
-                <div class="sortHeader dataRow">
+                <!-- <div class="sortHeader dataRow">
                     <div class="idSort">
                         <img width="25px" src="https://static.t-ru.org/templates/v1/images/folder_announce.gif" alt="">
                     </div>
@@ -146,6 +146,37 @@
                             <br/>
                             <span>
                                 mpv777	»
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id" class="sortHeader dataRow">
+                    <div class="idSort">
+                        <img width="25px" src="https://static.t-ru.org/templates/v1/images/folder_sticky.gif" alt="">
+                    </div>
+                    <div class="topicsSort" @click="$router.push({ name: 'Distribution', query: { distributtionid: distributtion._id } })">
+                        <span>
+                            {{ distributtion.theme }}
+                        </span>
+                    </div>
+                    <div class="answersSort">
+                        <span>
+                            0
+                        </span>
+                    </div>
+                    <div class="authorSort">
+                        <span>
+                            {{ distributtion.author }}
+                        </span>
+                    </div>
+                    <div class="lastMessageSort">
+                        <div>
+                            <span>
+                                {{ distributtions.author }}
+                            </span>
+                            <br/>
+                            <span>
+                                {{ distributtion.added }}
                             </span>
                         </div>
                     </div>
@@ -155,7 +186,7 @@
                         Прилеплены
                     </span>
                 </div>
-                <div class="sortHeader dataRow">
+                <!-- <div class="sortHeader dataRow">
                     <div class="idSort">
                         <img width="25px" src="https://static.t-ru.org/templates/v1/images/folder_sticky.gif" alt="">
                     </div>
@@ -275,6 +306,37 @@
                             <br/>
                             <span>
                                 mpv777	»
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id" class="sortHeader dataRow">
+                    <div class="idSort">
+                        <img width="25px" src="https://static.t-ru.org/templates/v1/images/folder_announce.gif" alt="">
+                    </div>
+                    <div @click="$router.push({ name: 'Distribution', query: { distributtionid: distributtion._id } })" class="topicsSort">
+                        <span>
+                            {{ distributtion.theme }}
+                        </span>
+                    </div>
+                    <div class="answersSort">
+                        <span>
+                            0
+                        </span>
+                    </div>
+                    <div class="authorSort">
+                        <span>
+                            {{ distributtion.author }}
+                        </span>
+                    </div>
+                    <div class="lastMessageSort">
+                        <div>
+                            <span>
+                                {{ distributtion.added }}
+                            </span>
+                            <br/>
+                            <span>
+                                {{ distributtion.author }}
                             </span>
                         </div>
                     </div>
@@ -1211,7 +1273,7 @@
                             </span>
                             <br/>
                             <span>
-                                mpv777	»
+                                {{ distributtion.author }}	»
                             </span>
                         </div>
                     </div>
