@@ -128,6 +128,7 @@ const DistributionSchema = new mongoose.Schema({
     theme: String,
     forum: String,
     author: String,
+    authorName: String,
     size: Number,
     seeds: {
         type: Number,
@@ -229,7 +230,7 @@ app.get('/api/distributtions/create', async (req, res) => {
         if(distributtionExists){
             return res.json({ status: "Error" })
         } else {
-            const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtionforum, author: req.query.torrenterid, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countOfFiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
+            const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtionforum, author: req.query.torrenterid, authorName: req.query.torrentername, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countOfFiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
             newDistributtion.save(function (err, distributtion) {
                 if(err){
                     console.log('ошибка 2')

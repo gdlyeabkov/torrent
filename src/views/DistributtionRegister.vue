@@ -373,7 +373,7 @@ export default {
             let markupWithEOL = this.markup.split('\n').map(markupRow => {
                 return `${markupRow}@`
             }).join('')
-            fetch(`http://localhost:4000/api/distributtions/create/?torrenterid=${this.torrenter._id}&distributtiontheme=${this.theme}&distributtionmarkup=${markupWithEOL}&distributtionposter=${this.poster}&distributtionresolution=${this.resolution}&distributtioncountoffiles=${this.countOfFiles}&distributtionformat=${this.format}&distributtiondescription=${this.description}&distributtionpreview=${this.preview}&distributtionforum=${this.forum}`, {
+            fetch(`http://localhost:4000/api/distributtions/create/?torrenterid=${this.torrenter._id}&torrentername=${this.torrenter.name}&distributtiontheme=${this.theme}&distributtionmarkup=${markupWithEOL}&distributtionposter=${this.poster}&distributtionresolution=${this.resolution}&distributtioncountoffiles=${this.countOfFiles}&distributtionformat=${this.format}&distributtiondescription=${this.description}&distributtionpreview=${this.preview}&distributtionforum=${this.forum}`, {
               mode: 'cors',
               method: 'GET'
             }).then(response => response.body).then(rb  => {

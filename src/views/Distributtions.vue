@@ -161,24 +161,34 @@
                     </div>
                     <div class="answersSort">
                         <span>
-                            0
+                            {{
+                               distributtion.posts[distributtion.posts.length - 1] ?
+                                distributtion.posts.length
+                               :
+                                0
+                            }}
                         </span>
                     </div>
                     <div class="authorSort">
                         <span>
-                            {{ distributtion.author }}
+                            {{ distributtion.authorName }}
                         </span>
                     </div>
                     <div class="lastMessageSort">
-                        <div>
+                        <div v-if="distributtion.posts[distributtion.posts.length - 1]">
                             <span>
-                                {{ distributtions.author }}
+                                {{ distributtion.posts[distributtion.posts.length - 1]['message'] }}
                             </span>
                             <br/>
                             <span>
-                                {{ distributtion.added }}
+                                {{ `${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[2]}-${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[1]}-${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[0]} ${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[1].split(':')[0]}:${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[1].split(':')[1]}` }}
+                                by
+                                {{ distributtion.posts[distributtion.posts.length - 1]['author'] }}
                             </span>
                         </div>
+                        <span v-else>
+                            Сообщений нет
+                        </span>
                     </div>
                 </div>
                 <div class="section">
@@ -321,24 +331,34 @@
                     </div>
                     <div class="answersSort">
                         <span>
-                            0
+                            {{
+                               distributtion.posts[distributtion.posts.length - 1] ?
+                                distributtion.posts.length
+                               :
+                                0
+                            }}
                         </span>
                     </div>
                     <div class="authorSort">
                         <span>
-                            {{ distributtion.author }}
+                            {{ distributtion.authorName }}
                         </span>
                     </div>
                     <div class="lastMessageSort">
-                        <div>
+                        <div v-if="distributtion.posts[distributtion.posts.length - 1]">
                             <span>
-                                {{ distributtion.added }}
+                                {{ distributtion.posts[distributtion.posts.length - 1]['message'] }}
                             </span>
                             <br/>
                             <span>
-                                {{ distributtion.author }}
+                                {{ `${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[2]}-${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[1]}-${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[0]} ${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[1].split(':')[0]}:${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[1].split(':')[1]}` }}
+                                by
+                                {{ distributtion.posts[distributtion.posts.length - 1]['author'] }}
                             </span>
                         </div>
+                        <span v-else>
+                            Сообщений нет
+                        </span>
                     </div>
                 </div>
                 <div class="section">
@@ -1258,24 +1278,34 @@
                     </div>
                     <div class="answersSort">
                         <span>
-                            0
+                            {{
+                               distributtion.posts[distributtion.posts.length - 1] ?
+                                distributtion.posts.length
+                               :
+                                0
+                            }}
                         </span>
                     </div>
                     <div class="authorSort">
                         <span>
-                            {{ distributtion.author }}
+                            {{ distributtion.authorName }}
                         </span>
                     </div>
                     <div class="lastMessageSort">
-                        <div>
+                        <div v-if="distributtion.posts[distributtion.posts.length - 1]">
                             <span>
-                                {{ distributtion.added }}
+                                {{ distributtion.posts[distributtion.posts.length - 1]['message'] }}
                             </span>
                             <br/>
                             <span>
-                                {{ distributtion.author }}	»
+                                {{ `${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[2]}-${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[1]}-${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[0].split('-')[0]} ${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[1].split(':')[0]}:${distributtion.posts[distributtion.posts.length - 1]['date'].split(' ')[1].split(':')[1]}` }}
+                                by
+                                {{ distributtion.posts[distributtion.posts.length - 1]['author'] }}
                             </span>
                         </div>
+                        <span v-else>
+                            Сообщений нет
+                        </span>
                     </div>
                 </div>
                 <div class="sortBy">
@@ -1349,6 +1379,7 @@ export default {
             distributtions: [],
             currentPage: 1,
             distributtionsPerPage: 3,
+            authors: [],
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
@@ -1415,6 +1446,7 @@ export default {
                         })
                         .then(result => {
                             if(JSON.parse(result).status.includes('OK')){
+                                console.log(`JSON.parse(result).distributtions: ${Object.values(JSON.parse(result).distributtions[0])}`)
                                 this.distributtions = JSON.parse(result).distributtions
                             } else if(JSON.parse(result).status.includes('Error')){
                             
@@ -1456,7 +1488,8 @@ export default {
             })
             .then(result => {
                 if(JSON.parse(result).status.includes('OK')){
-                    return JSON.parse(result).torrenter.name
+                    console.log(`JSON.parse(result).torrenter.name: ${JSON.parse(result).torrenter.name}`)
+                    return `${JSON.parse(result).torrenter.name.toString()}`
                 } else if(JSON.parse(result).status.includes('Error')){
                     return authorId
                 }

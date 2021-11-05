@@ -11,15 +11,15 @@
             <div class="distributtion">
                 <div class="distributtionAuthor">
                     <span class="authorName">
-                        {{ distributtion.author }}
+                        {{ distributtion.authorName }}
                     </span>
                     <img width="75px" src="https://static.t-ru.org/ranks/s_topseed_7.gif" alt="">
                     <img width="85px" src="https://static.t-ru.org/avatars/0/79/3992479.jpg" alt="">
                     <span class="authorMeta">
-                        Стаж: 13 лет 4 месяца
+                        Стаж: {{ age }}
                     </span>
                     <span class="authorMeta">
-                        Сообщений: 118
+                        Сообщений: {{ distributtionTorrenter.messages }}
                     </span>
                     <img class="authorCountry" src="../assets/flag.png" alt="" />
                     <div class="postAuthorFooter">
@@ -216,7 +216,12 @@
                                     Статус:
                                 </td>
                                 <td>
-                                    * не проверено 
+                                    * {{
+                                        distributtion.checked ?
+                                            'проверено'
+                                        :
+                                            'не проверено'
+                                    }}
                                 </td>
                             </tr>
                             <tr>
@@ -568,6 +573,7 @@ import Footer from '@/components/Footer.vue'
 import Spoiler from '@/components/Spoiler.vue'
 
 import * as jwt from 'jsonwebtoken'
+import calculateAge from 'calculate-age'
 
 export default {
     name: 'Distribution',
@@ -577,6 +583,8 @@ export default {
             torrenter: {},
             distributtion: {},
             message: '',
+            distributtionTorrenter: {},
+            age: '0',
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
@@ -643,6 +651,40 @@ export default {
                            if(JSON.parse(result).status.includes('OK')){
                                console.log("получаем раздачу")
                                this.distributtion = JSON.parse(result).distribution
+
+                                fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${this.distributtion.author}`, {
+                                    mode: 'cors',
+                                    method: 'GET'
+                                }).then(response => response.body).then(rb  => {
+                                    const reader = rb.getReader()
+                                    return new ReadableStream({
+                                    start(controller) {
+                                        function push() {
+                                            reader.read().then( ({done, value}) => {
+                                                if (done) {
+                                                    console.log('done', done);
+                                                    controller.close();
+                                                    return;
+                                                }
+                                                controller.enqueue(value);
+                                                console.log(done, value);
+                                                push();
+                                            })
+                                        }
+                                        push();
+                                    }
+                                });
+                            }).then(stream => {
+                                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+                            })
+                            .then(result => {
+                                if(JSON.parse(result).status.includes('OK')){
+                                    this.distributtionTorrenter = JSON.parse(result).torrenter
+                                    console.log(`JSON.parse(result).torrenter: ${JSON.parse(result).torrenter}`)
+                                    // this.age = `${new calculateAge(`${this.distributtionTorrenter.created.split('T')[0]}`, `${new Date().toLocaleDateString().split('-')[2]}-${new Date().toLocaleDateString().split('-')[1]}-${new Date().toLocaleDateString().split('-')[0]}`).getObject().years} лет ${new calculateAge(`${this.distributtionTorrenter.created.split('T')[0]}`, `${new Date().toLocaleDateString().split('-')[2]}-${new Date().toLocaleDateString().split('-')[1]}-${new Date().toLocaleDateString().split('-')[0]}`).getObject().months} месяц`
+                                }
+                            })
+
                            } else if(JSON.parse(result).status.includes('Error')){
 
                            } 
