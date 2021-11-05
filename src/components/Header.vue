@@ -225,7 +225,6 @@ export default {
             })
             .then(result => {
                     if(JSON.parse(result).status.includes('OK')){
-                        alert('вошёл')
                         this.isLogin = true
                         this.loginToggler = false
                         this.torrenter = JSON.parse(result).torrenter

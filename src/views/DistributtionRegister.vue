@@ -251,40 +251,54 @@
                             
                         </textarea>
                     </div>
-                    <div class="uploadFile">
-                        <img width="10px" height="13px" src="https://static.t-ru.org/templates/v1/images/icon_attach.gif" alt="">
-                        <span>
-                            загрузить файл
+                    <form enctype="multipart/form-data" method="POST" :action="`http://localhost:4000/api/distributtions/create/?torrenterid=${torrenter._id}&torrentername=${torrenter.name}&distributtiontheme=${theme}&distributtionmarkup=${markup.split('\n').map(markupRow => {
+                        return `${markupRow}@`
+                    }).join('')}&distributtionposter=${poster}&distributtionresolution=${resolution}&distributtioncountoffiles=${countOfFiles}&distributtionformat=${format}&distributtiondescription=${description}&distributtionpreview=${preview}&distributtionforum=${forum}`">
+                        <div v-if="!isUpload" class="uploadFile">
+                            <img width="10px" height="13px" src="https://static.t-ru.org/templates/v1/images/icon_attach.gif" alt="">
+                            <span @click="uploadFile = false; isUpload = true" for="uploader">
+                                загрузить файл
+                            </span>       
+                        </div>
+                        <div v-else>
+                            <input type="file" id="uploader" name="myfile" />
+                            <span class="deleteTorrent" @click="isUpload = false">
+                                Удалить
+                            </span>
+                        </div>
+                        <span v-if="uploadFile" class="maxSize">
+                            максимальный размер: 
+                            <span class="warning">
+                                3 MB
+                            </span>
+                            [
+                            <span class="link">
+                                Как уменьшить размер торрент-файла
+                            </span>
+                            ] , файлы: *
+                            <span class="warning">
+                                .torrent
+                            </span>
                         </span>
-                    </div>
-                    <span v-if="uploadFile" class="maxSize">
-                        максимальный размер: 
-                        <span class="warning">
-                            3 MB
+                        <span v-else>
+                            выберите нужный файл, он будет загружен автоматически при отправке сообщения
                         </span>
-                         [
-                        <span class="link">
-                            Как уменьшить размер торрент-файла
-                        </span>
-                        ] , файлы: *
-                        <span class="warning">
-                            .torrent
-                        </span>
-                    </span>
-                    <span v-else>
-                        выберите нужный файл, он будет загружен автоматически при отправке сообщения
-                    </span>
-                    <div class="btns">
-                        <button>
-                            Загрузить картинку
-                        </button>
-                        <button>
-                            Предв. просмотр
-                        </button>
-                        <button @click="createDistributtion()">
-                            Отправить
-                        </button>
-                    </div>
+                        <div class="btns">
+                            <button>
+                                Загрузить картинку
+                            </button>
+                            <button>
+                                Предв. просмотр
+                            </button>
+                            
+                            <!-- <button @click="createDistributtion()">
+                                Отправить
+                            </button> -->
+                            <button type="submit">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -300,7 +314,7 @@ import Spoiler from '@/components/Spoiler.vue'
 import * as jwt from 'jsonwebtoken'
 
 export default {
-    name: 'Favorite',
+    name: 'DistributtionRegister',
     data(){
         return {
             theme: 'фыв, [ячс, 2]',
@@ -311,6 +325,7 @@ export default {
             img: 'Картинка',
             markup: `[size=24]фыв[/size]\n[img=right]https://cdn.admitad-connect.com/public/bs/2021/05/07/240%D1%85400_YD_img_F_Mbappe_Scr_3.e7d0.jpg[/img]\n[b]Разрешение[/b]: ячс\n[b]Количество файлов[/b]: 2\n[b]Формат[/b]: йцу\n[b]Состав и описание раздачи[/b]: мак\n[spoiler="Превью примеров"]йфя[/spoiler]"`,
             uploadFile: true,
+            isUpload: false,
             countOfFiles: 0,
             resolution: '1024x768',
             format: 'png',
@@ -646,6 +661,11 @@ export default {
     .postContentHeader > select {
         width: 125px;
         font-size: 12px;
+    }
+
+    .deleteTorrent {
+        color: rgb(0, 0, 255);
+        cursor: pointer;
     }
 
 </style>

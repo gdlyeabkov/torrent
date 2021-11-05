@@ -1,14 +1,25 @@
 const fs = require('fs')
 const multer  = require('multer')
-const storage = multer.diskStorage({
+const storageForTorrents = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'uploads')
+      cb(null, 'uploads/torrents/')
     },
     filename: function (req, file, cb) {
       cb(null, file.originalname)
     }
 })
-const upload = multer({ storage: storage })
+const uploadForTorrents = multer({ storage: storageForTorrents })
+
+const storageForImages = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, `uploads/images/`)
+    },
+    filename: function (req, file, cb) {
+    //   cb(null, file.originalname)
+      cb(null, `${req.query.torrentername}.png`)
+    }
+})
+const uploadForImages = multer({ storage: storageForImages })
 
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -205,13 +216,16 @@ app.get('/api/torrenters/create', async (req, res) => {
     })
 })
 
-app.get('/api/distributtions/create', async (req, res) => {
+// app.get('/api/distributtions/create', async (req, res) => {
+app.post('/api/distributtions/create', uploadForTorrents.single('myfile'), async (req, res) => {
     
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
     
+    const file = req.file
+
     let query = DistributionModel.find({  })
     query.exec((err, allDistributtions) => {
         if (err){
@@ -227,7 +241,7 @@ app.get('/api/distributtions/create', async (req, res) => {
                 }
             })
         }
-        if(distributtionExists){
+        if(distributtionExists || !file){
             return res.json({ status: "Error" })
         } else {
             const newDistributtion = new DistributionModel({ theme: req.query.distributtiontheme, forum: req.query.distributtionforum, author: req.query.torrenterid, authorName: req.query.torrentername, size: 0, markup: req.query.distributtionmarkup, poster: req.query.distributtionposter, resolution: req.query.distributtionresolution, countOfFiles: req.query.distributtioncountoffiles, format: req.query.distributtionformat, description: req.query.distributtiondescription, preview: req.query.distributtionpreview })
@@ -250,13 +264,17 @@ app.get('/api/distributtions/create', async (req, res) => {
                         if(err){
                             return res.json({ "status": "error" })
                         } else {
-                            return res.json({ "status": "OK" })
+                            
+                            // return res.json({ "status": "OK" })
+                            // return res.redirect(`http://localhost:4000/`)
+                            return res.redirect('http://localhost:8080/')
                         }
                     })
                 }
             })
         }
     })
+    // return res.redirect(`http://localhost:4000/`)
 })
 
 app.get('/api/distributtions/fromforum', (req, res) => {
@@ -346,13 +364,16 @@ app.get('/api/torrenters/check', (req,res)=>{
     })
 })
 
-app.get('/api/torrenters/update', (req, res) => {
+// app.get('/api/torrenters/update', (req, res) => {
+app.post('/api/torrenters/update', uploadForImages.single('myfile'), (req, res) => {
     
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
     
+    const file = req.file
+
     let query =  TorrenterModel.findOne({ 'name': req.query.torrentername }, function(err, torrenter){
         if (err){
             return res.json({ "status": "Error" })
@@ -361,9 +382,22 @@ app.get('/api/torrenters/update', (req, res) => {
             var encodedPassword = "#"
             let saltRounds = 10
             let salt = bcrypt.genSalt(saltRounds)
-            encodedPassword = bcrypt.hashSync(req.query.torrenternewpassword, saltRounds)
+            
+            // if(req.query.torrenternewpassword.length <= 0){
+            //     encodedPassword = bcrypt.hashSync(req.query.torrenterpassword, saltRounds)
+            // } else if(req.query.torrenternewpassword.length >= 1){
+            //     encodedPassword = bcrypt.hashSync(req.query.torrenternewpassword, saltRounds)
+            // }
+
+            if(req.query.torrenternewpassword.length >= 1){
+                encodedPassword = bcrypt.hashSync(req.query.torrenternewpassword, saltRounds)
+                TorrenterModel.updateOne({ name: req.query.torrentername }, {
+                    password: encodedPassword
+                })
+            }
+
             TorrenterModel.updateOne({ name: req.query.torrentername }, {
-                password: encodedPassword,
+                // password: encodedPassword,
                 email: req.query.torrenteremail,
                 contacts: req.query.torrentercontacts,
                 hobby: req.query.torrenterhobby,
@@ -381,13 +415,28 @@ app.get('/api/torrenters/update', (req, res) => {
                 domainName: req.query.torrenterdomainname,
                 avatar: req.query.torrenteravatar
             }, (err, torrenter) => {
-                if(err){
+                if(err || !file){
                     return res.json({ status: 'Error' })        
                 }
-                return res.json({ status: 'OK' })
+                
+                // return res.json({ status: 'OK' })
+                return res.redirect('http://localhost:8080/')
+            
             })
         }
     })
+})
+
+app.get('/avatars/getavatar', (req, res)=>{
+        
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    
+    console.log(`avatar: ${req.query.torrentername}`)
+    return res.sendFile(__dirname + `/uploads/images/${req.query.torrentername}.png`)
+    
 })
 
 app.get('/api/distributtions/download', async (req, res) => {
@@ -411,12 +460,13 @@ app.get('/api/distributtions/download', async (req, res) => {
                 if(err){
                     return res.json({ "status": "error to download file" })
                 } else {
-                    return res.json({ "status": "file success download" })
+                    // return res.json({ "status": "file success download" })
+                    return res.redirect(`http://localhost:4000/`)
                 }
             })
         }
     })
-
+    // return res.redirect(`http://localhost:4000/?redirectroute=${req.path}`)
 })
 
 app.get('/api/distributtions/posts/add', (req, res) => {

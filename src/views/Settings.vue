@@ -1,348 +1,357 @@
 <template>
     <div>
         <Header />
-        <div class="main">
-            <h4>
-                Редактирование профиля
-            </h4>
-            <p>
-                Главная
-            </p>
-            <div class="userData">
-                <div class="registerInfo">
-                    <span>
-                        Регистрационная информация
-                    </span>
-                </div>
-                <div class="requiredInfo">
-                    <span>
-                        Поля, отмеченные *, обязательны к заполнению
-                    </span>
-                </div>
-                <div class="inputData">
-                    <div class="inputLabels">
-                        <div class="nameField">
-                            <span>
-                                Имя: *
-                            </span>
-                        </div>
-                        <div class="passwordField">
-                            <span>
-                                Текущий пароль: *
-                            </span>
-                        </div>
-                        <div class="passwordField">
-                            <span>
-                                Новый пароль: *
-                            </span>
-                        </div>
-                        <div class="emailField">
-                            <span>
-                                E-mail: *
-                            </span>
-                        </div>
-                        <div class="contactsField">
-                            <span>
-                                Контакты:
-                            </span>
-                        </div>
-                        <div class="hobbyField">
-                            <span>
-                                Род занятий:
-                            </span>
-                        </div>
-                        <div class="interestField">
-                            <span>
-                                Интересы:
-                            </span>
-                        </div>
-                        <div class="whereField">
-                            <span>
-                                Откуда
-                            </span>
-                        </div>
-                        <div class="gmtField">
-                            <span>
-                                Часовой пояс
-                            </span>
-                        </div>
-                        <div class="genderField">
-                            <span>
-                                Пол
-                            </span>
-                        </div>
-                        <div class="subscriptionField">
-                            <span>
-                                Подпись:
-                                Макс. ШИРИНА×ВЫСОТА картинок: 750×80 px
-                                Макс. вес картинок: 150 KB
-                                Макс. длина текста: 750 символов
+        <form method="POST" :action="`http://localhost:4000/api/torrenters/update/?torrentername=${torrenter.name}&torrenterpassword=${password}&torrenternewpassword=${newPassword}&torrenteremail=${email}&torrentercontacts=${contacts}&torrenterhobby=${hobby}&torrenterinterest=${interest}&torrentergender=${gender}&torrentergmt=${gmt}&torrenterwhere=${where}&torrentersubscription=${subscription}&torrenterdisablegetandsendpm=${disableGetAndSendPMField}&torrenterenableshowofactivedistributtions=${this.enableShowOfActiveDistributtionsField}&torrenterhidelistofactivedistributtions=${hideListOfActiveDistributtionsField}&torrenteraddretreckerintorrentfiles=${addRetreckerInTorrentFilesField}&torrenteraddnameofthemeinnamedownloadedetorrentfile=${addNameOfThemeInNameDownloadedTorrentFileField}&torrenterdisableanimationicons=${disableAnimationIconsField}&torrenterdomainname=${domainName}&torrenteravatar=${avatar}`" enctype="multipart/form-data">
+            <div class="main">
+                <h4>
+                    Редактирование профиля
+                </h4>
+                <p>
+                    Главная
+                </p>
+                <div class="userData">
+                    <div class="registerInfo">
+                        <span>
+                            Регистрационная информация
+                        </span>
+                    </div>
+                    <div class="requiredInfo">
+                        <span>
+                            Поля, отмеченные *, обязательны к заполнению
+                        </span>
+                    </div>
+                    <div class="inputData">
+                        <div class="inputLabels">
+                            <div class="nameField">
+                                <span>
+                                    Имя: *
+                                </span>
+                            </div>
+                            <div class="passwordField">
+                                <span>
+                                    Текущий пароль: *
+                                </span>
+                            </div>
+                            <div class="passwordField">
+                                <span>
+                                    Новый пароль: *
+                                </span>
+                            </div>
+                            <div class="emailField">
+                                <span>
+                                    E-mail: *
+                                </span>
+                            </div>
+                            <div class="contactsField">
+                                <span>
+                                    Контакты:
+                                </span>
+                            </div>
+                            <div class="hobbyField">
+                                <span>
+                                    Род занятий:
+                                </span>
+                            </div>
+                            <div class="interestField">
+                                <span>
+                                    Интересы:
+                                </span>
+                            </div>
+                            <div class="whereField">
+                                <span>
+                                    Откуда
+                                </span>
+                            </div>
+                            <div class="gmtField">
+                                <span>
+                                    Часовой пояс
+                                </span>
+                            </div>
+                            <div class="genderField">
+                                <span>
+                                    Пол
+                                </span>
+                            </div>
+                            <div class="subscriptionField">
+                                <span>
+                                    Подпись:
+                                    Макс. ШИРИНА×ВЫСОТА картинок: 750×80 px
+                                    Макс. вес картинок: 150 KB
+                                    Макс. длина текста: 750 символов
 
-                                Как отключить показ подписей 
-                            </span>
+                                    Как отключить показ подписей 
+                                </span>
+                            </div>
+                            <div class="disableGetAndSendPMField">
+                                <span>
+                                    Отключить получение и отправку ЛС:
+                                </span>
+                            </div>
+                            <div class="enableShowOfActiveDistributtionsField">
+                                <span>
+                                    Включить показ активных раздач и учет отданного:
+                                </span>
+                            </div>
+                            <div class="hideListOfActiveDistributtionsField">
+                                <span>
+                                    Скрывать список активных раздач:
+                                </span>
+                            </div>
+                            <div class="addRetreckerInTorrentFilesField">
+                                <span>
+                                    Добавлять ретрекер в торрент-файлы:
+                                </span>
+                            </div>
+                            <div class="addNameOfThemeInNameDownloadedTorrentFileField">
+                                <span>
+                                    Добавлять название темы в имя скачиваемого торрент-файла:
+                                </span>
+                            </div>
+                            <div class="disableAnimationIconsField">
+                                <span>
+                                    Отключить анимацию иконок:
+                                </span>
+                            </div>
+                            <div class="domainNameField">
+                                <span>
+                                    Доменное имя для трекера:
+                                </span>
+                            </div>
+                            <div class="avatarField">
+                                <span>
+                                    Изображение под вашим именем в сообщениях
+                                    Максимальные ШИРИНА и ВЫСОТА: 100x100 пикселов
+                                    Максимальный вес: 30 KB
+                                    Подробнее об ограничениях...
+                                    Загрузить аватару
+                                </span>
+                                <img width="75px" :src="`http://localhost:4000/avatars/getavatar/?torrentername=${torrenter.name}`" :alt="torrenter.name" />
+                                <input type="file" name="myfile" />
+                            </div>
                         </div>
-                        <div class="disableGetAndSendPMField">
-                            <span>
-                                Отключить получение и отправку ЛС:
-                            </span>
-                        </div>
-                        <div class="enableShowOfActiveDistributtionsField">
-                            <span>
-                                Включить показ активных раздач и учет отданного:
-                            </span>
-                        </div>
-                        <div class="hideListOfActiveDistributtionsField">
-                            <span>
-                                Скрывать список активных раздач:
-                            </span>
-                        </div>
-                        <div class="addRetreckerInTorrentFilesField">
-                            <span>
-                                Добавлять ретрекер в торрент-файлы:
-                            </span>
-                        </div>
-                        <div class="addNameOfThemeInNameDownloadedTorrentFileField">
-                            <span>
-                                Добавлять название темы в имя скачиваемого торрент-файла:
-                            </span>
-                        </div>
-                        <div class="disableAnimationIconsField">
-                            <span>
-                                Отключить анимацию иконок:
-                            </span>
-                        </div>
-                        <div class="domainNameField">
-                            <span>
-                                Доменное имя для трекера:
-                            </span>
-                        </div>
-                        <div class="avatarField">
-                            <span>
-                                Изображение под вашим именем в сообщениях
-                                Максимальные ШИРИНА и ВЫСОТА: 100x100 пикселов
-                                Максимальный вес: 30 KB
-                                Подробнее об ограничениях...
-                                Загрузить аватару
-                            </span>
-                            <input type="file">
+                        <div class="inputFields">
+                            <div class="nameField">
+                                <p>
+                                    {{ torrenter.name }}
+                                </p>
+                            </div>
+                            <div class="passwordField">
+                                <div class="passwordInputRow">
+                                    <input v-model="password" ref="password" type="password" class="form-control w-25">
+                                    <span>
+                                        Введите текущий пароль, если хотите изменить его или e-mail
+                                    </span>
+                                </div>
+                                <p>
+                                    Показать пароль
+                                </p>
+                            </div>
+                            <div class="passwordField">
+                                <div class="passwordInputRow">
+                                    <input v-model="newPassword" ref="password" type="password" class="form-control w-25">
+                                    <span>
+                                        Введите новый пароль, если меняете текущий (максимум: 20 символов)
+                                    </span>
+                                </div>
+                                <p>
+                                    Показать пароль
+                                </p>
+                            </div>
+                            <div class="emailField">
+                                <div class="passwordInputRow">
+                                    <input v-model="email" type="email" class="form-control w-25">
+                                    <span>
+                                        На этот адрес вам будет отправлено письмо для завершения регистрации
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="contactsField">
+                                <input v-model="contacts" type="text" class="form-control w-25" />
+                            </div>
+                            <div class="hobbyField">
+                                <input v-model="hobby" type="text" class="form-control w-25">
+                            </div>
+                            <div class="interestField">
+                                <input v-model="interest" type="text" class="form-control w-25">
+                            </div>
+                            <div class="whereField">
+                                <select v-model="where">
+                                    <option value="Россия">Россия</option>
+                                    <option value="Украина">Украина</option>
+                                    <option value="Беларусь">Беларусь</option>
+                                </select>
+                                <div class="passwordInputRow">
+                                    <span>
+                                        Россия
+                                    </span>
+                                    <span>
+                                        Украина
+                                    </span>
+                                    <span>
+                                        Беларусь
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="gmtField">
+                                <select v-model="gmt">
+                                    <option value="gmt-12">GMT-12</option>
+                                    <option value="gmt-11">GMT-11</option>
+                                    <option value="gmt-10">GMT-10</option>
+                                    <option value="gmt-9">GMT-9</option>
+                                    <option value="gmt-8">GMT-8</option>
+                                    <option value="gmt-7">GMT-7</option>
+                                    <option value="gmt-6">GMT-6</option>
+                                    <option value="gmt-5">GMT-5</option>
+                                    <option value="gmt-4">GMT-4</option>
+                                    <option value="gmt-3:30">GMT-3:30</option>
+                                    <option value="gmt-3">GMT-3</option>
+                                    <option value="gmt-2">GMT-2</option>
+                                    <option value="gmt-1">GMT-1</option>
+                                    <option value="gmt">GMT (Время по гринвичу)</option>
+                                    <option value="gmt+1">GMT+1</option>
+                                    <option value="gmt+2">GMT+2</option>
+                                    <option value="gmt+3">GMT+3</option>
+                                    <option value="gmt+3:30">GMT+3:30</option>
+                                    <option value="gmt+4">GMT+4</option>
+                                    <option value="gmt+4:30">GMT+4:30</option>
+                                    <option value="gmt+5">GMT+5</option>
+                                    <option value="gmt+5:30">GMT+5:30</option>
+                                    <option value="gmt+6">GMT+6</option>
+                                    <option value="gmt+6:30">GMT+6:30</option>
+                                    <option value="gmt+7">GMT+7</option>
+                                    <option value="gmt+8">GMT+8</option>
+                                    <option value="gmt+9">GMT+9</option>
+                                    <option value="gmt+9:30">GMT+9:30</option>
+                                    <option value="gmt+10">GMT+10</option>
+                                    <option value="gmt+11">GMT+11</option>
+                                    <option value="gmt+12">GMT+12</option>
+                                    <option value="gmt+13">GMT+13</option>
+                                </select>
+                            </div>
+                            <div class="genderField">
+                                <select v-model="gender">
+                                    <option value="secret">Засекречен</option>
+                                    <option value="male">Мужской</option>
+                                    <option value="female">Женский</option>
+                                </select>
+                            </div>
+                            <div class="subscriptionField">
+                                <textarea  v-model="subscription">
+
+                                </textarea>
+                            </div>
+                            <div class="disableGetAndSendPMField">
+                                <div>
+                                    <input v-model="disableGetAndSendPMField" value="yes" name="disableGetAndSendPMField" type="radio" />
+                                    <span>
+                                        Да
+                                    </span>
+                                </div>
+                                <div>
+                                    <input v-model="disableGetAndSendPMField" value="no" name="disableGetAndSendPMField" type="radio" />
+                                    <span>
+                                        Нет
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="enableShowOfActiveDistributtionsField">
+                                <div>
+                                    <input v-model="enableShowOfActiveDistributtionsField" value="yes" name="enableShowOfActiveDistributtionsField" type="radio" />
+                                    <span>
+                                        Да
+                                    </span>
+                                </div>
+                                <div>
+                                    <input v-model="enableShowOfActiveDistributtionsField" value="no" name="enableShowOfActiveDistributtionsField" type="radio" />
+                                    <span>
+                                        Нет
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="hideListOfActiveDistributtionsField">
+                                <div>
+                                    <input v-model="hideListOfActiveDistributtionsField" value="yes" name="hideListOfActiveDistributtionsField" type="radio" />
+                                    <span>
+                                        Да
+                                    </span>
+                                </div>
+                                <div>
+                                    <input v-model="hideListOfActiveDistributtionsField" value="no" name="hideListOfActiveDistributtionsField" type="radio" />
+                                    <span>
+                                        Нет
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="addRetreckerInTorrentFilesField">
+                                <div>
+                                    <input v-model="addRetreckerInTorrentFilesField" value="yes" name="addRetreckerInTorrentFilesField" type="radio" />
+                                    <span>
+                                        Да
+                                    </span>
+                                </div>
+                                <div>
+                                    <input v-model="addRetreckerInTorrentFilesField" value="no" name="addRetreckerInTorrentFilesField" type="radio" />
+                                    <span>
+                                        Нет
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="addNameOfThemeInNameDownloadedTorrentFileField">
+                                <div>
+                                    <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" value="yes" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
+                                    <span>
+                                        Да
+                                    </span>
+                                </div>
+                                <div>
+                                    <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" value="no" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
+                                    <span>
+                                        Нет
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="disableAnimationIconsField">
+                                <div>
+                                    <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" value="yes" type="radio" />
+                                    <span>
+                                        Да
+                                    </span>
+                                </div>
+                                <div>
+                                    <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" value="no" type="radio" />
+                                    <span>
+                                        Нет
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="domainNameField">
+                                <input v-model="domainName" type="text" name="" id="" />
+                                <span>
+                                    Не работает для magnet-ссылок. Оставьте поле пустым для домена по умолчанию.
+                                </span>
+                            </div>
+                            <div class="avatarField">
+                                <input v-model="avatar" type="checkbox" />
+                                <span>
+                                    Удалить изображение
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="inputFields">
-                        <div class="nameField">
-                            <p>
-                                {{ torrenter.name }}
-                            </p>
-                        </div>
-                        <div class="passwordField">
-                            <div class="passwordInputRow">
-                                <input v-model="password" ref="password" type="password" class="form-control w-25">
-                                <span>
-                                    Введите текущий пароль, если хотите изменить его или e-mail
-                                </span>
-                            </div>
-                            <p>
-                                Показать пароль
-                            </p>
-                        </div>
-                        <div class="passwordField">
-                            <div class="passwordInputRow">
-                                <input v-model="newPassword" ref="password" type="password" class="form-control w-25">
-                                <span>
-                                    Введите новый пароль, если меняете текущий (максимум: 20 символов)
-                                </span>
-                            </div>
-                            <p>
-                                Показать пароль
-                            </p>
-                        </div>
-                        <div class="emailField">
-                            <div class="passwordInputRow">
-                                <input v-model="email" type="email" class="form-control w-25">
-                                <span>
-                                    На этот адрес вам будет отправлено письмо для завершения регистрации
-                                </span>
-                            </div>
-                        </div>
-                        <div class="contactsField">
-                            <input v-model="contacts" type="text" class="form-control w-25" />
-                        </div>
-                        <div class="hobbyField">
-                            <input v-model="hobby" type="text" class="form-control w-25">
-                        </div>
-                        <div class="interestField">
-                            <input v-model="interest" type="text" class="form-control w-25">
-                        </div>
-                        <div class="whereField">
-                            <select v-model="where">
-                                <option value="Россия">Россия</option>
-                                <option value="Украина">Украина</option>
-                                <option value="Беларусь">Беларусь</option>
-                            </select>
-                            <div class="passwordInputRow">
-                                <span>
-                                    Россия
-                                </span>
-                                <span>
-                                    Украина
-                                </span>
-                                <span>
-                                    Беларусь
-                                </span>
-                            </div>
-                        </div>
-                        <div class="gmtField">
-                            <select v-model="gmt">
-                                <option value="gmt-12">GMT-12</option>
-                                <option value="gmt-11">GMT-11</option>
-                                <option value="gmt-10">GMT-10</option>
-                                <option value="gmt-9">GMT-9</option>
-                                <option value="gmt-8">GMT-8</option>
-                                <option value="gmt-7">GMT-7</option>
-                                <option value="gmt-6">GMT-6</option>
-                                <option value="gmt-5">GMT-5</option>
-                                <option value="gmt-4">GMT-4</option>
-                                <option value="gmt-3:30">GMT-3:30</option>
-                                <option value="gmt-3">GMT-3</option>
-                                <option value="gmt-2">GMT-2</option>
-                                <option value="gmt-1">GMT-1</option>
-                                <option value="gmt">GMT (Время по гринвичу)</option>
-                                <option value="gmt+1">GMT+1</option>
-                                <option value="gmt+2">GMT+2</option>
-                                <option value="gmt+3">GMT+3</option>
-                                <option value="gmt+3:30">GMT+3:30</option>
-                                <option value="gmt+4">GMT+4</option>
-                                <option value="gmt+4:30">GMT+4:30</option>
-                                <option value="gmt+5">GMT+5</option>
-                                <option value="gmt+5:30">GMT+5:30</option>
-                                <option value="gmt+6">GMT+6</option>
-                                <option value="gmt+6:30">GMT+6:30</option>
-                                <option value="gmt+7">GMT+7</option>
-                                <option value="gmt+8">GMT+8</option>
-                                <option value="gmt+9">GMT+9</option>
-                                <option value="gmt+9:30">GMT+9:30</option>
-                                <option value="gmt+10">GMT+10</option>
-                                <option value="gmt+11">GMT+11</option>
-                                <option value="gmt+12">GMT+12</option>
-                                <option value="gmt+13">GMT+13</option>
-                            </select>
-                        </div>
-                        <div class="genderField">
-                            <select v-model="gender">
-                                <option value="secret">Засекречен</option>
-                                <option value="male">Мужской</option>
-                                <option value="female">Женский</option>
-                            </select>
-                        </div>
-                        <div class="subscriptionField">
-                            <textarea  v-model="subscription">
-
-                            </textarea>
-                        </div>
-                        <div class="disableGetAndSendPMField">
-                            <div>
-                                <input v-model="disableGetAndSendPMField" value="yes" name="disableGetAndSendPMField" type="radio" />
-                                <span>
-                                    Да
-                                </span>
-                            </div>
-                            <div>
-                                <input v-model="disableGetAndSendPMField" value="no" name="disableGetAndSendPMField" type="radio" />
-                                <span>
-                                    Нет
-                                </span>
-                            </div>
-                        </div>
-                        <div class="enableShowOfActiveDistributtionsField">
-                            <div>
-                                <input v-model="enableShowOfActiveDistributtionsField" value="yes" name="enableShowOfActiveDistributtionsField" type="radio" />
-                                <span>
-                                    Да
-                                </span>
-                            </div>
-                            <div>
-                                <input v-model="enableShowOfActiveDistributtionsField" value="no" name="enableShowOfActiveDistributtionsField" type="radio" />
-                                <span>
-                                    Нет
-                                </span>
-                            </div>
-                        </div>
-                        <div class="hideListOfActiveDistributtionsField">
-                            <div>
-                                <input v-model="hideListOfActiveDistributtionsField" value="yes" name="hideListOfActiveDistributtionsField" type="radio" />
-                                <span>
-                                    Да
-                                </span>
-                            </div>
-                            <div>
-                                <input v-model="hideListOfActiveDistributtionsField" value="no" name="hideListOfActiveDistributtionsField" type="radio" />
-                                <span>
-                                    Нет
-                                </span>
-                            </div>
-                        </div>
-                        <div class="addRetreckerInTorrentFilesField">
-                            <div>
-                                <input v-model="addRetreckerInTorrentFilesField" value="yes" name="addRetreckerInTorrentFilesField" type="radio" />
-                                <span>
-                                    Да
-                                </span>
-                            </div>
-                            <div>
-                                <input v-model="addRetreckerInTorrentFilesField" value="no" name="addRetreckerInTorrentFilesField" type="radio" />
-                                <span>
-                                    Нет
-                                </span>
-                            </div>
-                        </div>
-                        <div class="addNameOfThemeInNameDownloadedTorrentFileField">
-                            <div>
-                                <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" value="yes" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
-                                <span>
-                                    Да
-                                </span>
-                            </div>
-                            <div>
-                                <input v-model="addNameOfThemeInNameDownloadedTorrentFileField" value="no" name="addNameOfThemeInNameDownloadedTorrentFileField" type="radio" />
-                                <span>
-                                    Нет
-                                </span>
-                            </div>
-                        </div>
-                        <div class="disableAnimationIconsField">
-                            <div>
-                                <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" value="yes" type="radio" />
-                                <span>
-                                    Да
-                                </span>
-                            </div>
-                            <div>
-                                <input v-model="disableAnimationIconsField" name="disableAnimationIconsField" value="no" type="radio" />
-                                <span>
-                                    Нет
-                                </span>
-                            </div>
-                        </div>
-                        <div class="domainNameField">
-                            <input v-model="domainName" type="text" name="" id="" />
-                            <span>
-                                Не работает для magnet-ссылок. Оставьте поле пустым для домена по умолчанию.
-                            </span>
-                        </div>
-                        <div class="avatarField">
-                            <input v-model="avatar" type="checkbox" />
-                            <span>
-                                Удалить изображение
-                            </span>
-                        </div>
-                    </div>
+                </div>
+                
+                <!-- <div class="agreeBtnContainer">
+                    <button @click="updateTorrenter()" class="btn btn-light agreeBtn">
+                        Отправить
+                    </button>
+                </div> -->
+                <div class="agreeBtnContainer">
+                    <button type="submit" class="btn btn-light agreeBtn">
+                        Отправить
+                    </button>
                 </div>
             </div>
-            <div class="agreeBtnContainer">
-                <button @click="updateTorrenter()" class="btn btn-light agreeBtn">
-                    Отправить
-                </button>
-            </div>
-        </div>
+        </form>
         <Footer />
     </div>
 </template>
@@ -416,7 +425,7 @@ export default {
                         this.torrenter = JSON.parse(result).torrenter
 
                         this.password = this.torrenter.password
-                        this.newPassword = this.torrenter.password
+                        // this.newPassword = this.torrenter.password
                         this.email = this.torrenter.email
                         this.contacts = this.torrenter.contacts
                         this.hobby = this.torrenter.hobby
