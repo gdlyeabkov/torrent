@@ -17,7 +17,7 @@
                 <span @click="$router.push({ name: 'ForProviders' })">
                     Для провайдеров
                 </span>
-                <span @click="$router.push({ name: 'Torrentpedia' })">
+                <span @click="$router.push({ name: 'Wiki' })">
                     Торрентопедия
                 </span>
             </div>
@@ -25,7 +25,7 @@
                 <span @click="$router.push({ name: 'Rules' })">
                     Правила
                 </span>
-                <span @click="$router.push({ name: 'QAndA' })">
+                <span @click="$router.push({ name: 'Wiki', query: { question: ' Кому задать вопрос?' } })">
                     Кому задать вопрос
                 </span>
                 <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Авторские раздачи' } })">

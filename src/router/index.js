@@ -31,6 +31,7 @@ import Responses from '../views/Responses.vue'
 import StartNewTheme from '../views/StartNewTheme.vue'
 import DistributtionRegister from '../views/DistributtionRegister.vue'
 import MyDistributtions from '../views/MyDistributtions.vue'
+import Wiki from '../views/Wiki.vue'
 
 Vue.use(VueRouter)
 
@@ -185,6 +186,11 @@ const routes = [
     name: 'MyDistributtions',
     component: MyDistributtions
   },
+  {
+    path: '/wiki',
+    name: 'Wiki',
+    component: Wiki
+  }
   
 ]
 
