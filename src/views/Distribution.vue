@@ -43,10 +43,10 @@
                     <div class="postContentHeader">
                         <div>
                             <span class="postDate">
-                                {{ distributtion.added }}
+                                {{ `${distributtion.added.split('T')[0].split('-')[2]}-${monthNames[distributtion.added.split('T')[0].split('-')[1]]}-${distributtion.added.split('T')[0].split('-')[0]} ${distributtion.added.split('T')[1].split(':')[0]}:${distributtion.added.split('T')[1].split(':')[1]}` }}
                             </span>
                             <span>
-                                (спустя 13 мин.) 
+                                <!-- (спустя 13 мин.)  -->
                             </span>
                         </div>
                         <div>
@@ -186,7 +186,7 @@
                                     Зарегистрирован: 	
                                 </td>
                                 <td>
-                                    {{ distributtion.added }} Скачан: {{ distributtion.downloaded }} раза 
+                                    {{ `${distributtion.added.split('T')[0].split('-')[2]}-${monthNames[distributtion.added.split('T')[0].split('-')[1]]}-${distributtion.added.split('T')[0].split('-')[0]} ${distributtion.added.split('T')[1].split(':')[0]}:${distributtion.added.split('T')[1].split(':')[1]}` }} Скачан: {{ distributtion.downloaded }} раза 
                                 </td>
                                 <td rowspan="4">
                                     <div class="downloadCell">
@@ -587,6 +587,29 @@ export default {
             message: '',
             distributtionTorrenter: {},
             age: '0',
+            monthNames: {
+                '1': 'Янв',
+                '2': 'Фев',
+                '3': 'Мар',
+                '4': 'Апр',
+                '5': 'Мая',
+                '6': 'Июн',
+                '7': 'Июл',
+                '8': 'Авг',
+                '9': 'Сен',
+                '01': 'Янв',
+                '02': 'Фев',
+                '03': 'Мар',
+                '04': 'Апр',
+                '05': 'Мая',
+                '06': 'Июн',
+                '07': 'Июл',
+                '08': 'Авг',
+                '09': 'Сен',
+                '10': 'Окт',
+                '11': 'Ноя',
+                '12': 'Дек',
+            },
             token: window.localStorage.getItem("torrentiotoken")
         }
     },

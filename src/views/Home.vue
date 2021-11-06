@@ -535,7 +535,7 @@
             <div class="forum">
               <img width="25px" height="25px" src="https://static.t-ru.org/templates/v1/images/folder_big_3.gif" alt="">
               <div class="forumContent">
-                <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'Браузерные и клиентские онлайн-игры' } })">
+                <span @click="$router.push({ name: 'Distributtions', query: { distributtionforum: 'ОБХОД БЛОКИРОВОК' } })">
                   ОБХОД БЛОКИРОВОК
                 </span>
                 <div class="forumFooter">

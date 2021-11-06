@@ -1,6 +1,6 @@
 <template>
     <div>
-    <Header />
+    <Header @getDistributtionsEvent="getDistributtions" />
     <div class="main">
         <div class="resultsInfo">
             <span class="resultsInfoHeader">
@@ -116,7 +116,7 @@
                 <span>
                     &nbsp;    
                 </span>
-                <div>
+                <!-- <div>
                     <img width="10px" src="https://static.t-ru.org/templates/v1/images/icon_minipost_new.gif" />
                 </div>
                 <div>
@@ -129,6 +129,9 @@
                     <img width="10px" src="https://static.t-ru.org/templates/v1/images/icon_minipost_new.gif" />
                 </div>
                 <div>
+                    <img width="10px" src="https://static.t-ru.org/templates/v1/images/icon_minipost_new.gif" />
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
                     <img width="10px" src="https://static.t-ru.org/templates/v1/images/icon_minipost_new.gif" />
                 </div>
             </div>
@@ -136,7 +139,7 @@
                 <span>
                     &nbsp;
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         *
                     </span>
@@ -157,6 +160,11 @@
                     </span>
                 </div>
                 <div>
+                    <span>
+                        *
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
                     <span>
                         *
                     </span>
@@ -166,7 +174,7 @@
                 <span>
                     Форум
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         Pop-Rock & Soft Rock (lossless)
                     </span>
@@ -189,6 +197,11 @@
                 <div>
                     <span>
                         Pop-Rock & Soft Rock (lossless)
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
+                    <span>
+                        {{ distributtion.forum }}
                     </span>
                 </div>
             </div>
@@ -196,7 +209,7 @@
                 <span>
                     Тема
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         Pop-Rock & Soft Rock (lossless)
                     </span>
@@ -219,6 +232,11 @@
                 <div>
                     <span>
                         Pop-Rock & Soft Rock (lossless)
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id" @click="$router.push({ name: 'Distribution', query: { distributtionid: distributtion._id } })">
+                    <span>
+                        {{ distributtion.theme }}
                     </span>
                 </div>
             </div>
@@ -226,7 +244,7 @@
                 <span>
                     Автор
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         Musicgate
                     </span>
@@ -249,6 +267,11 @@
                 <div>
                     <span>
                         Musicgate
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
+                    <span>
+                        {{ distributtion.authorName }}
                     </span>
                 </div>
             </div>
@@ -256,7 +279,7 @@
                 <span>
                     Размер
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         8.53 GB ↓
                     </span>
@@ -279,6 +302,11 @@
                 <div>
                     <span>
                         8.53 GB ↓
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
+                    <span>
+                        {{ distributtion.size }} GB ↓
                     </span>
                 </div>
             </div>
@@ -286,7 +314,7 @@
                 <span>
                     S
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         3
                     </span>
@@ -309,6 +337,11 @@
                 <div>
                     <span>
                         3
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
+                    <span>
+                        {{ distributtion.seeds }}
                     </span>
                 </div>
             </div>
@@ -316,7 +349,7 @@
                 <span>
                     L
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         0
                     </span>
@@ -339,6 +372,11 @@
                 <div>
                     <span>
                         0
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
+                    <span>
+                        {{ distributtion.leechs }}
                     </span>
                 </div>
             </div>
@@ -346,7 +384,7 @@
                 <span>
                     C
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         1
                     </span>
@@ -369,6 +407,11 @@
                 <div>
                     <span>
                         1
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
+                    <span>
+                        {{ distributtion.downloaded }}
                     </span>
                 </div>
             </div>
@@ -376,7 +419,7 @@
                 <span>
                     Добавлен
                 </span>
-                <div>
+                <!-- <div>
                     <span>
                         30-Окт-21 15:53
                     </span>
@@ -399,6 +442,11 @@
                 <div>
                     <span>
                         30-Окт-21 15:53
+                    </span>
+                </div> -->
+                <div v-for="distributtion in distributtions" :key="distributtion._id">
+                    <span>
+                        {{ `${distributtion.added.split('T')[0].split('-')[2]}-${monthNames[distributtion.added.split('T')[0].split('-')[1]]}-${distributtion.added.split('T')[0].split('-')[0]} ${distributtion.added.split('T')[1].split(':')[0]}:${distributtion.added.split('T')[1].split(':')[1]}` }}
                     </span>
                 </div>
             </div>
@@ -433,6 +481,29 @@ export default {
             torrentsFor: 'allTime',
             onlyOpenedDistributtions: false, 
             distributtions: [],
+            monthNames: {
+                '1': 'Янв',
+                '2': 'Фев',
+                '3': 'Мар',
+                '4': 'Апр',
+                '5': 'Мая',
+                '6': 'Июн',
+                '7': 'Июл',
+                '8': 'Авг',
+                '9': 'Сен',
+                '01': 'Янв',
+                '02': 'Фев',
+                '03': 'Мар',
+                '04': 'Апр',
+                '05': 'Мая',
+                '06': 'Июн',
+                '07': 'Июл',
+                '08': 'Авг',
+                '09': 'Сен',
+                '10': 'Окт',
+                '11': 'Ноя',
+                '12': 'Дек',
+            },
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
@@ -470,40 +541,7 @@ export default {
                     if(JSON.parse(result).status.includes('OK')){
                         this.torrenter = JSON.parse(result).torrenter
                         
-                        fetch(`http://localhost:4000/api/distributtions/all/`, {
-                            mode: 'cors',
-                            method: 'GET'
-                        }).then(response => response.body).then(rb  => {
-                            const reader = rb.getReader()
-                            return new ReadableStream({
-                                start(controller) {
-                                    function push() {
-                                        reader.read().then( ({done, value}) => {
-                                            if (done) {
-                                                console.log('done', done);
-                                                controller.close();
-                                                return;
-                                            }
-                                            controller.enqueue(value);
-                                            console.log(done, value);
-                                            push();
-                                        })
-                                    }
-                                    push();
-                                }
-                            });
-                        }).then(stream => {
-                            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
-                        })
-                        .then(result => {
-                            if(JSON.parse(result).status.includes('OK')){
-                                this.distributtions = JSON.parse(result).distributtions
-                                console.log(`this.distributtions.length: ${this.distributtions.length}`)
-                                this.distributtions = this.distributtions.filter(distributtion => {
-                                    return distributtion.theme.includes(this.$route.query.keywords)
-                                })
-                            }
-                        })
+                        this.getDistributtions(this.$route.query.keywords)
 
                     } else if(JSON.parse(result).status.includes('Error')){
                         alert('Не удаётся получить торрентера')
@@ -511,6 +549,43 @@ export default {
                 })
             }
         })
+    },
+    methods: {
+        getDistributtions(keywords) {
+            fetch(`http://localhost:4000/api/distributtions/all/`, {
+                mode: 'cors',
+                method: 'GET'
+            }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                if(JSON.parse(result).status.includes('OK')){
+                    this.distributtions = JSON.parse(result).distributtions
+                    this.distributtions = this.distributtions.filter(distributtion => {
+                        return distributtion.theme.toLowerCase().includes(keywords.toLowerCase())
+                    })
+                }
+            })
+        }
     },
     components: {
         Header,
@@ -604,6 +679,10 @@ export default {
         display: flex;
         flex-direction: column;
         width: 34%;
+    }
+
+    .distributtionsTopic > div > span {
+        cursor: pointer;
     }
 
     .distributtionsAuthor {

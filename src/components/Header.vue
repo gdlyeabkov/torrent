@@ -8,7 +8,7 @@
                 <span @click="$router.push({ name: 'Home' })">
                     Трекер
                 </span>
-                <span @click="$router.push({ name: 'Search' })">
+                <span @click="search()">
                     Поиск
                 </span>
                 <span @click="$router.push({ name: 'Home' })">
@@ -67,7 +67,7 @@
                         <option value="4">в wiki</option>
                         <option value="5">по info_hash</option>
                     </select>
-                    <button @click="$router.push({ name: 'Search', query: { keywords: keywords } })" v-if="!loginToggler" class="btn btn-light h-75">
+                    <button @click="search()" v-if="!loginToggler" class="btn btn-light h-75">
                         Поиск
                     </button>
                     <button @click="login()" v-else class="btn btn-light h-75">
@@ -188,6 +188,9 @@ export default {
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
+    emits: [
+        'getDistributtionsEvent'
+    ],
     // props: {
     //     isLogin: {
     //         type: Boolean,
@@ -238,6 +241,13 @@ export default {
         })
     },
     methods: {
+        search(){
+            if(this.$route.path.includes('/search')) {
+                this.$emit('getDistributtionsEvent', this.keywords)
+            } else {
+                this.$router.push({ name: 'Search', query: { keywords: this.keywords } })
+            }
+        },
         checkModal(dialog){
             if(!this.inDialog) {
               this.pmDialog = false
