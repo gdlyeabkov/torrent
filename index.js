@@ -1,3 +1,5 @@
+const captcha = require("nodejs-captcha");
+
 const fs = require('fs')
 const multer  = require('multer')
 const storageForTorrents = multer.diskStorage({
@@ -184,7 +186,6 @@ app.get('/api/torrenters/create', async (req, res) => {
     let query = TorrenterModel.find({  })
     query.exec((err, allTorrenters) => {
         if (err){
-            console.log('ошибка 1')
             return res.json({ "status": "Error" })
         }      
         let torrenterExists = false
@@ -199,6 +200,16 @@ app.get('/api/torrenters/create', async (req, res) => {
         if(torrenterExists){
             return res.json({ status: "Error" })
         } else {
+
+            // var newCaptcha = captcha();
+            // var value = newCaptcha.value
+            // var imagebase64 = newCaptcha.image;
+            // var width = newCaptcha.width;
+            // var height = newCaptcha.heigth;
+            
+            // let result = captcha();
+            // let source = result.image;
+
             let encodedPassword = "#"
             const salt = bcrypt.genSalt(saltRounds)
             encodedPassword = bcrypt.hashSync(req.query.torrenterpassword, saltRounds)
@@ -285,6 +296,23 @@ app.get('/api/distributtions/fromforum', (req, res) => {
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
    
     let query = DistributionModel.find({ forum: req.query.distributtionsforum })
+    query.exec((err, distributtions) => {
+        if (err){
+            return res.json({ status: 'Error' })
+        }
+        return res.json({ status: "OK", distributtions: distributtions })
+    })
+
+})
+
+app.get('/api/distributtions/all', (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+   
+    let query = DistributionModel.find({  })
     query.exec((err, distributtions) => {
         if (err){
             return res.json({ status: 'Error' })
@@ -415,7 +443,7 @@ app.post('/api/torrenters/update', uploadForImages.single('myfile'), (req, res) 
                 domainName: req.query.torrenterdomainname,
                 avatar: req.query.torrenteravatar
             }, (err, torrenter) => {
-                if(err || !file){
+                if(err){
                     return res.json({ status: 'Error' })        
                 }
                 
@@ -434,7 +462,6 @@ app.get('/avatars/getavatar', (req, res)=>{
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, X-Access-Token, X-Socket-ID, Content-Type");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
     
-    console.log(`avatar: ${req.query.torrentername}`)
     return res.sendFile(__dirname + `/uploads/images/${req.query.torrentername}.png`)
     
 })

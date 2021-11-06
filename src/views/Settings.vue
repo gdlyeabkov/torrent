@@ -117,16 +117,18 @@
                                     Доменное имя для трекера:
                                 </span>
                             </div>
-                            <div class="avatarField">
-                                <span>
-                                    Изображение под вашим именем в сообщениях
-                                    Максимальные ШИРИНА и ВЫСОТА: 100x100 пикселов
-                                    Максимальный вес: 30 KB
-                                    Подробнее об ограничениях...
-                                    Загрузить аватару
-                                </span>
-                                <img width="75px" :src="`http://localhost:4000/avatars/getavatar/?torrentername=${torrenter.name}`" :alt="torrenter.name" />
-                                <input type="file" name="myfile" />
+                            <div class="avatarField withPreview">
+                                <div>
+                                    <span>
+                                        Изображение под вашим именем в сообщениях
+                                        Максимальные ШИРИНА и ВЫСОТА: 100x100 пикселов
+                                        Максимальный вес: 30 KB
+                                        Подробнее об ограничениях...
+                                        Загрузить аватару
+                                    </span>
+                                    <input type="file" name="myfile" />
+                                </div>
+                                <img width="75px" height="75px" :src="`http://localhost:4000/avatars/getavatar/?torrentername=${torrenter.name}`" :alt="torrenter.name" />
                             </div>
                         </div>
                         <div class="inputFields">
@@ -181,13 +183,13 @@
                                     <option value="Беларусь">Беларусь</option>
                                 </select>
                                 <div class="passwordInputRow">
-                                    <span>
+                                    <span @click="where='Россия'" class="whereLabel">
                                         Россия
                                     </span>
-                                    <span>
+                                    <span @click="where='Украина'" class="whereLabel">
                                         Украина
                                     </span>
-                                    <span>
+                                    <span @click="where='Беларусь'" class="whereLabel">
                                         Беларусь
                                     </span>
                                 </div>
@@ -659,7 +661,7 @@ export default {
     }
 
     .avatarField {
-        height: 100px;
+        height: 250px;
     }
 
     .code {
@@ -679,6 +681,16 @@ export default {
 
     .contactsField, .hobbyField, .interestField {
         height: 50px;
+    }
+
+    .whereLabel {
+        cursor: pointer;
+    }
+
+    .withPreview {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around !important;
     }
 
 </style>

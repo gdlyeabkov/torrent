@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <div class="codeVerificationField">
-                            <img class="code" src="https://static.t-ru.org/captcha/77b83edb6bbbd3bff09a029650bdbbd7.jpg?1267471757" alt="">
+                            <img class="code" :src="captchaSource" alt="">
                             <input v-model="code" type="text" class="form-control w-25">
                         </div>
                         <div class="whereField">
@@ -261,6 +261,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
 import * as jwt from 'jsonwebtoken'
+const captcha = require("nodejs-captcha")
 
 export default {
     name: 'Register',
@@ -273,47 +274,58 @@ export default {
             gmt: 'gmt+3',
             gender: 'secret',
             code: '',
+            captchaSource: '',
+            captchaCode: '',
             token: ''
         }
     },
+    mounted() {
+        let result = captcha()
+        this.captchaSource = result.image
+        this.captchaCode = result.value
+    },
     methods: {
         createTorrenter(){
-            fetch(`http://localhost:4000/api/torrenters/create/?torrentername=${this.name}&torrenterpassword=${this.password}&torrenteremail=${this.email}&torrentergender=${this.gender}&torrentergmt=${this.gmt}&torrenterwhere=${this.where}`, {
-              mode: 'cors',
-              method: 'GET'
-            }).then(response => response.body).then(rb  => {
-            const reader = rb.getReader()
-            return new ReadableStream({
-              start(controller) {
-                function push() {
-                  reader.read().then( ({done, value}) => {
-                    if (done) {
-                      console.log('done', done);
-                      controller.close();
-                      return;
+            if(this.captchaCode === this.code) {
+                fetch(`http://localhost:4000/api/torrenters/create/?torrentername=${this.name}&torrenterpassword=${this.password}&torrenteremail=${this.email}&torrentergender=${this.gender}&torrentergmt=${this.gmt}&torrenterwhere=${this.where}`, {
+                mode: 'cors',
+                method: 'GET'
+                }).then(response => response.body).then(rb  => {
+                const reader = rb.getReader()
+                return new ReadableStream({
+                start(controller) {
+                    function push() {
+                    reader.read().then( ({done, value}) => {
+                        if (done) {
+                        console.log('done', done);
+                        controller.close();
+                        return;
+                        }
+                        controller.enqueue(value);
+                        console.log(done, value);
+                        push();
+                    })
                     }
-                    controller.enqueue(value);
-                    console.log(done, value);
                     push();
-                  })
                 }
-                push();
-              }
-            });
-        }).then(stream => {
-            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
-          })
-          .then(result => {
-                if(JSON.parse(result).status.includes('OK')){
-                //     this.token = jwt.sign({
-                //         torrenter: this.name
-                //     }, 'torentiosecret', { expiresIn: '5m' })
-                //     localStorage.setItem('torrentiotoken', this.token)
-                    this.$router.push({ name: 'Home' } )
-                } else if(JSON.parse(result).status.includes('Error')){
-                    alert('Не удаётся создать пользователя')
-                }
-            });
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                    if(JSON.parse(result).status.includes('OK')){
+                    //     this.token = jwt.sign({
+                    //         torrenter: this.name
+                    //     }, 'torentiosecret', { expiresIn: '5m' })
+                    //     localStorage.setItem('torrentiotoken', this.token)
+                        this.$router.push({ name: 'Home' } )
+                    } else if(JSON.parse(result).status.includes('Error')){
+                        alert('Не удаётся создать пользователя')
+                    }
+                });
+            } else {
+                alert('Неправильно введён код')
+            }
         }
     },
     components: {

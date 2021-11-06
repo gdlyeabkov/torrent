@@ -54,7 +54,7 @@
                     </span>
                 </div>
                 <div class="bottomItemCenter">
-                    <input v-if="!loginToggler" type="text" class="form-control h-75">
+                    <input v-model="keywords" v-if="!loginToggler" type="text" class="form-control h-75">
                     <div v-else class="authRow">
                         <input v-model="name" placeholder="имя" type="text" class="form-control h-75">
                         <input v-model="password" placeholder="пароль" type="password" class="form-control h-75">
@@ -67,7 +67,7 @@
                         <option value="4">в wiki</option>
                         <option value="5">по info_hash</option>
                     </select>
-                    <button v-if="!loginToggler" class="btn btn-light h-75">
+                    <button @click="$router.push({ name: 'Search', query: { keywords: keywords } })" v-if="!loginToggler" class="btn btn-light h-75">
                         Поиск
                     </button>
                     <button @click="login()" v-else class="btn btn-light h-75">
@@ -75,7 +75,7 @@
                     </button>
                 </div>
                 <div v-if="isLogin" class="bottomItemRight">
-                    <div @mouseenter="pmDialog = true">
+                    <div @mouseleave="checkModal()" @mouseenter="pmDialog = true; profileDialog = false; messagesDialog = false">
                         <span>
                             ЛС ✉
                         </span>
@@ -83,7 +83,7 @@
                             expand_more
                         </span>
                     </div>
-                    <div @mouseenter="profileDialog = true">
+                    <div @mouseleave="checkModal()" @mouseenter="profileDialog = true; pmDialog = false; messagesDialog = false">
                         <span>
                             Профиль
                         </span>
@@ -91,7 +91,7 @@
                             expand_more
                         </span>
                     </div>
-                    <div @mouseenter="messagesDialog = true">
+                    <div @mouseleave="checkModal()" @mouseenter="messagesDialog = true; pmDialog = false; profileDialog = false">
                         <span>
                             Мои сообщения
                         </span>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="pmDialog" @mouseleave="pmDialog = false" class="pmDialog">
+        <div v-if="pmDialog" @mouseenter="inDialog = true" @mouseleave="pmDialog = false; inDialog = false" class="pmDialog">
             <div @click="$router.push({ name: 'PM', query: { activetab: 'Входящие' } }); $emit('changeFolder', 'Входящие')">
                 <span>
                     Входящие
@@ -131,7 +131,7 @@
                 </span>
             </div>
         </div>
-        <div v-if="profileDialog" @mouseleave="profileDialog = false" class="profileDialog">
+        <div v-if="profileDialog" @mouseenter="inDialog = true" @mouseleave="profileDialog = false; inDialog = false" class="profileDialog">
             <div @click="$router.push({ name: 'Settings' });">
                 <span>
                     Настройки
@@ -148,7 +148,7 @@
                 </span>
             </div>
         </div>
-        <div v-if="messagesDialog" @mouseleave="messagesDialog = false" class="messagesDialog">
+        <div v-if="messagesDialog" @mouseenter="inDialog = true" @mouseleave="messagesDialog = false; inDialog = false" class="messagesDialog">
             <div @click="$router.push({ name: 'MyDistributtions' })">
                 <span>
                     Мои раздачи
@@ -179,10 +179,12 @@ export default {
             loginToggler: false,
             name: '',
             password: '',
+            keywords: '',
             torrenter: {},
             pmDialog: false,
             profileDialog: false,
             messagesDialog: false,
+            inDialog: false,
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
@@ -236,6 +238,13 @@ export default {
         })
     },
     methods: {
+        checkModal(dialog){
+            if(!this.inDialog) {
+              this.pmDialog = false
+              this.profileDialog = false
+              this.messagesDialog = false
+            }
+        },
         logout(){
             this.token = jwt.sign({
               torrenter: 'admin'
@@ -273,7 +282,6 @@ export default {
           })
           .then(result => {
                 if(JSON.parse(result).status.includes('OK')){
-                    alert('вошёл')
                     this.isLogin = true
                     this.loginToggler = false
                     this.torrenter = JSON.parse(result).torrenter
@@ -422,7 +430,7 @@ export default {
         flex-direction: column;
         border: 1px solid rgb(0, 0, 0);
         position: absolute;
-        top: 200px;
+        top: 180px;
         left: 900px;
         z-index: 10;
     }
@@ -448,7 +456,7 @@ export default {
         flex-direction: column;
         border: 1px solid rgb(0, 0, 0);
         position: absolute;
-        top: 200px;
+        top: 180px;
         left: 1050px;
         z-index: 15;
     }
@@ -474,7 +482,7 @@ export default {
         flex-direction: column;
         border: 1px solid rgb(0, 0, 0);
         position: absolute;
-        top: 200px;
+        top: 180px;
         left: 1200px;
         z-index: 20;
     }

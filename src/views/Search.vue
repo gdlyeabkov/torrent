@@ -11,7 +11,7 @@
             </span>
             <span>
                 <span class="resultsInfoCountOfResults">
-                    Результатов поиска: 13
+                    Результатов поиска: {{ distributtions.length }}
                 </span>
                  (max: 500) 
             </span>
@@ -423,13 +423,94 @@
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
+import * as jwt from 'jsonwebtoken'
+
 export default {
     name: 'Search',
     data(){
         return {
             sortBy: 'registered',
             torrentsFor: 'allTime',
+            onlyOpenedDistributtions: false, 
+            distributtions: [],
+            token: window.localStorage.getItem("torrentiotoken")
         }
+    },
+    mounted(){
+        jwt.verify(this.token, 'torrentiosecret', (err, decoded) => {
+            if (err) {
+                this.$router.push({ name: 'Home' })
+            } else {
+                fetch(`http://localhost:4000/api/torrenters/get/?torrenterid=${decoded.torrenter}`, {
+                    mode: 'cors',
+                    method: 'GET'
+                }).then(response => response.body).then(rb  => {
+                    const reader = rb.getReader()
+                    return new ReadableStream({
+                    start(controller) {
+                        function push() {
+                            reader.read().then( ({done, value}) => {
+                                if (done) {
+                                    console.log('done', done);
+                                    controller.close();
+                                    return;
+                                }
+                                controller.enqueue(value);
+                                console.log(done, value);
+                                push();
+                            })
+                        }
+                        push();
+                    }
+                });
+            }).then(stream => {
+                return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+            })
+            .then(result => {
+                    if(JSON.parse(result).status.includes('OK')){
+                        this.torrenter = JSON.parse(result).torrenter
+                        
+                        fetch(`http://localhost:4000/api/distributtions/all/`, {
+                            mode: 'cors',
+                            method: 'GET'
+                        }).then(response => response.body).then(rb  => {
+                            const reader = rb.getReader()
+                            return new ReadableStream({
+                                start(controller) {
+                                    function push() {
+                                        reader.read().then( ({done, value}) => {
+                                            if (done) {
+                                                console.log('done', done);
+                                                controller.close();
+                                                return;
+                                            }
+                                            controller.enqueue(value);
+                                            console.log(done, value);
+                                            push();
+                                        })
+                                    }
+                                    push();
+                                }
+                            });
+                        }).then(stream => {
+                            return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+                        })
+                        .then(result => {
+                            if(JSON.parse(result).status.includes('OK')){
+                                this.distributtions = JSON.parse(result).distributtions
+                                console.log(`this.distributtions.length: ${this.distributtions.length}`)
+                                this.distributtions = this.distributtions.filter(distributtion => {
+                                    return distributtion.theme.includes(this.$route.query.keywords)
+                                })
+                            }
+                        })
+
+                    } else if(JSON.parse(result).status.includes('Error')){
+                        alert('Не удаётся получить торрентера')
+                    }
+                })
+            }
+        })
     },
     components: {
         Header,
