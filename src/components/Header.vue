@@ -59,13 +59,13 @@
                         <input v-model="name" placeholder="имя" type="text" class="form-control h-75">
                         <input v-model="password" placeholder="пароль" type="password" class="form-control h-75">
                     </div>
-                    <select v-if="isLogin" class="form-select h-75 w-25" aria-label="Default select example">
-                        <option selected>раздачи</option>
-                        <option value="1">все темы</option>
-                        <option value="2">в google</option>
-                        <option value="3">в duckdukgo</option>
-                        <option value="4">в wiki</option>
-                        <option value="5">по info_hash</option>
+                    <select v-model="searchBy" v-if="isLogin" class="form-select h-75 w-25" aria-label="Default select example">
+                        <option value="distributtions">раздачи</option>
+                        <option value="allThemes">все темы</option>
+                        <option value="google">в google</option>
+                        <option value="duckdukgo">в duckdukgo</option>
+                        <option value="wiki">в wiki</option>
+                        <option value="info_hash">по info_hash</option>
                     </select>
                     <button @click="search()" v-if="!loginToggler" class="btn btn-light h-75">
                         Поиск
@@ -185,6 +185,7 @@ export default {
             profileDialog: false,
             messagesDialog: false,
             inDialog: false,
+            searchBy: "distributtions",
             token: window.localStorage.getItem("torrentiotoken")
         }
     },
@@ -245,7 +246,7 @@ export default {
             if(this.$route.path.includes('/search')) {
                 this.$emit('getDistributtionsEvent', this.keywords)
             } else {
-                this.$router.push({ name: 'Search', query: { keywords: this.keywords } })
+                this.$router.push({ name: 'Search', query: { keywords: this.keywords, by: this.searchBy } })
             }
         },
         checkModal(dialog){

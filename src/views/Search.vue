@@ -27,6 +27,764 @@
                     <span>
                         Перейти к разделу
                     </span>
+                    <div class="sections">
+                        <span>
+                            Все имеющиеся
+                        </span>
+                        <span class="sectionHeader">
+                            Новости
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Кино, видео и ТВ
+                        </span>
+                        <div class="subSection">
+                            <span class="subSectionHeader">
+                                Наше кино
+                            </span>
+                            <span>
+                                | - Кино СССР
+                            </span>
+                            <span>
+                                | - Детские и отечественные фильмы
+                            </span>
+                            <span>
+                                | - Авторские дебюты
+                            </span>
+                            <span class="subSectionHeader">
+                                Зарубежное кино
+                            </span>
+                            <span>
+                                Классика мирового кинематографа
+                            </span>
+                            <span>
+                                | - Фильмы до 1990 года
+                            </span>
+                            <span>
+                                | - Фильмы 1991-2000
+                            </span>
+                            <span>
+                                | - Фильмы 2001-2005
+                            </span>
+                            <span>
+                                | - Фильмы 2006-2010
+                            </span>
+                            <span>
+                                | - Фильмы 2011-2015
+                            </span>
+                            <span>
+                                | - Фильмы 2016-2020
+                            </span>
+                            <span>
+                                | - Фильмы 2021
+                            </span>
+                            <span>
+                                | - Фильмы ближнего зарубежья
+                            </span>
+                            <span>
+                                | - Азиатские фильмы
+                            </span>
+                            <span>
+                                | - Индийское кино
+                            </span>
+                            <span>
+                                | - Сборники фильмов
+                            </span>
+                            <span>
+                                | - Короткий метр
+                            </span>
+                            <span>
+                                | - Грайндхаус
+                            </span>
+                            <span class="subSectionHeader">
+                                Арт-хаус и авторское кино
+                            </span>
+                            <span>
+                                | - Короткий метр (Арт-хаус и авторское кино)
+                            </span>
+                            <span>
+                                | - Документальные фильмы (Арт-хаус и авторское кино)
+                            </span>
+                            <span>
+                                | - Анимация (Арт-хаус и авторское кино)
+                            </span>
+                            <span class="subSectionHeader">
+                                Театр
+                            </span>
+                            <span class="subSectionHeader">
+                                DVD Video
+                            </span>
+                            <span>
+                                | - Классика мирового кинематографа (DVD Video)
+                            </span>
+                            <span>
+                                | - Зарубежное кино(DVD Video)
+                            </span>
+                            <span>
+                                | - Наше кино(DVD Video)
+                            </span>
+                            <span>
+                                | - Фильмы ближнего зарубежья (DVD Video)
+                            </span>
+                            <span>
+                                | - Азиатские фильмы (DVD Video)
+                            </span>
+                            <span>
+                                | - Арт-хаус и авторское кино(DVD Video)
+                            </span>
+                            <span>
+                                | - Индийское кино (DVD Video)
+                            </span>
+                            <span>
+                                | - Грайндхаус (DVD Video)
+                            </span>
+                            <span class="subSectionHeader">
+                                HD Video
+                            </span>
+                            <span>
+                                | - UHD Video
+                            </span>
+                            <span>
+                                | - Классика мирового кинематографа (HD Video)
+                            </span>
+                            <span>
+                                | - Зарубежное кино(HD Video)
+                            </span>
+                            <span>
+                                | - Наше кино(HD Video)
+                            </span>
+                            <span>
+                                | - Фильмы ближнего зарубежья (HD Video)
+                            </span>
+                            <span>
+                                | - Азиатские фильмы (HD Video)
+                            </span>
+                            <span>
+                                | - Арт-хаус и авторское кино(HD Video)
+                            </span>
+                            <span>
+                                | - Индийское кино (HD Video)
+                            </span>
+                            <span>
+                                | - Грайндхаус (HD Video)
+                            </span>
+                            <span class="subSectionHeader">
+                                3D/Стерео кино, Видео, TV и Спорт
+                            </span>
+                            <span>
+                                | - 3D Кинофильмы
+                            </span>
+                            <span>
+                                | - 3D Мультфильмы
+                            </span>
+                            <span>
+                                | - 3D Документальные фильмы
+                            </span>
+                            <span>
+                                | - 3D Спорт
+                            </span>
+                            <span>
+                                | - 3D ролики, Музыкалное видео, Трейлеры к фильмам
+                            </span>
+                            <span class="subSectionHeader">
+                                Мультфильмы
+                            </span>
+                            <span>
+                                | - Отечественные мультфильмы (HD Video)
+                            </span>
+                            <span>
+                                | - Иностранные мультфильмы (HD Video)
+                            </span>
+                            <span>
+                                | - Иностранные короткометражные мультфильмы (HD Video)
+                            </span>
+                            <span>
+                                | - Отечественные мультфильмы (DVD)
+                            </span>
+                            <span>
+                                | - Иностранные  мультфильмы (DVD)
+                            </span>
+                            <span>
+                                | - Иностранные короткометражные мультфильмы (DVD)
+                            </span>
+                            <span>
+                                | - Отечественные мультфильмы
+                            </span>
+                            <span>
+                                | - Отечественные полнометражные мультфильмы
+                            </span>
+                            <span>
+                                | - Иностранные мультфильмы
+                            </span>
+                            <span>
+                                | - Иностранные короткометражные мультфильмы
+                            </span>
+                            <span>
+                                | - Сбоники мультфильмов
+                            </span>
+                            <span class="subSectionHeader">
+                                Мультсериалы
+                            </span>
+                            <span>
+                                | - Мультсериалы (SD Video)
+                            </span>
+                            <span>
+                                | - Мультсериалы (DVD Video)
+                            </span>
+                            <span>
+                                | - Мультсериалы (HD Video)
+                            </span>
+                            <span class="subSectionHeader">
+                                Аниме
+                            </span>
+                            <span>
+                                | - Аниме (HD Video)
+                            </span>
+                            <span>
+                                | - Аниме (DVD)
+                            </span>
+                            <span>
+                                | - Аниме (основной подраздел)
+                            </span>
+                            <span>
+                                | - Аниме (плеерный подраздел)
+                            </span>
+                            <span>
+                                | - Аниме (QC раздел)
+                            </span>
+                            <span>
+                                | - Ванпис
+                            </span>
+                            <span>
+                                | - Гандам
+                            </span>
+                            <span>
+                                | - Наруто
+                            </span>
+                            <span>
+                                | - Покемоны
+                            </span>
+                            <span>
+                                | - Японские мультфильмы
+                            </span>
+                            <span>
+                                | - Звуковые дорожки (Аниме)
+                            </span>
+                            <span>
+                                | - Артбуки и журналы (Аниме)
+                            </span>
+                            <span>
+                                | - Обои, сканы, аватары, арт
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Сериалы
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Документалистика и юмор
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Спорт
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Книги и журналы
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Обучение иностранным языкам
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Обучающее видео
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Аудиокниги
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Авто и мото
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Музыка
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Популярная музыка
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Джазовая и Блюзовая музыка
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Рок-музыка
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Электронная музыка
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Hi-Res форматы, оцифровки
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Музыкальное видео
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Игры
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                Generation.Torrent - Музыкальный конкурс
+                            </span>
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Программы и Дизайн
+                        </span>
+                        <div class="subSection">
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Мобильные устройства
+                        </span>
+                        <div class="subSection">
+                            <span class="subSectionHeader">
+                                Rutracker Awards (мероприятия и конкурсы)
+                            </span>
+                            <span>
+                                | - Конкурсы
+                            </span>
+                            <span>
+                                | - Rutracker Awards (раздачи)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Apple
+                        </span>
+                        <div class="subSection">
+                            <span class="subSectionHeader">
+                                Apple Macintosh
+                            </span>
+                            <span>
+                                | - Mac OS (для Macintosh)
+                            </span>
+                            <span>
+                                | - Mac OS (для PC-Macintosh)
+                            </span>
+                            <span>
+                                | - Программы для просмотра и обработки видео (MacOS)
+                            </span>
+                            <span>
+                                | - Программы для создания и обработки графики (MacOS)
+                            </span>
+                            <span>
+                                | - Плагины для программ компании Adobe (MacOS)
+                            </span>
+                            <span>
+                                | - Аудио редакторы и конверторы (MacOS)
+                            </span>
+                            <span>
+                                | - Системные программы (MacOS)
+                            </span>
+                            <span>
+                                | - Офисные программы (MacOS)
+                            </span>
+                            <span>
+                                | - Программы для интернета и сетей (MacOS)
+                            </span>
+                            <span>
+                                | - Другие программы (MacOS)
+                            </span>
+                            <span class="subSectionHeader">
+                                IOS
+                            </span>
+                            <span>
+                                | - Программы для IOS
+                            </span>
+                            <span>
+                                | - Игры для IOS
+                            </span>
+                            <span>
+                                | - Разное для IOS
+                            </span>
+                            <span class="subSectionHeader">
+                                Видео
+                            </span>
+                            <span>
+                                | - Фильмы для iPod, iPhone, iPad
+                            </span>
+                            <span>
+                                | - Сериалы для iPod, iPhone, iPad
+                            </span>
+                            <span>
+                                | - Мультфильмы для iPod, iPhone, iPad
+                            </span>
+                            <span>
+                                | - Аниме для iPod, iPhone, iPad
+                            </span>
+                            <span>
+                                | - Музыкальное видео HD для iPod, iPhone, iPad
+                            </span>
+                            <span class="subSectionHeader">
+                                Видео HD
+                            </span>
+                            <span>
+                                | - Фильмы HD для Apple TV
+                            </span>
+                            <span>
+                                | - Сериалы HD для Apple TV
+                            </span>
+                            <span>
+                                | - Мультфильмы HD для Apple TV
+                            </span>
+                            <span>
+                                | - Документальное видео HD для Apple TV
+                            </span>
+                            <span>
+                                | - Музыкальное видео HD для Apple TV
+                            </span>
+                            <span class="subSectionHeader">
+                                Аудио
+                            </span>
+                            <span>
+                                | - Аудиокниги (AAC, ALAC)
+                            </span>
+                            <span>
+                                | - Музыка lossless (ALAC)
+                            </span>
+                            <span>
+                                | - Музыка Lossy (AAC-iTunes)
+                            </span>
+                            <span>
+                                | - Музыка Lossy (AAC)
+                            </span>
+                            <span>
+                                | - Музыка Lossy (AAC) (Singles, EPs)
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Разное
+                        </span>
+                        <div class="subSection">
+                            <span class="subSectionHeader">
+                                Разное (раздачи)
+                            </span>
+                            <span>
+                                | - Психоактивные аудиопрограммы
+                            </span>
+                            <span>
+                                | - Аватары, Иконки, Смайлы
+                            </span>
+                            <span>
+                                | - Живопись, графика, скульптура, digital art
+                            </span>
+                            <span>
+                                | - Картинки
+                            </span>
+                            <span>
+                                | - Любительские фотографии
+                            </span>
+                            <span>
+                                | - Обои
+                            </span>
+                            <span>
+                                | - Фото знаменитостей
+                            </span>
+                            <span>
+                                | - Аудио
+                            </span>
+                            <span>
+                                | - Музыка(Lossy)
+                            </span>
+                            <span>
+                                | - Музыка(lossless)
+                            </span>
+                            <span>
+                                | - Видео
+                            </span>
+                            <span>
+                                | - Публикации и учебные материалы (тексты)
+                            </span>
+                            <span>
+                                | - Трейлеры и дополнительные материалы к фильмам
+                            </span>
+                            <span>
+                                | - Любительские видеоклипы
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Обсуждения, встречи, общение
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                | - Отчеты о встречах
+                            </span>
+                        </div>
+                        <span class="sectionHeader">
+                            Приватные форумы
+                        </span>
+                        <div class="subSection">
+                            <span>
+                                | - Классическая и современная академическая музыка
+                            </span>
+                            <span>
+                                | - Рэп, Хип-хоп, R'n'B
+                            </span>
+                            <span>
+                                | - Авторская песня, Шансон
+                            </span>
+                            <span>
+                                | - Музыка разных жанров
+                            </span>
+                            <span>
+                                | - Популярная музыка
+                            </span>
+                            <span>
+                                | - Джазовая и блюзовая музыка
+                            </span>
+                            <span>
+                                | - Рок, металл
+                            </span>
+                            <span>
+                                | - Электронная музыка
+                            </span>
+                        </div>
+                    </div>
+                    <span>
+
+                    </span>
                 </div>
                 <div class="sortBy">
                     <div class="sortByRowHeader">
@@ -451,6 +1209,11 @@
                 </div>
             </div>
         </div>
+        <div v-if="distributtions.length <= 0" class="notFound">
+            <span>
+                Не найдено
+            </span>
+        </div>
         <div class="distributtionsFooter">
 
         </div>
@@ -799,6 +1562,33 @@ export default {
     .sortByRowHeader {
         display: flex;
         justify-content: space-between;
+    }
+
+    .notFound {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sections {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subSection {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionHeader {
+        cursor: pointer;
+        color: rgb(0, 0, 255);
+        font-weight: bolder;
+    }
+
+    .subSectionHeader {
+        cursor: pointer;
+        font-weight: bolder;
     }
 
 </style>
